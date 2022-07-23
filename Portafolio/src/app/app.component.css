@@ -1,0 +1,47 @@
+#nav{
+  margin:0;
+  width: 100vw;
+}
+#logoArgProg{
+  text-align: right;
+  display: inline;
+  height: 40px;
+  cursor:pointer;
+}
+#logInRedes{
+  display: inline;
+  cursor:pointer;
+  position:absolute;
+  right: 11px;
+  top:10px;
+}
+#logIn{
+  display: inline;
+  height: 32px;
+  cursor:pointer;
+  margin-right: 25px;
+}
+#botones{
+  display: inline;
+  cursor:pointer;
+}
+
+.boton{
+  opacity:80%;
+  display:inline
+}
+.boton:hover{
+  opacity:100%;
+}
+
+.logoRed{
+  display: inline;
+  cursor:pointer;
+  margin-right: 22px;
+  height: 30px;
+}
+p{
+  color:rgb(255, 255, 255);
+  display:inline;
+  opacity: 50%;
+}
