@@ -2,12 +2,14 @@
   margin:0;
   width: 100vw;
 }
+
 #logoArgProg{
   text-align: right;
   display: inline;
   height: 40px;
   cursor:pointer;
 }
+
 #logInRedes{
   display: inline;
   cursor:pointer;
@@ -15,21 +17,24 @@
   right: 11px;
   top:10px;
 }
+
 #logIn{
   display: inline;
-  height: 32px;
+  height: 30px;
   cursor:pointer;
-  margin-right: 25px;
+  margin-left: 20px;
 }
+
 #botones{
   display: inline;
   cursor:pointer;
 }
 
 .boton{
-  opacity:80%;
+  opacity:60%;
   display:inline
 }
+
 .boton:hover{
   opacity:100%;
 }
@@ -38,8 +43,9 @@
   display: inline;
   cursor:pointer;
   margin-right: 22px;
-  height: 30px;
+  height: 25px;
 }
+
 p{
   color:rgb(255, 255, 255);
   display:inline;
