@@ -26,3 +26,6 @@ a{
   text-decoration: none;
   color: white;
 }
+.section{
+  display: block;
+}

@@ -1,0 +1,74 @@
+.section{
+  margin-top: 20px;
+  margin-top: 70px;
+  text-align: center;
+  height: 80vh;
+}
+#experiencia{
+  margin-right:100px;
+  margin-left: 100px;
+}
+
+p{
+  margin:3px;
+  text-align: left;
+  display: inline;
+}
+
+#contenedor-pestañas{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:100vw;
+}
+
+.pestaña{
+  background-color:rgba(2, 1, 11, 0.618);
+  margin: 15px;
+  height: 70px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  padding: auto;
+  align-items: center;
+}
+
+.descripcion{
+  display:flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+
+.descripcionPuesto{
+  color: rgba(255, 255, 255, 0.826);
+}
+
+.descripcionEmpresa{
+  color: rgba(255, 255, 255, 0.418);
+  font-size: 12px;
+}
+
+.tiempo{
+  color: rgba(255, 255, 255, 0.744);
+  display: inline-block;
+  width: fit-content;
+}
+
+#titulo{
+  display: block;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.puntoBlanco{
+  height: 10px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.contenedorPunto{
+  width:60px;
+}

@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class DatosService {
 
   constructor() { }
@@ -17,7 +19,8 @@ export class DatosService {
     perfil:"https://i.postimg.cc/Yq1STwMq/imagenCV.png",
     banner:"https://i.postimg.cc/vB4rzrQX/banner2.png",
     lapiz:"https://i.postimg.cc/FRctCFsY/ic-edit-128-28238.png",
-    lapizNegro:"https://i.postimg.cc/Ss6YBNCn/edit-icon-icons-com-50403.png"
+    lapizNegro:"https://i.postimg.cc/Ss6YBNCn/edit-icon-icons-com-50403.png",
+    puntoBlanco:"https://i.postimg.cc/XN2VHdTt/punto-Blanco.png"
   }
 
   Link = {
@@ -33,7 +36,34 @@ export class DatosService {
     nombre:"Agustín",
     apellido:"Godzic",
     titulo:"Full Stack Developer Jr",
-    sobreMi:"Soy Agustin, tengo 25 años y soy un estudiante apasionado por la lógica, las matemáticas y la programación. Me encuentro en constante desarrollo y capacitación tanto de forma académica como autodidacta."
+    sobreMi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    experiencia:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
   }
 
+   Experiencia = [
+    {
+      puesto:"Desarollador Full Stack Jr",
+      empresa:"Tech y Dev S.A",
+      tiempo:5,
+      unidad:"años"
+    },
+    {
+      puesto:"Desarollador Java",
+      empresa:"Tecno Solutions S.A",
+      tiempo:5,
+      unidad:"años"
+    },
+    {
+      puesto:"php Back End Developer",
+      empresa:"Infiny Des",
+      tiempo:4,
+      unidad:"años"
+    },
+    {
+      puesto:"Desarollador Front End Sr",
+      empresa:"Tech y Dev S.A",
+      tiempo:8,
+      unidad:"meses"
+    },
+   ]
 }
