@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+  background-color: rgb(1, 3, 33);
+  font-family: Microsoft PhagsPa ;
+  color: white;
+}
+body::-webkit-scrollbar{
+  width: 9px;
+  height: 0px;
+  position:absolute;
+}
+body::-webkit-scrollbar-track{
+  background-color: rgb(1, 3, 33);
+  position:absolute;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: #ffffff4d;
+  border-radius: 7px;
+  position:absolute;
+
+}
+body::-webkit-scrollbar-thumb:hover{
+  background-color: #ffffff91;
+}
+a{
+  text-decoration: none;
+  color: white;
+}

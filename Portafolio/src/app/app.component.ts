@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DatosService } from './datos.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Portafolio';
+  constructor(private Datos:DatosService){
+  }
+
+  Imagen = this.Datos.Imagen;
+  Link = this.Datos.Link;
 }
 

@@ -1,0 +1,98 @@
+#contenedorBanner{
+  text-align: center;
+  margin-top: 15px;
+}
+#banner{
+  width: 95vw;
+  opacity: 85%;
+  box-shadow: 10px 5px 30px 5px rgba(0, 0, 0, 0.842);
+}
+#fotoPerfil{
+  width: 150px;
+  border-radius: 100px;
+}
+
+#contenedorPerfil{
+  position:absolute;
+  left:8vw;
+  opacity: 90%;
+  transform: translateY(-6vw);
+  color:white;
+  font-size: 17px;
+  font-family: Microsoft PhagsPa ;
+  text-align: center;
+}
+
+#nombre{
+  margin:5px;
+  opacity: 50px;
+}
+
+#titulo{
+  opacity:30%;
+  font-size: 14px;
+  margin:0px;
+}
+
+#editarPortada{
+  position:absolute;
+  font-family: Microsoft PhagsPa ;
+  color:bisque;
+  background-color: rgba(0, 0, 0, 0.364);
+  cursor:pointer;
+  border:none;
+  height: 30px;
+  border-radius: 3px;
+  width: auto;
+  right:4vw;
+  top:80px
+}
+
+#lapizBanner{
+  width:12px;
+  margin-right: 4px;
+}
+
+#editarPortada:hover{
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+#editarFoto{
+  background-color: rgba(255, 255, 255, 0.54);
+  position:absolute;
+  width: 25px;
+  border-radius: 100px;
+  transform: translate(120px,-40px);
+  cursor:pointer;
+}
+
+#editarFoto:hover{
+  background-color: rgba(255, 255, 255, 0.867);
+}
+
+#lapizFoto{
+  margin-left:auto;
+  margin-right:auto;
+  width:15px;
+}
+
+#sobreMi{
+  opacity: 60%;
+  position:absolute;
+  margin-left:30vw;
+  margin-right: 20vw;
+  margin-top: 35px;
+  width: 60vw;
+  font-size: 17px;
+  overflow: visible;
+  padding-right: 15px;
+}
+
+@media (max-width:800px){
+  #sobreMi{
+    margin-left:40vw;
+    margin-right: 25px;
+    font-size: 15px;
+    width: 55vw;
+  }
+}
