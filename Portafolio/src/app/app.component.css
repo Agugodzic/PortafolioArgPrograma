@@ -52,3 +52,12 @@ p{
   display:inline;
   opacity: 50%;
 }
+
+#yoProgramo{
+  position:absolute;
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  top:20px;
+  opacity: 30%;
+}

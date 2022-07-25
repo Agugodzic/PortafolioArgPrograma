@@ -15,7 +15,9 @@ export class DatosService {
     gitHub:"https://i.postimg.cc/DwRxzTFk/github.png",
     linkedin:"https://i.postimg.cc/K8jWzfML/linkedin.png",
     perfil:"https://i.postimg.cc/Yq1STwMq/imagenCV.png",
-    banner:"https://i.postimg.cc/vB4rzrQX/banner2.png"
+    banner:"https://i.postimg.cc/vB4rzrQX/banner2.png",
+    lapiz:"https://i.postimg.cc/FRctCFsY/ic-edit-128-28238.png",
+    lapizNegro:"https://i.postimg.cc/Ss6YBNCn/edit-icon-icons-com-50403.png"
   }
 
   Link = {
@@ -30,7 +32,8 @@ export class DatosService {
     edad:25,
     nombre:"Agustín",
     apellido:"Godzic",
-    titulo:"Full Stack Developer Jr"
+    titulo:"Full Stack Developer Jr",
+    sobreMi:"Soy Agustin, tengo 25 años y soy un estudiante apasionado por la lógica, las matemáticas y la programación. Me encuentro en constante desarrollo y capacitación tanto de forma académica como autodidacta."
   }
 
 }

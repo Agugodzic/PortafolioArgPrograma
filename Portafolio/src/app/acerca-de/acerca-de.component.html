@@ -1,8 +1,15 @@
 <div id="contenedorBanner">
   <img id="banner" [src]="Imagen.banner">
+  <button id="editarPortada"><img id="lapizBanner" [src]="Imagen.lapiz">Editar portada</button>
 </div>
 <div id="contenedorPerfil">
   <img id="fotoPerfil" [src]="Imagen.perfil">
+  <div id="editarFoto">
+    <img id="lapizFoto" [src]="Imagen.lapizNegro">
+  </div>
   <p id="nombre">{{ Info.nombre.toUpperCase() +" "+ Info.apellido.toUpperCase()  }}</p>
   <p id="titulo">{{ Info.titulo }}</p>
+</div>
+<div id="sobreMi">SOBRE MI
+  <p>{{Info.sobreMi}}</p>
 </div>
