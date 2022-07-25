@@ -14,14 +14,23 @@ export class DatosService {
     instagram:"https://i.postimg.cc/zDd3WDQh/instagram.png",
     gitHub:"https://i.postimg.cc/DwRxzTFk/github.png",
     linkedin:"https://i.postimg.cc/K8jWzfML/linkedin.png",
-    perfil:"https://i.postimg.cc/Yq1STwMq/imagenCV.png"
+    perfil:"https://i.postimg.cc/Yq1STwMq/imagenCV.png",
+    banner:"https://i.postimg.cc/vB4rzrQX/banner2.png"
   }
+
   Link = {
     argPrograma:"https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa",
     facebook:"https://www.facebook.com/agugodzic/",
     instagram:"https://www.instagram.com/agugodzic/",
     gitHub:"https://github.com/Agugodzic",
     linkedin:"https://www.linkedin.com/in/agust%C3%ADn-godzic-109b09188/"
+  }
+
+  Info = {
+    edad:25,
+    nombre:"Agustín",
+    apellido:"Godzic",
+    titulo:"Full Stack Developer Jr"
   }
 
 }
