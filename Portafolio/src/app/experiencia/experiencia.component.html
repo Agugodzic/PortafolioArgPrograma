@@ -1,19 +1,31 @@
 <div class="section">
   <p id="titulo">EXPERIENCIA</p>
-  <div id="contenedor-pestañas" *ngFor="let elemento of Experiencia">
-    <div class="pestaña">
+  <div  *ngFor="let elemento of Experiencia">
+    <div id="contenedor-pestañas">
+      <div class="pestaña">
 
-      <div class="contenedorPunto"> <!-- 1 -->
-        <img class="puntoBlanco" [src]="Imagen.puntoBlanco">
+        <div class="contenedor-punto"> <!-- 1 -->
+          <img class="punto-blanco" [src]="Imagen.puntoBlanco">
+        </div>
+
+        <div class="descripcion"> <!-- 4 -->
+          <p class="descripcion-puesto">{{elemento.puesto}}</p> <!-- 2 -->
+          <p class="descripcion-empresa">{{elemento.empresa}}</p> <!-- 3 -->
+        </div>
+
+        <div class="tiempo"> <!-- 5 -->
+          <p class="descripcion-tiempo">{{elemento.tiempo + " " + elemento.unidad}}</p>
+        </div>
       </div>
 
-      <div class="descripcion"> <!-- 4 -->
-        <p class="descripcionPuesto">{{elemento.puesto}}</p> <!-- 2 -->
-        <p class="descripcionEmpresa">{{elemento.empresa}}</p> <!-- 3 -->
-      </div>
-
-      <div class="tiempo"> <!-- 5 -->
-        <p class="descripcionTiempo">{{elemento.tiempo + " " + elemento.unidad}}</p>
+      <div class="botones"> <!-- 6 -->
+        <button class="boton">
+          <img class="lapiz" [src]="Imagen.lapiz">
+        </button>
+        <button class="boton  boton-delete">
+          <img class="delete" [src]="Imagen.delete">
+        </button>
       </div>
     </div>
   </div>
+

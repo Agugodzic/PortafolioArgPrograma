@@ -2,7 +2,6 @@
   margin-top: 20px;
   margin-top: 70px;
   text-align: center;
-  height: 80vh;
 }
 #experiencia{
   margin-right:100px;
@@ -19,8 +18,9 @@ p{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  width:100vw;
+  justify-content: start;
+  width:800vw;
+  margin-left: 100px;
 }
 
 .pestaña{
@@ -28,7 +28,7 @@ p{
   margin: 15px;
   height: 70px;
   width: 400px;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   border-radius: 4px;
   padding: auto;
@@ -36,17 +36,17 @@ p{
 }
 
 .descripcion{
-  display:flex;
+  display:inline-flex;
   flex-direction: column;
   width: 300px;
 }
 
 
-.descripcionPuesto{
+.descripcion-puesto{
   color: rgba(255, 255, 255, 0.826);
 }
 
-.descripcionEmpresa{
+.descripcion-empresa{
   color: rgba(255, 255, 255, 0.418);
   font-size: 12px;
 }
@@ -63,12 +63,44 @@ p{
   margin-bottom: 60px;
 }
 
-.puntoBlanco{
+.punto-blanco{
   height: 10px;
   margin: 5px;
   display: inline-block;
 }
 
-.contenedorPunto{
+.contenedor-punto{
   width:60px;
+}
+
+.botones{
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.boton{
+  color: rgba(252, 252, 252, 0.647);
+  background-color: rgba(22, 26, 36, 0.664);
+  border-radius: 4px ;
+  border:none;
+  margin-top: 5px;
+  cursor:pointer;
+  height: 25px;
+}
+
+.boton:hover{
+  background-color: rgba(56, 63, 80, 0.664);
+}
+
+.lapiz{
+  width:15px;
+}
+.delete{
+  width:15px;
+  opacity: 50%;
+}
+.boton-delete{
+  margin-top: 10px;
 }

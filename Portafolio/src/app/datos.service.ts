@@ -20,7 +20,8 @@ export class DatosService {
     banner:"https://i.postimg.cc/vB4rzrQX/banner2.png",
     lapiz:"https://i.postimg.cc/FRctCFsY/ic-edit-128-28238.png",
     lapizNegro:"https://i.postimg.cc/Ss6YBNCn/edit-icon-icons-com-50403.png",
-    puntoBlanco:"https://i.postimg.cc/XN2VHdTt/punto-Blanco.png"
+    puntoBlanco:"https://i.postimg.cc/XN2VHdTt/punto-Blanco.png",
+    delete:"https://i.postimg.cc/2SdQtMJS/delete.png"
   }
 
   Link = {
