@@ -1,4 +1,3 @@
-
 <div id="nav">
   <a class="boton" [href]="Link.argPrograma" target="_blank">
     <img id="logoArgProg"  [src]="Imagen.argPrograma">
@@ -15,7 +14,16 @@
 </div>
 
 <app-acerca-de></app-acerca-de>
-<app-habilidades></app-habilidades>
+<div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+
 <app-experiencia></app-experiencia>
+<div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+<a id="contenedorSubir" href="#nav"><button id="botonSubir"><img id="subirIcono" [src]="Imagen.subir"> </button></a>
+
+<app-habilidades></app-habilidades>
+<div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+
 <app-proyectos></app-proyectos>
+<div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+
 <app-estudios></app-estudios>

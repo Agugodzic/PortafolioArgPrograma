@@ -1,11 +1,11 @@
 .section{
   margin-top: 20px;
-  margin-top: 70px;
   text-align: center;
 }
-#experiencia{
-  margin-right:100px;
-  margin-left: 100px;
+
+#titulo{
+  opacity:70%;
+  margin-top: 40px;
 }
 
 p{
@@ -15,7 +15,12 @@ p{
 }
 
 #contenedor-pestañas{
-  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#generador-pestañas{
+  display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
@@ -53,12 +58,10 @@ p{
 
 .tiempo{
   color: rgba(255, 255, 255, 0.744);
-  display: inline-block;
   width: fit-content;
 }
 
 #titulo{
-  display: block;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -103,4 +106,20 @@ p{
 }
 .boton-delete{
   margin-top: 10px;
+}
+
+#masBoton{
+  background-color: rgba(0, 0, 0, 0.347);
+  border:none;
+  cursor:pointer;
+  border-radius: 5px;
+}
+#masBoton:hover{
+  background-color: rgba(56, 63, 80, 0.664);
+}
+
+#masIcono{
+  height: 15px;
+  margin:8px 4px 5px 4px;
+  opacity: 80%;
 }

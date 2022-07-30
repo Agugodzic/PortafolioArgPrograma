@@ -61,3 +61,40 @@ p{
   top:20px;
   opacity: 30%;
 }
+
+#botonSubir{
+  background-color: rgba(0, 0, 0, 0.357);
+  border:none;
+  opacity: 70%;
+  cursor:pointer;
+
+}
+
+#botonSubir:hover{
+  opacity: 85%;
+}
+
+#subirIcono{
+  height: 25px;
+}
+
+#contenedorSubir{
+  position:sticky;
+  display: block;
+  top:90vh;
+  width: 98vw;
+  text-align: end;
+}
+
+.contenedor-separador{
+  width: 100vw;
+  text-align: center;
+}
+
+.imagen-separador{
+  width: 90vw;
+  height: 3px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  opacity: 5%;
+}

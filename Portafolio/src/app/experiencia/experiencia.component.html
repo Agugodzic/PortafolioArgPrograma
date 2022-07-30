@@ -1,7 +1,7 @@
 <div class="section">
   <p id="titulo">EXPERIENCIA</p>
-  <div  *ngFor="let elemento of Experiencia">
-    <div id="contenedor-pestañas">
+  <div id="contenedor-pestañas" >
+    <div id="generador-pestañas" *ngFor="let elemento of Experiencia">
       <div class="pestaña">
 
         <div class="contenedor-punto"> <!-- 1 -->
@@ -16,16 +16,20 @@
         <div class="tiempo"> <!-- 5 -->
           <p class="descripcion-tiempo">{{elemento.tiempo + " " + elemento.unidad}}</p>
         </div>
+
       </div>
 
       <div class="botones"> <!-- 6 -->
+
         <button class="boton">
           <img class="lapiz" [src]="Imagen.lapiz">
         </button>
+
         <button class="boton  boton-delete">
           <img class="delete" [src]="Imagen.delete">
         </button>
+
       </div>
     </div>
   </div>
-
+  <button id="masBoton"><img id="masIcono" [src]="Imagen.mas"></button>
