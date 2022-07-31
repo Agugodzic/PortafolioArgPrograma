@@ -18,6 +18,10 @@ export class DatosService {
     linkedin:"https://i.postimg.cc/K8jWzfML/linkedin.png",
     perfil:"https://i.postimg.cc/Yq1STwMq/imagenCV.png",
     banner:"https://i.postimg.cc/vB4rzrQX/banner2.png",
+    banner2:"https://i.pinimg.com/originals/0f/81/ac/0f81ac43b11ce36b81d803077f7584b0.jpg",
+    banner3:"https://i.postimg.cc/VNjZ5sfP/banner3.png",
+    banner4:"https://i.postimg.cc/bw5KTbST/close-up-image-of-programer-working-at-his-desk-in-office.png",
+    banner5:"https://i.postimg.cc/C5Hgr1pK/banner4.jpg",
     lapiz:"https://i.postimg.cc/FRctCFsY/ic-edit-128-28238.png",
     lapizNegro:"https://i.postimg.cc/Ss6YBNCn/edit-icon-icons-com-50403.png",
     puntoBlanco:"https://i.postimg.cc/XN2VHdTt/punto-Blanco.png",
@@ -45,7 +49,7 @@ export class DatosService {
     experiencia:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
   }
 
-   Experiencia = [
+  Experiencia = [
     {
       puesto:"Desarollador Full Stack Jr",
       empresa:"Tech y Dev S.A",
@@ -70,5 +74,46 @@ export class DatosService {
       tiempo:8,
       unidad:"meses"
     },
-   ]
+  ]
+
+  Habilidades = [
+    {
+      habilidad:"Photoshop",
+      nivel:75
+    },
+    {
+      habilidad:"Word",
+      nivel:90
+    },
+    {
+      habilidad:"Excel",
+      nivel:70
+    },
+    {
+      habilidad:"Python",
+      nivel:65
+    },
+    {
+      habilidad:"Angular",
+      nivel:75
+    },
+    {
+      habilidad:"Html",
+      nivel:80
+    },
+    {
+      habilidad:"CSS",
+      nivel:70
+    },
+    {
+      habilidad:"GitHub",
+      nivel:80
+    },
+    {
+      habilidad:"Typescript",
+      nivel:70
+    }
+
+  ]
+
 }

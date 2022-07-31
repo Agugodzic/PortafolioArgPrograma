@@ -108,17 +108,17 @@ p{
   margin-top: 10px;
 }
 
-#masBoton{
+#mas-boton{
   background-color: rgba(0, 0, 0, 0.347);
   border:none;
   cursor:pointer;
   border-radius: 5px;
 }
-#masBoton:hover{
+#mas-boton:hover{
   background-color: rgba(56, 63, 80, 0.664);
 }
 
-#masIcono{
+#mas-icono{
   height: 15px;
   margin:8px 4px 5px 4px;
   opacity: 80%;

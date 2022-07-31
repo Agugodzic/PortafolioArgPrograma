@@ -4,14 +4,19 @@
   display: block;
 }
 
-#logoArgProg{
+.titulo{
+  opacity:30%;
+  font-size: 14px;
+}
+
+#logo-arg-programa{
   text-align: right;
   display: inline;
   height: 40px;
   cursor:pointer;
 }
 
-#logInRedes{
+#login-redes{
   display: inline;
   cursor:pointer;
   position:absolute;
@@ -19,7 +24,7 @@
   top:10px;
 }
 
-#logIn{
+#log-in{
   display: inline;
   height: 30px;
   cursor:pointer;
@@ -40,7 +45,7 @@
   opacity:100%;
 }
 
-.logoRed{
+.logo-red{
   display: inline;
   cursor:pointer;
   margin-right: 22px;
@@ -53,7 +58,7 @@ p{
   opacity: 50%;
 }
 
-#yoProgramo{
+#yo-programo{
   position:absolute;
   font-size: 12px;
   margin-top: 0px;
@@ -62,7 +67,7 @@ p{
   opacity: 30%;
 }
 
-#botonSubir{
+#boton-subir{
   background-color: rgba(0, 0, 0, 0.357);
   border:none;
   opacity: 70%;
@@ -70,15 +75,15 @@ p{
 
 }
 
-#botonSubir:hover{
+#boton-subir:hover{
   opacity: 85%;
 }
 
-#subirIcono{
+#subir-icono{
   height: 25px;
 }
 
-#contenedorSubir{
+#contenedor-subir{
   position:sticky;
   display: block;
   top:90vh;
@@ -95,6 +100,6 @@ p{
   width: 90vw;
   height: 3px;
   margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   opacity: 5%;
 }
