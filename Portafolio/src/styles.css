@@ -3,6 +3,7 @@ html{
   font-family: Microsoft PhagsPa ;
   color: white;
 }
+
 body::-webkit-scrollbar{
   width: 9px;
   height: 0px;
@@ -22,7 +23,11 @@ body::-webkit-scrollbar-thumb{
 body::-webkit-scrollbar-thumb:hover{
   background-color: #ffffff91;
 }
+
 a{
   text-decoration: none;
   color: white;
+}
+.section{
+  display: block;
 }

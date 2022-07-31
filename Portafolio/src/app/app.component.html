@@ -1,21 +1,32 @@
-
 <div id="nav">
   <a class="boton" [href]="Link.argPrograma" target="_blank">
-    <img id="logoArgProg"  [src]="Imagen.argPrograma">
-    <p id="yoProgramo">#YO PROGRAMO</p>
+    <img id="logo-arg-programa"  [src]="Imagen.argPrograma">
+    <p id="yo-programo">#YO PROGRAMO</p>
   </a>
   <div id="botones"></div>
-  <div id="logInRedes">
-    <a [href]="Link.instagram" target="_blank"><img class="logoRed boton"  [src]="Imagen.instagram"></a>
-    <a [href]="Link.facebook" target="_blank"><img class="logoRed boton"  [src]="Imagen.facebook"></a>
-    <a [href]="Link.gitHub" target="_blank"><img class="logoRed boton"   [src]="Imagen.gitHub"></a>
-    <a [href]="Link.linkedin" target="_blank"><img class="logoRed boton"  [src]="Imagen.linkedin"></a>
+  <div id="login-redes">
+    <a [href]="Link.instagram" target="_blank"><img class="logo-red boton"  [src]="Imagen.instagram"></a>
+    <a [href]="Link.facebook" target="_blank"><img class="logo-red boton"  [src]="Imagen.facebook"></a>
+    <a [href]="Link.gitHub" target="_blank"><img class="logo-red boton"   [src]="Imagen.gitHub"></a>
+    <a [href]="Link.linkedin" target="_blank"><img class="logo-red boton"  [src]="Imagen.linkedin"></a>
 
-    <a class="boton"><img  id="logIn" [src]="Imagen.logIn"></a>
+    <a class="boton"><img  id="log-in" [src]="Imagen.logIn"></a>
 </div>
 
 <app-acerca-de></app-acerca-de>
-<app-habilidades></app-habilidades>
+<div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+
 <app-experiencia></app-experiencia>
-<app-proyectos></app-proyectos>
+<div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+
+<a id="contenedor-subir" href="#nav"><button id="boton-subir"><img id="subir-icono" [src]="Imagen.subir"> </button></a>
+
+<app-habilidades></app-habilidades>
+<div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+
+
 <app-estudios></app-estudios>
+<div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+
+<app-proyectos></app-proyectos>
+

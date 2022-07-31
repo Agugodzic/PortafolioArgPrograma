@@ -1,0 +1,126 @@
+.section{
+  margin-top: 20px;
+  text-align: center;
+}
+
+#titulo{
+  opacity:70%;
+  margin-top: 40px;
+}
+
+p{
+  margin:3px;
+  text-align: left;
+  display: inline;
+}
+
+#contenedor-pestañas{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: inline;
+}
+
+#generador-pestañas{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  width:800vw;
+  margin-left: 100px;
+}
+
+.pestaña{
+  background-color:rgba(48, 48, 162, 0.168);
+  margin: 15px;
+  height: 70px;
+  width: 400px;
+  display: inline-flex;
+  flex-direction: row;
+  border-radius: 4px;
+  padding: auto;
+  align-items: center;
+}
+
+.descripcion{
+  display:inline-flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+
+.descripcion-puesto{
+  color: rgba(255, 255, 255, 0.826);
+}
+
+.descripcion-empresa{
+  color: rgba(255, 255, 255, 0.418);
+  font-size: 12px;
+}
+
+.tiempo{
+  color: rgba(255, 255, 255, 0.744);
+  width: fit-content;
+}
+
+#titulo{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.punto-blanco{
+  height: 10px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.contenedor-punto{
+  width:60px;
+}
+
+.botones{
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.boton{
+  color: rgba(252, 252, 252, 0.647);
+  background-color: rgba(15, 26, 55, 0.664);
+  border-radius: 4px ;
+  border:none;
+  margin-top: 5px;
+  cursor:pointer;
+  height: 25px;
+}
+
+.boton:hover{
+  background-color: rgba(56, 63, 80, 0.664);
+}
+
+.lapiz{
+  width:15px;
+}
+.delete{
+  width:15px;
+  opacity: 50%;
+}
+.boton-delete{
+  margin-top: 10px;
+}
+
+#mas-boton{
+  background-color: rgba(47, 48, 78, 0.347);
+  border:none;
+  cursor:pointer;
+  border-radius: 5px;
+}
+#mas-boton:hover{
+  background-color: rgba(56, 63, 80, 0.664);
+}
+
+#mas-icono{
+  height: 15px;
+  margin:8px 4px 5px 4px;
+  opacity: 80%;
+}

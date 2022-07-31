@@ -1,0 +1,20 @@
+<div class="section">
+  <p class="titulo">HABILIDADES</p>
+  <div id="contenedor-habilidades">
+    <div class="habilidad" *ngFor="let habilidad of Habilidades">
+    <circle-progress
+    [percent]="habilidad.nivel"
+    [title]="habilidad.habilidad"
+    [radius]="60"
+    [subtitle]="habilidad.nivel.toString()"
+    [units]="'%'"
+    [subtitleColor]="'#ffffff91'"
+    [subtitleFontSize]="'20'"
+    [showSubtitle]="false"
+    [backgroundPadding]="0"
+
+    ></circle-progress>
+    </div>
+  </div>
+</div>
+

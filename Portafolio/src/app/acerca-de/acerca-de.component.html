@@ -1,15 +1,17 @@
-<div id="contenedorBanner">
-  <img id="banner" [src]="Imagen.banner">
-  <button id="editarPortada"><img id="lapizBanner" [src]="Imagen.lapiz">Editar portada</button>
+<div class="section">
+<div id="contenedor-banner">
+  <img id="banner" [src]="Imagen.banner3">
+  <button id="editar-portada"><img id="lapiz-banner" [src]="Imagen.lapiz">Editar portada</button>
 </div>
-<div id="contenedorPerfil">
-  <img id="fotoPerfil" [src]="Imagen.perfil">
-  <div id="editarFoto">
-    <img id="lapizFoto" [src]="Imagen.lapizNegro">
+<div id="contenedor-perfil">
+  <img id="foto-perfil" [src]="Imagen.perfil">
+  <div id="editar-foto">
+    <img id="lapiz-foto" [src]="Imagen.lapizNegro">
   </div>
   <p id="nombre">{{ Info.nombre.toUpperCase() +" "+ Info.apellido.toUpperCase()  }}</p>
   <p id="titulo">{{ Info.titulo }}</p>
 </div>
-<div id="sobreMi">SOBRE MI
+<div id="sobre-mi">SOBRE MI
   <p>{{Info.sobreMi}}</p>
+</div>
 </div>
