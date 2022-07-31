@@ -29,7 +29,7 @@ p{
 }
 
 .pestaña{
-  background-color:rgba(2, 1, 11, 0.618);
+  background-color:rgba(48, 48, 162, 0.168);
   margin: 15px;
   height: 70px;
   width: 400px;
@@ -85,7 +85,7 @@ p{
 
 .boton{
   color: rgba(252, 252, 252, 0.647);
-  background-color: rgba(22, 26, 36, 0.664);
+  background-color: rgba(15, 26, 55, 0.664);
   border-radius: 4px ;
   border:none;
   margin-top: 5px;
