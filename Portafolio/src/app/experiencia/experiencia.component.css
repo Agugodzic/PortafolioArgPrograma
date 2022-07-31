@@ -17,6 +17,7 @@ p{
 #contenedor-pestañas{
   margin-top: 30px;
   margin-bottom: 30px;
+  display: inline;
 }
 
 #generador-pestañas{
@@ -109,7 +110,7 @@ p{
 }
 
 #mas-boton{
-  background-color: rgba(0, 0, 0, 0.347);
+  background-color: rgba(47, 48, 78, 0.347);
   border:none;
   cursor:pointer;
   border-radius: 5px;
