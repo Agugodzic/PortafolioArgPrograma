@@ -87,6 +87,29 @@
   padding-right: 15px;
 }
 
+
+.editar{
+  display:inline;
+  opacity:70%;
+  padding:0px;
+  background-color: rgba(74, 74, 74, 0.203);
+  border:none;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 12px;
+  border-radius: 5px;
+  transform: translateY(2px);
+}
+.lapiz-editar{
+  height: 17px;
+}
+.editar:hover{
+  cursor:pointer;
+  opacity:95%;
+  background-color: rgba(74, 74, 74, 0.398);
+}
+
+
 @media (max-width:800px){
   #sobre-mi{
     margin-left:40vw;

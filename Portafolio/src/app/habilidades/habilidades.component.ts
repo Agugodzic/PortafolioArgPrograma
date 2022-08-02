@@ -11,6 +11,7 @@ export class HabilidadesComponent implements OnInit {
   constructor(private datos:DatosService) { }
 
   Habilidades = this.datos.Habilidades;
+  Imagen = this.datos.Imagen;
 
   ngOnInit(): void {
   }
