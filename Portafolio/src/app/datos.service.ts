@@ -31,7 +31,7 @@ export class DatosService {
     separadorNegro:"https://i.postimg.cc/CLZYWxMK/separador-Negro.png",
     separadorBlanco:"https://i.postimg.cc/jjjr4x1K/separador-Blanco.png",
     info:"https://i.postimg.cc/T2jR0nRM/info-icon-147458.png"
-  }
+  };
 
   Link = {
     argPrograma:"https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa",
@@ -39,7 +39,7 @@ export class DatosService {
     instagram:"https://www.instagram.com/agugodzic/",
     gitHub:"https://github.com/Agugodzic",
     linkedin:"https://www.linkedin.com/in/agust%C3%ADn-godzic-109b09188/"
-  }
+  };
 
   Info = {
     edad:25,
@@ -48,7 +48,7 @@ export class DatosService {
     titulo:"Full Stack Developer Jr",
     sobreMi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     experiencia:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
-  }
+  };
 
   Experiencia = [
     {
@@ -75,7 +75,7 @@ export class DatosService {
       tiempo:8,
       unidad:"meses"
     },
-  ]
+  ];
 
   Habilidades = [
     {
@@ -115,7 +115,7 @@ export class DatosService {
       nivel:70
     }
 
-  ]
+  ];
 
   Proyectos = [
     {
@@ -139,6 +139,6 @@ export class DatosService {
       linkGitHub:"",
       linkImagen:""
     }
-  ]
+  ];
 
 }

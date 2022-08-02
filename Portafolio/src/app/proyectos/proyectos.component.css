@@ -1,12 +1,40 @@
 .section{
   min-height: 70vh;
+  text-align: center;
 }
 
 .titulo{
   text-align: center;
+  display: block;
+}
+
+.contenedor-proyectos{
+  display: inline-flex;
+  direction: row;
 }
 .proyecto{
-  background-color: rgba(238, 238, 238, 0.19);
-  height: 150px;
-  width: 300x;
+  background-color: rgba(0, 0, 255, 0.06);
+  margin:20px;
+  padding:20px;
+  width: 300px;
 }
+.titulo-proyecto{
+  display: block;
+}
+
+.descripcion-poyecto{
+  display: block;
+}
+
+.boton-proyecto{
+  border:none;
+  background-color: rgba(255, 255, 255, 0.591);
+  color:rgba(0, 0, 0, 0.898);
+  padding:5px;
+  border-radius: 4px;
+}
+.boton-proyecto:hover{
+  cursor:pointer;
+  background-color: rgba(255, 255, 255, 0.885);
+}
+
