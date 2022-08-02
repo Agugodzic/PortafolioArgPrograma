@@ -117,4 +117,14 @@ export class DatosService {
 
   ]
 
+  Proyectos = [
+    {
+      titulo:"",
+      descripcion:"",
+      linkPreview:"",
+      linkGitHub:"",
+      linkImagen:""
+    }
+  ]
+
 }
