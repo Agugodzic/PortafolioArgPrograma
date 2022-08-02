@@ -29,7 +29,8 @@ export class DatosService {
     mas: "https://i.postimg.cc/qv6m2hrY/mas3.png",
     subir:"https://i.postimg.cc/7Ym5YF4K/subir.png",
     separadorNegro:"https://i.postimg.cc/CLZYWxMK/separador-Negro.png",
-    separadorBlanco:"https://i.postimg.cc/jjjr4x1K/separador-Blanco.png"
+    separadorBlanco:"https://i.postimg.cc/jjjr4x1K/separador-Blanco.png",
+    info:"https://i.postimg.cc/T2jR0nRM/info-icon-147458.png"
   }
 
   Link = {
