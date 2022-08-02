@@ -1,4 +1,15 @@
 <div class="section">
   <p class="titulo">PROYECTOS</p>
+  <div id="generador-proyecto" *ngfor="let proyecto of Proyectos">
+    <div class="proyecto">
+      <img class="imagen-proyecto" [src]="proyecto.imagen">
+      <div class="titulo-proyecto"><p class="texto-titulo-proyecto">{{proyecto.titulo}}</p></div>
+      <div class="descripcion-proyecto"><p class="texto-descripcion-proyecto">{{proyecto.titulo}}</p></div>
+      <button>Repositorio</button>
+    </div>
+  </div>
+  <div *ngFor=" let experiencia of Experiencia">
+   {{experiencia.tiempo}}
+  </div>
 </div>
 

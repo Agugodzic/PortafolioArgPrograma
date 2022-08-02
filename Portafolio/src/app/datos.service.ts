@@ -119,8 +119,22 @@ export class DatosService {
 
   Proyectos = [
     {
-      titulo:"",
-      descripcion:"",
+      titulo:"Portafolio Argentina",
+      descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
+      linkPreview:"",
+      linkGitHub:"",
+      linkImagen:""
+    },
+    {
+      titulo:"Tienda Online de Hardware",
+      descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
+      linkPreview:"",
+      linkGitHub:"",
+      linkImagen:""
+    },
+    {
+      titulo:"Backing Tracks Online",
+      descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
       linkPreview:"",
       linkGitHub:"",
       linkImagen:""
