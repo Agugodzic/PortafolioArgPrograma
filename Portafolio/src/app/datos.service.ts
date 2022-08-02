@@ -123,21 +123,23 @@ export class DatosService {
       descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
       linkPreview:"",
       linkGitHub:"",
-      linkImagen:""
+      linkImagen:"https://i.postimg.cc/bw36jQRs/preview-portafolio.png",
     },
     {
       titulo:"Tienda Online de Hardware",
       descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
       linkPreview:"",
       linkGitHub:"",
-      linkImagen:""
+      linkImagen:"https://i.postimg.cc/NjgNVNm3/preview-Tienda.png",
+      estado:"En desarrollo"
     },
     {
       titulo:"Backing Tracks Online",
       descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
       linkPreview:"",
       linkGitHub:"",
-      linkImagen:""
+      linkImagen:"",
+      estado:"En desarrollo"
     }
   ];
 
