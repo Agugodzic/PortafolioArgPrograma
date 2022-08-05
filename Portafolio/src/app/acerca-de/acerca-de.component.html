@@ -14,4 +14,16 @@
 <div id="sobre-mi">SOBRE MI<button class="editar"><img class="lapiz-editar" [src]="Imagen.lapiz"></button>
   <p>{{Info.sobreMi}}</p>
 </div>
+<div class="informacion-personal" *ngIf="verMas">
+  <div class="info-columna">
+    <p class="texto-informacion-personal">Edad: 25 Años</p>
+    <p class="texto-informacion-personal">Cel: 342 5419964</p>
+  </div>
+  <div class="info-columna">
+    <p class="texto-informacion-personal">Santa Fe (3000) - Argentina</p>
+    <p class="texto-informacion-personal">Email: agugodzic@gmail.com</p>
+  </div>
+</div>
+  <button id="ver-mas" (click)="verMasClick()">{{verMasTexto}}</button>
+
 </div>

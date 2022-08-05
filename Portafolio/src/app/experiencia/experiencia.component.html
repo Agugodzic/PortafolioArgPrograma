@@ -3,29 +3,29 @@
   <div id="contenedor-pestañas" >
     <div id="generador-pestañas" *ngFor="let elemento of Experiencia">
       <div class="pestaña">
-        <div class="contenedor-punto"> <!-- 1 -->
+        <div class="contenedor-punto">
           <img class="punto-blanco" [src]="Imagen.puntoBlanco">
         </div>
 
-        <div class="descripcion"> <!-- 4 -->
-          <p class="descripcion-puesto">{{elemento.puesto}}</p> <!-- 2 -->
-          <p class="descripcion-empresa">{{elemento.empresa}}</p> <!-- 3 -->
+        <div class="descripcion">
+          <p class="descripcion-puesto">{{elemento.puesto}}</p>
+          <p class="descripcion-empresa">{{elemento.empresa}}</p>
         </div>
 
-        <div class="tiempo"> <!-- 5 -->
+        <div class="tiempo">
           <p class="descripcion-tiempo">{{elemento.tiempo + " " + elemento.unidad}}</p>
         </div>
 
       </div>
 
-      <div class="botones"> <!-- 6 -->
+      <div class="botones">
 
         <button class="boton">
-          <img class="lapiz" [src]="Imagen.lapiz">
+          <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
         </button>
 
         <button class="boton  boton-delete">
-          <img class="delete" [src]="Imagen.delete">
+          <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
         </button>
 
       </div>

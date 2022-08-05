@@ -124,6 +124,7 @@ export class DatosService {
       linkPreview:"",
       linkGitHub:"",
       linkImagen:"https://i.postimg.cc/bw36jQRs/preview-portafolio.png",
+      estado:"En desarrollo"
     },
     {
       titulo:"Tienda Online de Hardware",

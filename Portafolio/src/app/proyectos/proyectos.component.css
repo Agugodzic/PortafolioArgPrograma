@@ -51,3 +51,8 @@
   width:314px;
   border-radius: 3px;
   }
+
+.estado{
+  opacity: 50%;
+  font-size: 13px;
+}
