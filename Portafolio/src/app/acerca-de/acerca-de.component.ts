@@ -9,8 +9,21 @@ import { DatosService } from '../datos.service';
 export class AcercaDeComponent implements OnInit {
 
   constructor(private datos:DatosService) { }
-  Imagen = this.datos.Imagen;
-  Info = this.datos.Info;
+  Imagen:any = this.datos.Imagen;
+  Info:any = this.datos.Info;
+  verMasTexto:String = "Ver mas";
+  verMas:boolean = false;
+
+  verMasClick(){
+    if(this.verMas == false){
+      this.verMasTexto = "Ver menos";
+      this.verMas = true;
+    }
+    else{
+      this.verMasTexto = "Ver mas";
+      this.verMas = false;
+    }
+  }
   ngOnInit(): void {
   }
 

@@ -1,3 +1,112 @@
-.titulo{
+.section{
   text-align: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.contenedor-estudios{
+  display:inline-flex;
+  width: 40vw;
+  text-align: center;
+}
+
+#estudios,#cursos{
+  display: inline-block;
+  width: fit-content;
+  margin:5px;
+  position:relative;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.texto-descripcion{
+  margin-left: 7px;
+  opacity: 80%;
+  font-size: 13px;
+  color:rgb(226, 231, 246);
+  transition:0.2s;
+  cursor:default;
+}
+.texto-descripcion:hover{
+  opacity: 100%;
+  transform: translateX(2px);
+}
+
+.titulo2{
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+.titulo3{
+  margin-top: 5px;
+  opacity: 95%;
+  margin-left: 5px;
+  color:rgb(129, 129, 183);
+}
+
+#estudios{
+  margin-bottom: 30px;
+}
+
+.curso{
+  opacity: 80%;
+}
+
+.margin-bottom{
+  margin-bottom: 40px;
+}
+
+.margin-top{
+  margin-top: 35px;
+}
+
+.info{
+  display:inline-block;
+  height:25px;
+  margin-left:4px;
+  transform:translateY(7px);
+}
+
+.info:hover{
+  background-color:rgba(255, 255, 255, 0.044);
+  border-radius: 8px;
+  cursor:pointer;
+}
+
+.editar{
+  display:inline;
+  opacity:70%;
+  padding:0px;
+  background-color: rgba(74, 74, 74, 0.203);
+  border:none;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 12px;
+  border-radius: 5px;
+  transform: translateY(2px);
+}
+.lapiz-editar{
+  height: 17px;
+}
+.editar:hover{
+  cursor:pointer;
+  opacity:95%;
+  background-color: rgba(74, 74, 74, 0.398);
+}
+
+@media (max-width:800px){
+  #estudios,#cursos{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:30px;
+  }
+  #cursos{
+    margin-top:70px;
+  }
+  .contenedor-estudios{
+    display:inline;
+    text-align: center;
+  }
 }

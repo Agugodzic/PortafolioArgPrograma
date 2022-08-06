@@ -1,0 +1,57 @@
+.form-control{
+  text-align: center;
+  margin:8px;
+}
+
+p{
+  color:black;
+  text-align: right;
+}
+
+form{
+  background-color: rgb(235, 235, 235);
+  width: 350px;
+  height: fit-content;
+  border-radius: 4px;
+  display:flex;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:15px;
+  padding-bottom:30px;
+  text-align: center;
+}
+
+#contenedor-form-controls{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#titulo{
+  font-size: 18px;
+  margin-bottom:20px;
+  text-align: center;
+}
+
+#crear-usuario{
+  font-size: 13px;
+  cursor:pointer;
+  opacity: 80%;
+  color:black;
+  border:none;
+  background-color: none;
+  margin-top: 5px;
+}
+
+.ingresar{
+  margin-top: 25px;
+  display:block;
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  cursor:pointer;
+}

@@ -2,11 +2,13 @@
   text-align: center;
   margin-top: 15px;
 }
+
 #banner{
   width: 95vw;
   opacity: 85%;
   box-shadow: 10px 5px 30px 5px rgba(0, 0, 0, 0.842);
 }
+
 #foto-perfil{
   width: 150px;
   border-radius: 100px;
@@ -86,6 +88,62 @@
   overflow: visible;
   padding-right: 15px;
 }
+
+
+.editar{
+  display:inline;
+  opacity:70%;
+  padding:0px;
+  background-color: rgba(74, 74, 74, 0.203);
+  border:none;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 12px;
+  border-radius: 5px;
+  transform: translateY(2px);
+}
+.lapiz-editar{
+  height: 17px;
+}
+.editar:hover{
+  cursor:pointer;
+  opacity:95%;
+  background-color: rgba(74, 74, 74, 0.398);
+}
+
+.informacion-personal{
+  margin-left:30vw;
+}
+
+.texto-informacion-personal{
+  text-align: left;
+  opacity:50%;
+  font-size: 13px;
+}
+
+.info-columna{
+  display: inline-block;
+  margin-right: 100px;
+}
+
+#ver-mas{
+  display:block;
+  background-color: rgba(0, 0, 0, 0);
+  border:none;
+  color:rgba(255, 255, 255, 0.458);
+  cursor:pointer;
+  font-size: 15px;
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+#ver-mas:hover{
+  color: rgba(252, 252, 252, 0.85);
+}
+
 
 @media (max-width:800px){
   #sobre-mi{

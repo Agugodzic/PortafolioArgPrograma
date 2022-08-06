@@ -21,3 +21,25 @@
   text-align: center;
   color:rgba(213, 224, 249, 0.815);
 }
+
+
+.editar{
+  display:inline;
+  opacity:70%;
+  padding:0px;
+  background-color: rgba(74, 74, 74, 0.203);
+  border:none;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-left: 12px;
+  border-radius: 5px;
+  transform: translateY(2px);
+}
+.lapiz-editar{
+  height: 17px;
+}
+.editar:hover{
+  cursor:pointer;
+  opacity:95%;
+  background-color: rgba(74, 74, 74, 0.398);
+}

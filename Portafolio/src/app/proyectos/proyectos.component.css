@@ -1,3 +1,58 @@
+.section{
+  min-height: 70vh;
+  text-align: center;
+}
+
 .titulo{
   text-align: center;
+  display: block;
+}
+
+.contenedor-proyectos{
+  display: inline-flex;
+  direction: row;
+}
+.proyecto{
+  background-color: rgba(0, 0, 255, 0.06);
+  margin:20px;
+  width: 320px;
+  border-radius: 3px;
+  padding:5px;
+  padding-bottom:20px;
+  padding-top:10px;
+}
+.titulo-proyecto{
+  display: block;
+}
+
+.descripcion-poyecto{
+  display: block;
+}
+.texto-descripcion-proyecto{
+  opacity: 85%;
+  font-size: 13px;
+  margin:20px;
+}
+.boton-proyecto{
+  border:none;
+  background-color: rgba(255, 255, 255, 0.591);
+  color:rgba(0, 0, 0, 0.984);
+  padding:3px 5px 3px 5px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.boton-proyecto:hover{
+  cursor:pointer;
+  background-color: rgba(255, 255, 255, 0.885);
+}
+
+.imagen-proyecto{
+  width:314px;
+  border-radius: 3px;
+  }
+
+.estado{
+  opacity: 50%;
+  font-size: 13px;
 }

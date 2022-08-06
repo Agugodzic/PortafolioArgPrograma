@@ -29,8 +29,9 @@ export class DatosService {
     mas: "https://i.postimg.cc/qv6m2hrY/mas3.png",
     subir:"https://i.postimg.cc/7Ym5YF4K/subir.png",
     separadorNegro:"https://i.postimg.cc/CLZYWxMK/separador-Negro.png",
-    separadorBlanco:"https://i.postimg.cc/jjjr4x1K/separador-Blanco.png"
-  }
+    separadorBlanco:"https://i.postimg.cc/jjjr4x1K/separador-Blanco.png",
+    info:"https://i.postimg.cc/T2jR0nRM/info-icon-147458.png"
+  };
 
   Link = {
     argPrograma:"https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa",
@@ -38,7 +39,7 @@ export class DatosService {
     instagram:"https://www.instagram.com/agugodzic/",
     gitHub:"https://github.com/Agugodzic",
     linkedin:"https://www.linkedin.com/in/agust%C3%ADn-godzic-109b09188/"
-  }
+  };
 
   Info = {
     edad:25,
@@ -47,7 +48,7 @@ export class DatosService {
     titulo:"Full Stack Developer Jr",
     sobreMi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     experiencia:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
-  }
+  };
 
   Experiencia = [
     {
@@ -74,7 +75,7 @@ export class DatosService {
       tiempo:8,
       unidad:"meses"
     },
-  ]
+  ];
 
   Habilidades = [
     {
@@ -114,6 +115,33 @@ export class DatosService {
       nivel:70
     }
 
-  ]
+  ];
+
+  Proyectos = [
+    {
+      titulo:"Portafolio Argentina",
+      descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
+      linkPreview:"",
+      linkGitHub:"",
+      linkImagen:"https://i.postimg.cc/bw36jQRs/preview-portafolio.png",
+      estado:"En desarrollo"
+    },
+    {
+      titulo:"Tienda Online de Hardware",
+      descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
+      linkPreview:"",
+      linkGitHub:"",
+      linkImagen:"https://i.postimg.cc/NjgNVNm3/preview-Tienda.png",
+      estado:"En desarrollo"
+    },
+    {
+      titulo:"Backing Tracks Online",
+      descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
+      linkPreview:"",
+      linkGitHub:"",
+      linkImagen:"",
+      estado:"En desarrollo"
+    }
+  ];
 
 }
