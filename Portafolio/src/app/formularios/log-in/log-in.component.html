@@ -1,1 +1,10 @@
-<p>log-in works!</p>
+
+<form [formGroup]="logIn">
+  <div id="contenedor-form-controls">
+  <p id="titulo">Iniciar Sesión</p>
+  <p>Usuario<input class="form-control" type="text" formControlName="usuario"></p>
+  <p>Contraseña<input class="form-control" type="password" formControlName="contraseña"></p>
+  <input class="form-control ingresar" value="ingresar" type="submit">
+  <button id="crear-usuario">Crear Usuario</button>
+  </div>
+</form>

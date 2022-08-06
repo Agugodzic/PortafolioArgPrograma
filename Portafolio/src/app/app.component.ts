@@ -9,8 +9,17 @@ import { DatosService } from './datos.service';
 export class AppComponent {
   constructor(private Datos:DatosService){
   }
-
   Imagen = this.Datos.Imagen;
   Link = this.Datos.Link;
+
+  mostrarLogIn:boolean = false;
+
+  switchLogIn():void{
+    if(this.mostrarLogIn == true){
+      this.mostrarLogIn = false;
+    }else{
+      this.mostrarLogIn = true;
+    }
+  }
 }
 
