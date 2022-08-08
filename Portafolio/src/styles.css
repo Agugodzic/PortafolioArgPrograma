@@ -31,3 +31,30 @@ a{
 .section{
   display: block;
 }
+
+
+.cerrar{
+  position:absolute;
+  top:20px;
+  left:20px;
+  cursor:pointer;
+  border:none;
+  opacity:80%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.cerrar:hover{
+  opacity: 100%;
+}
+
+.imagen-cerrar{
+  height: 26px;
+}
+
+.centrar{
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  direction:row;
+}

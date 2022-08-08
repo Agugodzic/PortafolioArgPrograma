@@ -10,11 +10,22 @@ import { DatosService } from 'src/app/datos.service';
 export class LogInComponent implements OnInit {
 
   constructor(private datos:DatosService) { }
-  Imagen = this.datos.Imagen;
+  Imagen:any = this.datos.Imagen;
+  registrado:boolean = true;
 
   logIn = new FormGroup(
     {}
   )
+  crearUsuario = new FormGroup(
+    {}
+  )
+
+  crearUsuarioClick(){
+    this.registrado = false;
+  }
+  ingresarClick(){
+    this.registrado = true;
+  }
 
   ngOnInit(): void {
   }

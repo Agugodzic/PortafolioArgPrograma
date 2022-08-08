@@ -1,8 +1,27 @@
 <div class="section">
+  <!-- Formularios -->
+
+  <div id="contenedor-formulario" *ngIf="mostrarEditarPortada">
+    <button class="cerrar" (click)="switchPortada()"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
+    <div class="centrar">
+      <app-editar-portada></app-editar-portada>
+    </div>
+  </div>
+
+  <div id="contenedor-formulario" *ngIf="mostrarEditarInfo">
+    <button class="cerrar" (click)="switchInfo()"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
+    <div class="centrar">
+      <app-editar-info></app-editar-info>
+    </div>
+  </div>
+
+  <!----------------->
+
 <div id="contenedor-banner">
   <img id="banner" [src]="Imagen.banner3">
-  <button id="editar-portada"><img id="lapiz-banner" [src]="Imagen.lapiz">Editar portada</button>
+  <button id="editar-portada" (click)="switchPortada()"><img id="lapiz-banner" [src]="Imagen.lapiz">Editar portada</button>
 </div>
+
 <div id="contenedor-perfil">
   <img id="foto-perfil" [src]="Imagen.perfil">
   <div id="editar-foto">
@@ -11,19 +30,27 @@
   <p id="nombre">{{ Info.nombre.toUpperCase() +" "+ Info.apellido.toUpperCase()  }}</p>
   <p id="titulo">{{ Info.titulo }}</p>
 </div>
-<div id="sobre-mi">SOBRE MI<button class="editar"><img class="lapiz-editar" [src]="Imagen.lapiz"></button>
+
+<div id="sobre-mi">SOBRE MI<button class="editar" (click)="switchInfo()"><img class="lapiz-editar" [src]="Imagen.lapiz"></button>
   <p>{{Info.sobreMi}}</p>
 </div>
+
 <div class="informacion-personal" *ngIf="verMas">
   <div class="info-columna">
-    <p class="texto-informacion-personal">Edad: 25 Años</p>
-    <p class="texto-informacion-personal">Cel: 342 5419964</p>
+    <p class="texto-informacion-personal">Edad: {{Info.edad}} Años</p>
+    <p class="texto-informacion-personal">Cel: {{Info.telefono}} </p>
   </div>
   <div class="info-columna">
-    <p class="texto-informacion-personal">Santa Fe (3000) - Argentina</p>
-    <p class="texto-informacion-personal">Email: agugodzic@gmail.com</p>
+    <p class="texto-informacion-personal">{{Info.ciudad+" ("+Info.codigoPostal+")"}}</p>
+    <p class="texto-informacion-personal">Email: {{Info.email}}</p>
+  </div>
+  <div class="info-columna">
+    <p class="texto-informacion-personal">Nacionalidad: {{Info.pais}}</p>
+    <p class="texto-informacion-personal">{{Info.otros}}
+    </p>
   </div>
 </div>
+
   <button id="ver-mas" (click)="verMasClick()">{{verMasTexto}}</button>
 
 </div>

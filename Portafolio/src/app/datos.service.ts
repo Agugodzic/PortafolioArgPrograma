@@ -9,6 +9,14 @@ export class DatosService {
 
   constructor() { }
 
+  Banner = [
+    {indice:0,link:"https://i.postimg.cc/vB4rzrQX/banner2.png"},
+    {indice:1,link:"https://i.pinimg.com/originals/0f/81/ac/0f81ac43b11ce36b81d803077f7584b0.jpg"},
+    {indice:2,link:"https://i.postimg.cc/VNjZ5sfP/banner3.png"},
+    {indice:3,link:"https://i.postimg.cc/bw5KTbST/close-up-image-of-programer-working-at-his-desk-in-office.png"},
+    {indice:4,link:"https://i.postimg.cc/C5Hgr1pK/banner4.jpg"}
+    ];
+
   Imagen = {
     logIn:"https://i.postimg.cc/N0YyV1d9/log-in.png",
     argPrograma:"https://i.postimg.cc/B6Jvb4cB/arg-programa2.png",
@@ -30,7 +38,8 @@ export class DatosService {
     subir:"https://i.postimg.cc/7Ym5YF4K/subir.png",
     separadorNegro:"https://i.postimg.cc/CLZYWxMK/separador-Negro.png",
     separadorBlanco:"https://i.postimg.cc/jjjr4x1K/separador-Blanco.png",
-    info:"https://i.postimg.cc/T2jR0nRM/info-icon-147458.png"
+    info:"https://i.postimg.cc/T2jR0nRM/info-icon-147458.png",
+    atras:"https://i.postimg.cc/wBfp0ST3/atras.png"
   };
 
   Link = {
@@ -42,9 +51,15 @@ export class DatosService {
   };
 
   Info = {
+    otros:"Ciudadania Italiana",
+    ciudad:"Santa Fe",
+    codigoPostal:"3000",
+    telefono:"342 5419964",
+    pais:"Argentina",
     edad:25,
     nombre:"Agustín",
     apellido:"Godzic",
+    email:"agugodzic@gmail.com",
     titulo:"Full Stack Developer Jr",
     sobreMi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     experiencia:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
