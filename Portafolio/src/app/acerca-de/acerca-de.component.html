@@ -30,15 +30,17 @@
 
 <div class="informacion-personal" *ngIf="verMas">
   <div class="info-columna">
-    <p class="texto-informacion-personal">Edad: 25 Años</p>
-    <p class="texto-informacion-personal">Cel: 342 5419964</p>
+    <p class="texto-informacion-personal">Edad: {{Info.edad}} Años</p>
+    <p class="texto-informacion-personal">Cel: {{Info.telefono}} </p>
   </div>
   <div class="info-columna">
-    <p class="texto-informacion-personal">Santa Fe (3000) - Argentina</p>
+    <p class="texto-informacion-personal">{{Info.ciudad}}</p>
     <p class="texto-informacion-personal">Email: agugodzic@gmail.com</p>
   </div>
   <div class="info-columna">
-    <p class="texto-informacion-personal">Full Stack Developer Jr</p>
+    <p class="texto-informacion-personal">Nacionalidad: {{Info.pais}}</p>
+    <p class="texto-informacion-personal">{{Info.otros}}
+    </p>
   </div>
 </div>
 

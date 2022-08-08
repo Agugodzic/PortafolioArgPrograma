@@ -32,12 +32,12 @@
 
 .imagen-banner{
   height: 120px;
+  width: 380px;
   display:block;
   margin:20px;
   border-radius: 4px;
   cursor:pointer;
   box-shadow:3px 3px 10px 2px#000000ad;
-
 }
 
 #ventana::-webkit-scrollbar{

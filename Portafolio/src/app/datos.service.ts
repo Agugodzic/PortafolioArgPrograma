@@ -51,6 +51,10 @@ export class DatosService {
   };
 
   Info = {
+    otros:"Ciudadania Italiana",
+    ciudad:"Santa Fe (3000)",
+    telefono:"342 5419964",
+    pais:"Argentina",
     edad:25,
     nombre:"Agustín",
     apellido:"Godzic",
