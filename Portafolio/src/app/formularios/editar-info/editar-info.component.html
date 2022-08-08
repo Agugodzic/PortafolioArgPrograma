@@ -1,1 +1,17 @@
-<p>editar-info works!</p>
+<form class="scroll" [formGroup]="info" *ngIf="cargarFormulario">
+  <div id="contenedor-form-controls">
+  <p id="titulo">Informacion de contacto:</p>
+  <p><input class="form-control" type="text" [value]="Info.nombre" placeholder="Nombre" formControlName="nombre"></p>
+  <p><input class="form-control" type="text" [value]="Info.apellido" placeholder="Apellido" formControlName="apellido"></p>
+  <p><input class="form-control" type="email" [value]="Info.email" placeholder="Email" formControlName="email"></p>
+  <p><input class="form-control" type="number" [value]="Info.edad" placeholder="Edad" formControlName="edad"></p>
+  <p><input class="form-control" type="text" [value]="Info.titulo" placeholder="Titulo o Profesion" formControlName="titulo"></p>
+  <p><input class="form-control" type="tel" [value]="Info.telefono" placeholder="Telefono" formControlName="telefono"></p>
+  <p><input class="form-control" type="text" [value]="Info.ciudad" placeholder="Ciudad" formControlName="nombre"></p>
+  <p><input class="form-control" type="text" [value]="Info.codigoPostal" placeholder="Codigo postal" formControlName="nombre"></p>
+  <p><input class="form-control" type="text" [value]="Info.pais" placeholder="Pais" formControlName="nombre"></p>
+  <p><input class="form-control" type="text" [value]="Info.otros" placeholder="Otro" formControlName="nombre"></p>
+  <p><textarea class="campo-de-texto scroll" [value]="Info.sobreMi " placeholder="Informacion sobre ti."></textarea></p>
+  <input class="form-control guardar" value="Guardar" type="submit">
+  </div>
+</form>

@@ -15,6 +15,7 @@ export class AcercaDeComponent implements OnInit {
   verMasTexto:String = "Ver mas";
   verMas:boolean = false;
   mostrarEditarPortada = false;
+  mostrarEditarInfo = false;
 
   verMasClick(){
     if(this.verMas == false){
@@ -32,6 +33,13 @@ export class AcercaDeComponent implements OnInit {
       this.mostrarEditarPortada = false;
     }else{
       this.mostrarEditarPortada = true;
+    }
+  }
+  switchInfo():void{
+    if(this.mostrarEditarInfo == true){
+      this.mostrarEditarInfo = false;
+    }else{
+      this.mostrarEditarInfo = true;
     }
   }
   ngOnInit(): void {

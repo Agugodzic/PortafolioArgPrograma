@@ -52,12 +52,14 @@ export class DatosService {
 
   Info = {
     otros:"Ciudadania Italiana",
-    ciudad:"Santa Fe (3000)",
+    ciudad:"Santa Fe",
+    codigoPostal:"3000",
     telefono:"342 5419964",
     pais:"Argentina",
     edad:25,
     nombre:"Agustín",
     apellido:"Godzic",
+    email:"agugodzic@gmail.com",
     titulo:"Full Stack Developer Jr",
     sobreMi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     experiencia:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
