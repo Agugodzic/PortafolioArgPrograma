@@ -8,12 +8,11 @@ import { DatosService } from 'src/app/datos.service';
 })
 export class EditarPortadaComponent implements OnInit {
 
-  constructor(private datos:DatosService) {
-   }
+  constructor(private datos:DatosService) {}
 
   Banner:any = this.datos.Banner;
-  banner:string=this.Banner.banner3;
-
+  banner:string = this.Banner.banner3;
+  numeros:any = this.datos.Banner;
   bannerClick(banner:string):void{
     this.banner=banner;
   }

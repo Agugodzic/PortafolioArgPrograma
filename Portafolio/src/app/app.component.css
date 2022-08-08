@@ -120,6 +120,8 @@ p{
   display: flex;
   align-items: center;
   margin: 0;
+  top:0px;
+  left:0px;
 }
 
 .cerrar{

@@ -27,8 +27,9 @@ import { EditarPortadaComponent } from './formularios/editar-portada/editar-port
     EstudiosComponent,
     ProyectosComponent,
     EditarExperienciaComponent,
-    EditarHabilidadComponent,
     EditarPortadaComponent,
+    EditarHabilidadComponent,
+
   ],
   imports: [
     BrowserModule,

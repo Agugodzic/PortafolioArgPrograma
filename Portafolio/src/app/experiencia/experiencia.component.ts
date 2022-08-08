@@ -10,7 +10,7 @@ import { DatosService } from '../datos.service';
 export class ExperienciaComponent implements OnInit {
 
   constructor(private datos:DatosService) { }
-  Experiencia  = this.datos.Experiencia;
+  Experiencia:any  = this.datos.Experiencia;
   Info = this.datos.Info;
   Imagen = this.datos.Imagen;
   ngOnInit(): void {

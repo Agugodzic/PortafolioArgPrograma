@@ -8,13 +8,14 @@ import { Injectable } from '@angular/core';
 export class DatosService {
 
   constructor() { }
-  Banner = {
-    banner:"https://i.postimg.cc/vB4rzrQX/banner2.png",
-    banner2:"https://i.pinimg.com/originals/0f/81/ac/0f81ac43b11ce36b81d803077f7584b0.jpg",
-    banner3:"https://i.postimg.cc/VNjZ5sfP/banner3.png",
-    banner4:"https://i.postimg.cc/bw5KTbST/close-up-image-of-programer-working-at-his-desk-in-office.png",
-    banner5:"https://i.postimg.cc/C5Hgr1pK/banner4.jpg",
-  };
+
+  Banner = [
+    {indice:0,link:"https://i.postimg.cc/vB4rzrQX/banner2.png"},
+    {indice:1,link:"https://i.pinimg.com/originals/0f/81/ac/0f81ac43b11ce36b81d803077f7584b0.jpg"},
+    {indice:2,link:"https://i.postimg.cc/VNjZ5sfP/banner3.png"},
+    {indice:3,link:"https://i.postimg.cc/bw5KTbST/close-up-image-of-programer-working-at-his-desk-in-office.png"},
+    {indice:4,link:"https://i.postimg.cc/C5Hgr1pK/banner4.jpg"}
+    ];
 
   Imagen = {
     logIn:"https://i.postimg.cc/N0YyV1d9/log-in.png",
