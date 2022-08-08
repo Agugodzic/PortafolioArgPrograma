@@ -1,11 +1,14 @@
 <span id="top"></span>
+<!-- Formularios -->
 
-<div id="contenedor-log-in" *ngIf="mostrarLogIn">
+<div id="contenedor-formulario" *ngIf="mostrarLogIn">
+  <button class="cerrar" (click)="switchLogIn()"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
   <div class="centrar">
     <app-log-in></app-log-in>
-    <button class="cerrar" (click)="switchLogIn()">x</button>
   </div>
 </div>
+
+<!----------------->
 
 <div id="nav">
   <a class="boton" [href]="Link.argPrograma" target="_blank">

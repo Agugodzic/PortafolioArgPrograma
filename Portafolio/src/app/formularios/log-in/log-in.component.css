@@ -1,6 +1,9 @@
 .form-control{
-  text-align: center;
+  text-align: left;
   margin:8px;
+  height: 25px;
+  font-size: 15px;
+  padding-left: 5px;
 }
 
 p{
@@ -21,6 +24,7 @@ form{
   padding-top:15px;
   padding-bottom:30px;
   text-align: center;
+  z-index:1000;
 }
 
 #contenedor-form-controls{
@@ -36,13 +40,17 @@ form{
 }
 
 #crear-usuario{
-  font-size: 13px;
+  font-size: 14px;
   cursor:pointer;
   opacity: 80%;
   color:black;
   border:none;
   background-color: none;
   margin-top: 5px;
+}
+
+#crear-usuario:hover{
+  opacity: 100%;
 }
 
 .ingresar{
@@ -54,4 +62,12 @@ form{
   margin-right: auto;
   margin-bottom: 15px;
   cursor:pointer;
+  height:30px;
+  color:white;
+  background-color: #006fde;
+  border-radius: 4px;
+  border:none;
+}
+.ingresar:hover{
+  background-color: #0268cfe2;
 }

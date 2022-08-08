@@ -14,6 +14,7 @@ export class AppComponent {
 
   mostrarLogIn:boolean = false;
 
+
   switchLogIn():void{
     if(this.mostrarLogIn == true){
       this.mostrarLogIn = false;
@@ -21,5 +22,6 @@ export class AppComponent {
       this.mostrarLogIn = true;
     }
   }
+
 }
 

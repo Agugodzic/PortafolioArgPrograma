@@ -1,0 +1,6 @@
+<div id="ventana">
+  <p id="titulo">Seleccionar:</p>
+  <div class="preview" *ngFor="let banner of Banner">
+    <a class="banner" (click)="bannerClick(banner)"><img class="imagen-banner" [src]="banner"></a>
+  </div>
+</div>

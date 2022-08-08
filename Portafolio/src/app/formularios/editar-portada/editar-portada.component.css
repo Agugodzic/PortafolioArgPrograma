@@ -1,0 +1,32 @@
+#ventana{
+  background-color: rgb(235, 235, 235);
+  width: max-content;
+  height: fit-content;
+  border-radius: 4px;
+  display:flex;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding:20px;
+  padding-top:15px;
+  padding-bottom:30px;
+  text-align: center;
+  z-index:1000;
+}
+
+#titulo{
+  font-size: 18px;
+  margin-bottom:20px;
+  text-align: center;
+}
+
+.banner{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imagen-banner{
+  height: 30px;
+}

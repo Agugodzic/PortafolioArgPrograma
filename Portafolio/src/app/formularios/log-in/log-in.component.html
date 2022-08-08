@@ -1,10 +1,22 @@
 
-<form [formGroup]="logIn">
+<form [formGroup]="logIn" *ngIf="registrado">
   <div id="contenedor-form-controls">
   <p id="titulo">Iniciar Sesión</p>
-  <p>Usuario<input class="form-control" type="text" formControlName="usuario"></p>
-  <p>Contraseña<input class="form-control" type="password" formControlName="contraseña"></p>
-  <input class="form-control ingresar" value="ingresar" type="submit">
-  <button id="crear-usuario">Crear Usuario</button>
+  <p><input class="form-control" type="text" placeholder="Usuario" formControlName="usuario"></p>
+  <p><input class="form-control" type="password" placeholder="Contraseña" formControlName="contraseña"></p>
+  <input class="form-control ingresar" value="Ingresar" type="submit">
+  <button id="crear-usuario" (click)="crearUsuarioClick()">Crear Usuario</button>
+  </div>
+</form>
+
+<form [formGroup]="crearUsuario" *ngIf="registrado == false">
+  <div id="contenedor-form-controls">
+  <p id="titulo">Crear Usuario</p>
+  <p><input class="form-control" type="text" placeholder="Usuario" formControlName="usuario"></p>
+  <p><input class="form-control" type="email" placeholder="Email" formControlName="contraseña"></p>
+  <p><input class="form-control" type="password" placeholder="Contraseña" formControlName="contraseña"></p>
+  <p><input class="form-control" type="password" placeholder="Confirmar contraseña" formControlName="contraseña"></p>
+  <input class="form-control ingresar" value="Crear" type="submit">
+  <button id="crear-usuario" (click)="ingresarClick()">Ya estoy registrado</button>
   </div>
 </form>

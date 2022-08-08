@@ -111,32 +111,33 @@ p{
   opacity: 5%;
 }
 
-#contenedor-log-in{
+#contenedor-formulario{
   position:fixed;
   height:100vh;
   width: 100vw;
-  background-color:rgba(0, 0, 0, 0.583);
+  background-color:rgba(0, 0, 0, 0.712);
   z-index:1000;
   display: flex;
   align-items: center;
+  margin: 0;
 }
 
 .cerrar{
-  display:inline-block;
-  border-radius: 5px;
+  position:absolute;
+  top:20px;
+  left:20px;
   cursor:pointer;
-  margin-left: 8px;
-  height: 18px;
-  width: 18px;
   border:none;
-  transform:translateY(-20px);
-  opacity:50%;
-  background-color: rgba(255, 255, 255, 0.869);
-  color:rgb(0, 0, 0);
+  opacity:80%;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .cerrar:hover{
-  opacity: 80%;
+  opacity: 100%;
+}
+
+.imagen-cerrar{
+  height: 26px;
 }
 
 .centrar{

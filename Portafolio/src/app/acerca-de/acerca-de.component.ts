@@ -11,8 +11,10 @@ export class AcercaDeComponent implements OnInit {
   constructor(private datos:DatosService) { }
   Imagen:any = this.datos.Imagen;
   Info:any = this.datos.Info;
+  Banner:any = this.datos.Banner;
   verMasTexto:String = "Ver mas";
   verMas:boolean = false;
+  mostrarEditarPortada = false;
 
   verMasClick(){
     if(this.verMas == false){
@@ -22,6 +24,14 @@ export class AcercaDeComponent implements OnInit {
     else{
       this.verMasTexto = "Ver mas";
       this.verMas = false;
+    }
+  }
+
+  switchPortada():void{
+    if(this.mostrarEditarPortada == true){
+      this.mostrarEditarPortada = false;
+    }else{
+      this.mostrarEditarPortada = true;
     }
   }
   ngOnInit(): void {

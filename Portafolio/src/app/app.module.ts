@@ -14,6 +14,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EditarExperienciaComponent } from './formularios/editar-experiencia/editar-experiencia.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditarHabilidadComponent } from './formularios/editar-habilidad/editar-habilidad.component';
+import { EditarPortadaComponent } from './formularios/editar-portada/editar-portada.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     EstudiosComponent,
     ProyectosComponent,
     EditarExperienciaComponent,
+    EditarHabilidadComponent,
+    EditarPortadaComponent,
   ],
   imports: [
     BrowserModule,
