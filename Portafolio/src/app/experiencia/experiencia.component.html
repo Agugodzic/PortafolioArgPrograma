@@ -1,4 +1,15 @@
 <div class="section">
+    <!-- Formularios -->
+
+    <div id="contenedor-formulario" *ngIf="editarExperiencia">
+      <button class="cerrar" (click)="switchEditarExperiencia()"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
+      <div class="centrar">
+        <app-editar-experiencia></app-editar-experiencia>
+      </div>
+    </div>
+
+    <!----------------->
+
   <p class="titulo">EXPERIENCIA</p>
   <div id="contenedor-pestañas" >
     <div id="generador-pestañas" *ngFor="let elemento of Experiencia">

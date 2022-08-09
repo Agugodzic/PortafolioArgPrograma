@@ -1,1 +1,20 @@
-<p>editar-experiencia works!</p>
+<form [formGroup]="editarExperiencia" *ngIf="editar">
+  <div id="contenedor-form-controls">
+  <p><input class="form-control" type="text" placeholder="Puesto" formControlName="puesto"></p>
+  <p><input class="form-control" type="text" placeholder="Empresa o institucion" formControlName="empresa"></p>
+  <p><input class="form-control" type="number" placeholder="Tiempo en el cargo" formControlName="tiempo">
+  <select multiple name="tiempo en" id="drawfs">
+    <option>Años</option>
+    <option>Meses</option>
+  </select></p>
+  <input class="form-control ingresar" value="Guardar" type="submit">
+  </div>
+</form>
+
+<form [formGroup]="agregarExperiencia" *ngIf="agregar">
+  <div id="contenedor-form-controls">
+  <p><input class="form-control" type="text" placeholder="Usuario" formControlName="usuario"></p>
+  <p><input class="form-control" type="password" placeholder="Contraseña" formControlName="contraseña"></p>
+  <input class="form-control ingresar" value="Agregar" type="submit">
+  </div>
+</form>

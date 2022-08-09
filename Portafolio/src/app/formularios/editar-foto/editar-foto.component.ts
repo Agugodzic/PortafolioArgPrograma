@@ -12,6 +12,19 @@ export class EditarFotoComponent implements OnInit {
 
   Foto:any = this.datos.Foto;
   foto:string = this.Foto.banner3;
+  textoAgregar:string = "Agregar"
+
+  mostrarAgregar:boolean = false;
+
+  agregarSwitch():void{
+    if( this.mostrarAgregar == false ){
+      this.mostrarAgregar = true;
+      this.textoAgregar= "Listo"
+    }else{
+      this.mostrarAgregar = false;
+      this.textoAgregar= "Agregar"
+    };
+  }
 
   fotoClick(foto:string):void{
     this.foto=foto;

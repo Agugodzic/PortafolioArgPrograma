@@ -7,5 +7,9 @@
     </a>
   </div>
   </div>
-  <button id="agregar">Agregar</button>
+  <div *ngIf="mostrarAgregar">
+    <input id="input-link" type="link" placeholder="Link">
+    <input id="input-ok" type="submit" id="ok" value="Ok">
+  </div>
+  <button id="agregar" (click)="agregarSwitch()">{{textoAgregar}}</button>
 </div>

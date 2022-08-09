@@ -13,7 +13,7 @@
   overflow-y: scroll;
   max-height:60vh;
   border-radius: 5px;
-  width: 400px;
+  width: 480px;
 }
 
 #agregar{
@@ -86,4 +86,9 @@
 }
 #ventana::-webkit-scrollbar-thumb:hover{
   background-color: #000030ad;
+}
+
+#input-link{
+  height: 20px;
+  margin:5px;
 }
