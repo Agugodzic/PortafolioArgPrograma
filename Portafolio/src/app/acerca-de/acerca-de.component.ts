@@ -16,6 +16,7 @@ export class AcercaDeComponent implements OnInit {
   verMas:boolean = false;
   mostrarEditarPortada = false;
   mostrarEditarInfo = false;
+  mostrarEditarFoto = false;
 
   verMasClick(){
     if(this.verMas == false){
@@ -40,6 +41,13 @@ export class AcercaDeComponent implements OnInit {
       this.mostrarEditarInfo = false;
     }else{
       this.mostrarEditarInfo = true;
+    }
+  }
+  switchFoto():void{
+    if(this.mostrarEditarFoto == true){
+      this.mostrarEditarFoto = false;
+    }else{
+      this.mostrarEditarFoto = true;
     }
   }
   ngOnInit(): void {

@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EditarHabilidadComponent } from './formularios/editar-habilidad/editar-habilidad.component';
 import { EditarPortadaComponent } from './formularios/editar-portada/editar-portada.component';
 import { EditarInfoComponent } from './formularios/editar-info/editar-info.component';
+import { EditarFotoComponent } from './formularios/editar-foto/editar-foto.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { EditarInfoComponent } from './formularios/editar-info/editar-info.compo
     EditarPortadaComponent,
     EditarHabilidadComponent,
     EditarInfoComponent,
+    EditarFotoComponent,
 
   ],
   imports: [

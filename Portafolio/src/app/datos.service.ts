@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 
-
 export class DatosService {
 
   constructor() { }
@@ -16,6 +15,13 @@ export class DatosService {
     {indice:3,link:"https://i.postimg.cc/bw5KTbST/close-up-image-of-programer-working-at-his-desk-in-office.png"},
     {indice:4,link:"https://i.postimg.cc/C5Hgr1pK/banner4.jpg"}
     ];
+
+  Foto = [
+    {id:1 , link:"https://i.postimg.cc/Yq1STwMq/imagenCV.png"},
+    {id:2 , link:"https://i.postimg.cc/TKBs7w71/perfil2.jpg"},
+    {id:3 , link:"https://i.postimg.cc/Xp7tXtBj/perfil3.jpg"},
+    {id:4 , link:"https://i.postimg.cc/VJJTWMF2/perfil4.jpg"},
+  ]
 
   Imagen = {
     logIn:"https://i.postimg.cc/N0YyV1d9/log-in.png",

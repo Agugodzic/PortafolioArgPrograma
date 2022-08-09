@@ -15,6 +15,13 @@
     </div>
   </div>
 
+  <div id="contenedor-formulario" *ngIf="mostrarEditarFoto">
+    <button class="cerrar" (click)="switchFoto()"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
+    <div class="centrar">
+      <app-editar-foto></app-editar-foto>
+    </div>
+  </div>
+
   <!----------------->
 
 <div id="contenedor-banner">
@@ -24,7 +31,7 @@
 
 <div id="contenedor-perfil">
   <img id="foto-perfil" [src]="Imagen.perfil">
-  <div id="editar-foto">
+  <div id="editar-foto" (click)="switchFoto()">
     <img id="lapiz-foto" [src]="Imagen.lapizNegro">
   </div>
   <p id="nombre">{{ Info.nombre.toUpperCase() +" "+ Info.apellido.toUpperCase()  }}</p>

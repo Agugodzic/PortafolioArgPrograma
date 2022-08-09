@@ -1,0 +1,11 @@
+<div id="ventana">
+  <p id="titulo">Seleccionar:</p>
+  <div class="contenedor-fotos">
+  <div class="preview" *ngFor = "let foto of Foto">
+    <a class="foto" (click)="fotoClick(foto)">
+      <img class="imagen" [src]="foto.link">
+    </a>
+  </div>
+  </div>
+  <button id="agregar">Agregar</button>
+</div>
