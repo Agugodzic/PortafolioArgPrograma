@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter} from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { DatosService } from 'src/app/datos.service';
 
@@ -14,7 +14,9 @@ export class EditarInfoComponent implements OnInit {
   info = new FormGroup(
     {}
   )
+  propagar = new EventEmitter<string>();
   cargarFormulario=true;
+
   ngOnInit(): void {
   }
 

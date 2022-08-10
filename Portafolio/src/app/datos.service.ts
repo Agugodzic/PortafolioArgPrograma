@@ -80,21 +80,21 @@ export class DatosService {
       unidad:"años"
     },
     {
-      id:0,
+      id:1,
       puesto:"Desarollador Java",
       empresa:"Tecno Solutions S.A",
       tiempo:5,
       unidad:"años"
     },
     {
-      id:0,
+      id:2,
       puesto:"php Back End Developer",
       empresa:"Infiny Des",
       tiempo:4,
       unidad:"años"
     },
     {
-      id:0,
+      id:3,
       puesto:"Desarollador Front End Sr",
       empresa:"Tech y Dev S.A",
       tiempo:8,
