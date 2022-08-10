@@ -17,7 +17,8 @@ export class EditarExperienciaComponent{
     if(this.accion=="editar"){
       this.editar = true;
       this.agregar = false;
-    }else if(this.accion=="agregar"){
+    }
+    else if(this.accion=="agregar"){
       this.editar = false;
       this.agregar = true;
     }

@@ -18,9 +18,14 @@ export class ExperienciaComponent{
     this.Imagen = this.datos.Imagen;
   }
 
-  editarExperiencia:boolean=false;
+  editarExperiencia:boolean = false;
 
   switchEditarExperiencia():void{
+    if(this.editarExperiencia==false){
+      this.editarExperiencia = true;
+    }else{
+      this.editarExperiencia = false;
+    }
 
   }
 }
