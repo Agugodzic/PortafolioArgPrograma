@@ -1,20 +1,27 @@
-<form [formGroup]="editarExperiencia" *ngIf="editar">
+<form [formGroup]="editarExperiencia" *ngIf="editar()">
+  <p class="titulo">Editar experiencia</p>
   <div id="contenedor-form-controls">
-  <p><input class="form-control" type="text" placeholder="Puesto" formControlName="puesto"></p>
+  <p><input class="form-control" type="text" [value]="experiencia.id" placeholder="Puesto" formControlName="puesto"></p>
   <p><input class="form-control" type="text" placeholder="Empresa o institucion" formControlName="empresa"></p>
-  <p><input class="form-control" type="number" placeholder="Tiempo en el cargo" formControlName="tiempo">
-  <select multiple name="tiempo en" id="drawfs">
-    <option>Años</option>
-    <option>Meses</option>
+  <p><input class="form-control tiempo" type="number" placeholder="Tiempo" formControlName="tiempo">
+  <select name="tiempo en">
+    <option value="1">Años</option>
+    <option value="2">Meses</option>
   </select></p>
-  <input class="form-control ingresar" value="Guardar" type="submit">
+  <input class="form-control guardar" value="Guardar" type="submit">
   </div>
 </form>
 
-<form [formGroup]="agregarExperiencia" *ngIf="agregar">
+<form [formGroup]="agregarExperiencia" *ngIf="agregar()">
+  <p class="titulo">Agregar experiencia</p>
   <div id="contenedor-form-controls">
-  <p><input class="form-control" type="text" placeholder="Usuario" formControlName="usuario"></p>
-  <p><input class="form-control" type="password" placeholder="Contraseña" formControlName="contraseña"></p>
-  <input class="form-control ingresar" value="Agregar" type="submit">
+    <p><input class="form-control" type="text" placeholder="Puesto" formControlName="puesto"></p>
+    <p><input class="form-control" type="text" placeholder="Empresa o institucion" formControlName="empresa"></p>
+    <p><input class="form-control tiempo" type="number" placeholder="Tiempo" formControlName="tiempo">
+    <select name="tiempo en">
+      <option>Años</option>
+      <option>Meses</option>
+    </select></p>
+    <input class="form-control guardar" value="Agregar" type="submit">
   </div>
 </form>

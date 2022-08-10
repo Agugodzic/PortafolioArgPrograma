@@ -8,21 +8,20 @@ import { DatosService } from 'src/app/datos.service';
   styleUrls: ['./editar-experiencia.component.css']
 })
 export class EditarExperienciaComponent{
-  editar;
-  agregar;
   @Input() id:any;
   @Input() accion:any;
+  experiencia:any;
 
-  constructor(private datos:DatosService) {
-    if(this.accion=="editar"){
-      this.editar = true;
-      this.agregar = false;
-    }
-    else if(this.accion=="agregar"){
-      this.editar = false;
-      this.agregar = true;
-    }
-   }
+  constructor(private datos:DatosService ) {
+    this.experiencia = this.datos.Experiencia.find((elemento:any) => elemento.id == 1);
+  }
+
+  editar():boolean{
+    return this.accion == "editar";
+  }
+  agregar():boolean{
+    return this.accion =="agregar";
+  }
 
   editarExperiencia = new FormGroup(
     {}

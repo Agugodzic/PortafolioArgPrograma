@@ -2,9 +2,9 @@
     <!-- Formularios -->
 
     <div id="contenedor-formulario" *ngIf="editarExperiencia">
-      <button class="cerrar" (click)="switchEditarExperiencia()"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
+      <button class="cerrar" (click)="switchExperiencia('',0)"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
       <div class="centrar">
-        <app-editar-experiencia accion="agregar"></app-editar-experiencia>
+        <app-editar-experiencia [accion]="accion" [id]="id"></app-editar-experiencia>
       </div>
     </div>
 
@@ -26,12 +26,11 @@
         <div class="tiempo">
           <p class="descripcion-tiempo">{{elemento.tiempo + " " + elemento.unidad}}</p>
         </div>
-
       </div>
 
       <div class="botones">
 
-        <button class="boton" (click)="switchEditarExperiencia()">
+        <button class="boton" (click)="switchExperiencia('editar', elemento.id)">
           <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
         </button>
 
@@ -42,4 +41,4 @@
       </div>
     </div>
   </div>
-  <button id="mas-boton"><img id="mas-icono" [src]="Imagen.mas"></button>
+  <button id="mas-boton" (click)="switchExperiencia('agregar',0)"><img id="mas-icono" [src]="Imagen.mas" ></button>
