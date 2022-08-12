@@ -11,12 +11,7 @@
 
   <!----------------->
 
-
-  <p class="titulo">HABILIDADES
-    <a class="editar"(click)="switchHabilidades()" href="#actualizar-vista">
-      <img class="lapiz-editar" [src]="Imagen.lapiz">
-    </a>
-  </p>
+  <p class="titulo">HABILIDADES</p>
 
   <div id="contenedor-habilidades">
     <div class="habilidad" *ngFor="let habilidad of Habilidades">
@@ -30,8 +25,17 @@
     [subtitleFontSize]="'20'"
     [showSubtitle]="false"
     [backgroundPadding]="0"
-
     ></circle-progress>
+
+    <div class="botones">
+      <a class="editar"(click)="switchHabilidades()" href="#actualizar-vista">
+        <img class="lapiz-editar" [src]="Imagen.lapiz">
+      </a>
+        <a class="editar" href="#actualizar-vista">
+          <img class="borrar" [src]="Imagen.delete">
+        </a>
+    </div>
+
     </div>
   </div>
 </div>

@@ -11,7 +11,6 @@ export class EditarExperienciaComponent implements OnInit{
   @Input() id:any;
   @Input() accion:any;
   experiencia:any;
-  tiempo_value=8;
 
   constructor(private datos:DatosService ) {
   }
@@ -55,7 +54,6 @@ export class EditarExperienciaComponent implements OnInit{
 
   ngOnInit(): void {
     this.experiencia = this.generarExperiencia();
-
   }
 
   }
