@@ -14,6 +14,8 @@ export class EditarInfoComponent implements OnInit {
   info = new FormGroup(
     {}
   )
+
+  apellido="godzic";
   propagar = new EventEmitter<string>();
   cargarFormulario=true;
 

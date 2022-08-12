@@ -1,5 +1,22 @@
 <div class="section">
-  <p class="titulo margin-top">ESTUDIOS<button class="editar"><img class="lapiz-editar" [src]="Imagen.lapiz"></button></p>
+
+    <!-- Formularios -->
+
+    <div id="contenedor-formulario" *ngIf="mostrarEditarEstudios">
+      <button class="cerrar" (click)="switchEstudios()"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
+      <div class="centrar">
+        <app-editar-estudios></app-editar-estudios>
+      </div>
+    </div>
+
+    <!----------------->
+
+  <p class="titulo margin-top">ESTUDIOS
+    <button class="editar" (click)="switchEstudios()">
+      <img class="lapiz-editar" [src]="Imagen.lapiz">
+    </button>
+  </p>
+
   <div class="contenedor-estudios">
   <div id="estudios">
     <div id="titulo-secundario">

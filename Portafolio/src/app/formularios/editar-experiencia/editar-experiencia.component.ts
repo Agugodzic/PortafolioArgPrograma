@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, OnChanges } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { DatosService } from 'src/app/datos.service';
 
@@ -10,20 +10,32 @@ import { DatosService } from 'src/app/datos.service';
 export class EditarExperienciaComponent implements OnInit{
   @Input() id:any;
   @Input() accion:any;
+  experiencia:any;
+  tiempo_value=8;
 
   constructor(private datos:DatosService ) {
   }
 
-  experiencia:any = this.datos.Experiencia.find((elemento:any) => elemento.id == 1);
+  //experiencia:any = this.datos.Experiencia.find((elemento:any) => elemento.id == this.id);
+
+  generarExperiencia():any{
+    for(let experiencia of this.datos.Experiencia){
+      if(experiencia.id === this.id){
+        return experiencia;
+      }
+    }
+  }
+
+  valueEvent():void{
+
+  }
 
   mostrarElemento(){
     alert(this.id)
   }
-
   returnElemento():number{
     return this.id
   }
-
   editar():boolean{
     return this.accion == "editar";
   }
@@ -37,8 +49,12 @@ export class EditarExperienciaComponent implements OnInit{
   agregarExperiencia = new FormGroup(
     {}
   )
+  ngOnChanges():void{
+
+  }
 
   ngOnInit(): void {
+    this.experiencia = this.generarExperiencia();
 
   }
 

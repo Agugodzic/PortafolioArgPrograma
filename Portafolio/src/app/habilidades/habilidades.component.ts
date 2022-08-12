@@ -12,6 +12,15 @@ export class HabilidadesComponent implements OnInit {
 
   Habilidades = this.datos.Habilidades;
   Imagen = this.datos.Imagen;
+  mostrarEditarHabilidades = false;
+
+  switchHabilidades():void{
+    if(this.mostrarEditarHabilidades == true){
+      this.mostrarEditarHabilidades = false;
+    }else{
+      this.mostrarEditarHabilidades = true;
+    }
+  }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section"><span id="actualizar-vista"></span>
     <!-- Formularios -->
 
     <div id="contenedor-formulario" *ngIf="editarExperiencia">
@@ -30,9 +30,9 @@
 
       <div class="botones">
 
-        <button class="boton" (click)="switchExperiencia('editar', elemento.id)">
+        <a class="boton" (click)="switchExperiencia('editar', elemento.id)" href="#actualizar-vista">
           <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
-        </button>
+        </a>
 
         <button class="boton  boton-delete">
           <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>

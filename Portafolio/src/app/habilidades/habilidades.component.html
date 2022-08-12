@@ -1,5 +1,23 @@
-<div class="section">
-  <p class="titulo">HABILIDADES<button class="editar"><img class="lapiz-editar" [src]="Imagen.lapiz"></button></p>
+<div class="section"><span id="actualizar-vista"></span>
+
+   <!-- Formularios -->
+
+   <div id="contenedor-formulario" *ngIf="mostrarEditarHabilidades">
+    <button class="cerrar" (click)="switchHabilidades()"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
+    <div class="centrar">
+      <app-editar-habilidad></app-editar-habilidad>
+    </div>
+  </div>
+
+  <!----------------->
+
+
+  <p class="titulo">HABILIDADES
+    <a class="editar"(click)="switchHabilidades()" href="#actualizar-vista">
+      <img class="lapiz-editar" [src]="Imagen.lapiz">
+    </a>
+  </p>
+
   <div id="contenedor-habilidades">
     <div class="habilidad" *ngFor="let habilidad of Habilidades">
     <circle-progress

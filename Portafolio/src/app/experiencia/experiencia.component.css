@@ -124,3 +124,11 @@ p{
   margin:8px 4px 5px 4px;
   opacity: 80%;
 }
+
+
+#actualizar-vista{
+  position:fixed;
+  top:0px;
+  left:0px;
+}
+

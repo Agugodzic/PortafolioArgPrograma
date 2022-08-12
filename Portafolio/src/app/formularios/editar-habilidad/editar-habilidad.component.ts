@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { VirtualTimeScheduler } from 'rxjs';
+import { DatosService } from 'src/app/datos.service';
 
 @Component({
   selector: 'app-editar-habilidad',
@@ -7,8 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarHabilidadComponent implements OnInit {
 
-  constructor() { }
+  constructor(private datos:DatosService) { }
 
+  Habilidades = this.datos.Habilidades;
+  Info = this.datos.Info;
+  info = new FormGroup(
+    {}
+  )
+
+  apellido="godzic";
+  cargarFormulario=true;
   ngOnInit(): void {
   }
 

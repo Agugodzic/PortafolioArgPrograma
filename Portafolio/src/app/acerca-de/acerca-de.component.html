@@ -1,4 +1,5 @@
-<div class="section">
+<div class="section"><span id="actualizar-vista-info"></span>
+
   <!-- Formularios -->
 
   <div id="contenedor-formulario" *ngIf="mostrarEditarPortada">
@@ -38,7 +39,10 @@
   <p id="titulo">{{ Info.titulo }}</p>
 </div>
 
-<div id="sobre-mi">SOBRE MI<button class="editar" (click)="switchInfo()"><img class="lapiz-editar" [src]="Imagen.lapiz"></button>
+<div id="sobre-mi">SOBRE MI
+  <a class="editar" (click)="switchInfo()" href="#actualizar-vista-info">
+    <img class="lapiz-editar" [src]="Imagen.lapiz">
+  </a>
   <p>{{Info.sobreMi}}</p>
 </div>
 

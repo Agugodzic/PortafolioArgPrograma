@@ -11,6 +11,15 @@ export class EstudiosComponent implements OnInit {
   constructor(private datos:DatosService) { }
 
   Imagen = this.datos.Imagen;
+  mostrarEditarEstudios:boolean = false;
+
+  switchEstudios():void{
+    if(this.mostrarEditarEstudios == true){
+      this.mostrarEditarEstudios = false;
+    }else{
+      this.mostrarEditarEstudios = true;
+    }
+  }
 
   ngOnInit(): void {
   }

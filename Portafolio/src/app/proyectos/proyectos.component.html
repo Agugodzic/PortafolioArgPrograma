@@ -1,5 +1,17 @@
 <div class="section">
-  <p class="titulo">PROYECTOS</p>
+
+      <!-- Formularios -->
+
+      <div id="contenedor-formulario" *ngIf="mostrarEditarProyecto">
+        <button class="cerrar" (click)="switchProyecto()"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
+        <div class="centrar">
+          <app-editar-estudios></app-editar-estudios>
+        </div>
+      </div>
+
+      <!----------------->
+
+  <p class="titulo">PROYECTOS <button (click)="switchProyecto()">Editar</button></p>
   <div class="contenedor-proyectos">
   <div *ngFor=" let proyecto of Proyectos">
     <div class="proyecto">
