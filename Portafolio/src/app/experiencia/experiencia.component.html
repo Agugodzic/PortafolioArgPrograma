@@ -1,4 +1,15 @@
-<div class="section">
+<div class="section"><span id="actualizar-vista"></span>
+    <!-- Formularios -->
+
+    <div id="contenedor-formulario" *ngIf="editarExperiencia">
+      <button class="cerrar" (click)="switchExperiencia('',0)"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
+      <div class="centrar">
+        <app-editar-experiencia [accion]="accion" [id]="id"></app-editar-experiencia>
+      </div>
+    </div>
+
+    <!----------------->
+
   <p class="titulo">EXPERIENCIA</p>
   <div id="contenedor-pestañas" >
     <div id="generador-pestañas" *ngFor="let elemento of Experiencia">
@@ -15,14 +26,13 @@
         <div class="tiempo">
           <p class="descripcion-tiempo">{{elemento.tiempo + " " + elemento.unidad}}</p>
         </div>
-
       </div>
 
       <div class="botones">
 
-        <button class="boton">
+        <a class="boton" (click)="switchExperiencia('editar', elemento.id)" href="#actualizar-vista">
           <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
-        </button>
+        </a>
 
         <button class="boton  boton-delete">
           <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
@@ -31,4 +41,4 @@
       </div>
     </div>
   </div>
-  <button id="mas-boton"><img id="mas-icono" [src]="Imagen.mas"></button>
+  <button id="mas-boton" (click)="switchExperiencia('agregar',0)"><img id="mas-icono" [src]="Imagen.mas" ></button>

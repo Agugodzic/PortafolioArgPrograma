@@ -1,0 +1,104 @@
+.form-control{
+  text-align: left;
+  margin:8px;
+  height: 25px;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+p{
+  color:black;
+  text-align: right;
+}
+
+form{
+  background-color: rgb(235, 235, 235);
+  width: 350px;
+  height: 88vh;
+  border-radius: 4px;
+  display:flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:15px;
+  padding-bottom:30px;
+  text-align: center;
+  z-index:1000;
+  overflow-y: scroll;
+}
+
+#contenedor-form-controls{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#titulo{
+  position:relative;
+  margin-top: 1px;
+  font-size: 18px;
+  margin-bottom:20px;
+  text-align: center;
+}
+
+#crear-usuario{
+  font-size: 14px;
+  cursor:pointer;
+  opacity: 80%;
+  color:black;
+  border:none;
+  background-color: none;
+  margin-top: 5px;
+}
+
+#crear-usuario:hover{
+  opacity: 100%;
+}
+
+.guardar{
+  margin-top: 25px;
+  display:block;
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  cursor:pointer;
+  height:30px;
+  color:white;
+  background-color: #006fde;
+  border-radius: 4px;
+  border:none;
+}
+.guardar:hover{
+  background-color: #0268cfe2;
+}
+
+.campo-de-texto{
+  height: 100px;
+  width: 210px;
+}
+
+.scroll::-webkit-scrollbar{
+  width: 9px;
+  height: 0px;
+  position:absolute;
+  cursor:pointer;
+}
+.scroll::-webkit-scrollbar-track{
+  background-color: rgba(235, 235, 235, 0);
+  position:absolute;
+  border-radius: 4px;
+
+}
+
+.scroll::-webkit-scrollbar-thumb{
+  background-color: #120e7e79;
+  border-radius: 7px;
+  position:absolute;
+
+}
+.scroll::-webkit-scrollbar-thumb:hover{
+  background-color: #000030ad;
+}
+

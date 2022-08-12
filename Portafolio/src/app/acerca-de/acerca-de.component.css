@@ -157,6 +157,12 @@
   margin: 0;
 }
 
+#actualizar-vista-info{
+  position:fixed;
+  top:1px;
+  left:0px;
+}
+
 @media (max-width:800px){
   #sobre-mi{
     margin-left:40vw;

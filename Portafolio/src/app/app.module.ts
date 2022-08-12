@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EditarHabilidadComponent } from './formularios/editar-habilidad/editar-habilidad.component';
 import { EditarPortadaComponent } from './formularios/editar-portada/editar-portada.component';
 import { EditarInfoComponent } from './formularios/editar-info/editar-info.component';
+import { EditarFotoComponent } from './formularios/editar-foto/editar-foto.component';
+import { EditarEstudiosComponent } from './formularios/editar-estudios/editar-estudios.component';
+import { EditarProyectosComponent } from './formularios/editar-proyectos/editar-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +35,15 @@ import { EditarInfoComponent } from './formularios/editar-info/editar-info.compo
     EditarPortadaComponent,
     EditarHabilidadComponent,
     EditarInfoComponent,
+    EditarFotoComponent,
+    EditarEstudiosComponent,
+    EditarProyectosComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({
       "radius": 60,
       "space": -10,
