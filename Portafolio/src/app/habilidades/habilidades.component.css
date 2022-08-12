@@ -76,4 +76,24 @@
   left:0px;
 }
 
+#mas-boton{
+  display:block;
+  background-color: rgba(47, 48, 78, 0.347);
+  border:none;
+  cursor:pointer;
+  border-radius: 5px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
 
+#mas-boton:hover{
+  background-color: rgba(56, 63, 80, 0.664);
+}
+
+#mas-icono{
+  height: 15px;
+  margin:8px 4px 5px 4px;
+  opacity: 80%;
+}

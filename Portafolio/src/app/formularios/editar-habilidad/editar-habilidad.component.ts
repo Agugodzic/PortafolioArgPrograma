@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { VirtualTimeScheduler } from 'rxjs';
 import { DatosService } from 'src/app/datos.service';
@@ -10,17 +10,39 @@ import { DatosService } from 'src/app/datos.service';
 })
 export class EditarHabilidadComponent implements OnInit {
 
-  constructor(private datos:DatosService) { }
+  @Input() id:any;
+  @Input() accion:any;
 
-  Habilidades = this.datos.Habilidades;
-  Info = this.datos.Info;
+  Habilidad:any;
+
+  mostrarElemento(){
+    alert(this.id)
+  }
+
+  constructor(private datos:DatosService) {
+   }
+
+  editar():boolean{
+    return this.accion == "editar";
+  }
+  agregar():boolean{
+    return this.accion == "agregar";
+  }
+
+
+  editarHabilidad = new FormGroup(
+    {}
+  )
+  agregarHabilidad = new FormGroup(
+    {}
+  )
+
   info = new FormGroup(
     {}
   )
 
-  apellido="godzic";
-  cargarFormulario=true;
   ngOnInit(): void {
+    this.Habilidad = this.datos.Habilidades.find((elemento:any) => elemento.id == this.id);
   }
 
 }

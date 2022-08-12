@@ -14,21 +14,6 @@ export class EditarExperienciaComponent implements OnInit{
 
   constructor(private datos:DatosService ) {
   }
-
-  //experiencia:any = this.datos.Experiencia.find((elemento:any) => elemento.id == this.id);
-
-  generarExperiencia():any{
-    for(let experiencia of this.datos.Experiencia){
-      if(experiencia.id === this.id){
-        return experiencia;
-      }
-    }
-  }
-
-  valueEvent():void{
-
-  }
-
   mostrarElemento(){
     alert(this.id)
   }
@@ -53,7 +38,7 @@ export class EditarExperienciaComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.experiencia = this.generarExperiencia();
+    this.experiencia = this.datos.Experiencia.find((elemento:any) => elemento.id == this.id);
   }
 
   }

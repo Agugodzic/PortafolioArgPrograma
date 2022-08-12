@@ -104,38 +104,47 @@ export class DatosService {
 
   Habilidades = [
     {
+      id:0,
       habilidad:"Photoshop",
       nivel:75
     },
     {
+      id:1,
       habilidad:"Word",
       nivel:90
     },
     {
+      id:2,
       habilidad:"Excel",
       nivel:70
     },
     {
+      id:3,
       habilidad:"Python",
       nivel:65
     },
     {
+      id:4,
       habilidad:"Angular",
       nivel:75
     },
     {
+      id:5,
       habilidad:"Html",
       nivel:80
     },
     {
+      id:6,
       habilidad:"CSS",
       nivel:70
     },
     {
+      id:7,
       habilidad:"GitHub",
       nivel:80
     },
     {
+      id:8,
       habilidad:"Typescript",
       nivel:70
     }

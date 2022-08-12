@@ -7,18 +7,21 @@ import { DatosService } from '../datos.service';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit {
-
+  id:number=0;
+  accion:string="";
   constructor(private datos:DatosService) { }
 
   Habilidades = this.datos.Habilidades;
   Imagen = this.datos.Imagen;
-  mostrarEditarHabilidades = false;
+  mostrarEditarHabilidad = false;
 
-  switchHabilidades():void{
-    if(this.mostrarEditarHabilidades == true){
-      this.mostrarEditarHabilidades = false;
+  switchHabilidad(accion:string,id:number):void{
+    this.id = id;
+    this.accion = accion;
+    if(this.mostrarEditarHabilidad == true){
+      this.mostrarEditarHabilidad = false;
     }else{
-      this.mostrarEditarHabilidades = true;
+      this.mostrarEditarHabilidad = true;
     }
   }
 
