@@ -11,9 +11,11 @@
 
       <!----------------->
 
-  <p class="titulo">PROYECTOS <button (click)="switchProyecto()">Editar</button></p>
+  <p class="titulo">PROYECTOS </p>
   <div class="contenedor-proyectos">
-  <div *ngFor=" let proyecto of Proyectos">
+  <div class="generador-proyectos" *ngFor=" let proyecto of Proyectos">
+    <div class="pantalla-edicion">
+    </div>
     <div class="proyecto">
       <img class="imagen-proyecto" [src]="proyecto.linkImagen">
       <div class="titulo-proyecto"><p class="texto-titulo-proyecto">{{proyecto.titulo}}</p></div>

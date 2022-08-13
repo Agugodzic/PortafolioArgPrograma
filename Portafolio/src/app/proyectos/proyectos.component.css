@@ -12,6 +12,30 @@
   display: inline-flex;
   direction: row;
 }
+
+.lapiz-editar{
+  height: 17px;
+}
+
+.editar{
+  display:inline;
+  opacity:70%;
+  padding:0px;
+  background-color: rgba(74, 74, 74, 0.203);
+  border:none;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin: 8px;
+  border-radius: 5px;
+  transform: translateY(2px);
+}
+
+.editar:hover{
+  cursor:pointer;
+  opacity:95%;
+  background-color: rgba(74, 74, 74, 0.398);
+}
+
 .proyecto{
   background-color: rgba(0, 0, 255, 0.06);
   margin:20px;
@@ -28,11 +52,13 @@
 .descripcion-poyecto{
   display: block;
 }
+
 .texto-descripcion-proyecto{
   opacity: 85%;
   font-size: 13px;
   margin:20px;
 }
+
 .boton-proyecto{
   border:none;
   background-color: rgba(255, 255, 255, 0.591);
@@ -55,4 +81,22 @@
 .estado{
   opacity: 50%;
   font-size: 13px;
+}
+
+.pantalla-edicion{
+  position:absolute;
+  background-color: rgba(4, 4, 18, 0.803);
+  margin:20px;
+  width: 320px;
+  height: auto;
+  border-radius: 3px;
+  padding:5px;
+  padding-bottom:20px;
+  padding-top:10px;
+  opacity: 0%;
+  z-index: 2050;
+}
+
+.pantalla-edicion:hover{
+  opacity: 100%;
 }

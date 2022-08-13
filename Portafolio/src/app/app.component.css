@@ -124,22 +124,12 @@ p{
   left:0px;
 }
 
-.cerrar{
-  position:absolute;
-  top:20px;
-  left:20px;
-  cursor:pointer;
-  border:none;
-  opacity:80%;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.cerrar:hover{
-  opacity: 100%;
-}
-
 .imagen-cerrar{
-  height: 26px;
+  height: 20px;
+}
+
+.cerrar{
+  right:10px;
 }
 
 .centrar{

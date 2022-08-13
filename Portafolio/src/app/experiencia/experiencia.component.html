@@ -2,8 +2,8 @@
     <!-- Formularios -->
 
     <div id="contenedor-formulario" *ngIf="editarExperiencia">
-      <button class="cerrar" (click)="switchExperiencia('',0)"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
       <div class="centrar">
+        <button class="cerrar" (click)="switchExperiencia('',0)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
         <app-editar-experiencia [accion]="accion" [id]="id"></app-editar-experiencia>
       </div>
     </div>

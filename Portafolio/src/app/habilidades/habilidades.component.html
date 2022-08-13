@@ -3,8 +3,8 @@
    <!-- Formularios -->
 
    <div id="contenedor-formulario" *ngIf="mostrarEditarHabilidad">
-    <button class="cerrar" (click)="switchHabilidad('',0)"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
     <div class="centrar">
+      <button class="cerrar" (click)="switchHabilidad('',0)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
       <app-editar-habilidad [id]="id" [accion]="accion"></app-editar-habilidad>
     </div>
   </div>

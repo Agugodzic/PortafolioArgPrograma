@@ -40,6 +40,7 @@ export class DatosService {
     lapizNegro:"https://i.postimg.cc/Ss6YBNCn/edit-icon-icons-com-50403.png",
     puntoBlanco:"https://i.postimg.cc/XN2VHdTt/punto-Blanco.png",
     delete:"https://i.postimg.cc/2SdQtMJS/delete.png",
+    deleteNegro:"https://i.postimg.cc/D042wHhw/delete-black.png",
     mas: "https://i.postimg.cc/qv6m2hrY/mas3.png",
     subir:"https://i.postimg.cc/7Ym5YF4K/subir.png",
     separadorNegro:"https://i.postimg.cc/CLZYWxMK/separador-Negro.png",
