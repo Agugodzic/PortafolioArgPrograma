@@ -1,4 +1,4 @@
-<form class="scroll" [formGroup]="info" *ngIf="editar()">
+<form class="scroll" [formGroup]="editarHabilidad" *ngIf="editar()">
 
   <div id="contenedor-form-controls">
     <p id="titulo">Editar habilidad:</p>
@@ -16,12 +16,11 @@
 
     <input class="form-control guardar"
       value="Guardar"
-      type="submit"
-      (click)="mostrarElemento()">
+      type="submit">
   </div>
 </form>
 
-<form class="scroll" [formGroup]="info" *ngIf="agregar()">
+<form class="scroll" [formGroup]="agregarHabilidad" *ngIf="agregar()">
 
   <div id="contenedor-form-controls">
     <p id="titulo">Agregar Habilidad:</p>

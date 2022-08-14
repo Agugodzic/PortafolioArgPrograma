@@ -154,6 +154,7 @@ export class DatosService {
 
   Proyectos = [
     {
+      id:0,
       titulo:"Portafolio Argentina",
       descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
       linkPreview:"",
@@ -162,6 +163,7 @@ export class DatosService {
       estado:"En desarrollo"
     },
     {
+      id:1,
       titulo:"Tienda Online de Hardware",
       descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
       linkPreview:"",
@@ -170,6 +172,7 @@ export class DatosService {
       estado:"En desarrollo"
     },
     {
+      id:2,
       titulo:"Backing Tracks Online",
       descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
       linkPreview:"",

@@ -39,12 +39,14 @@
 .proyecto{
   background-color: rgba(0, 0, 255, 0.06);
   margin:20px;
+  height: fit-content;
   width: 320px;
   border-radius: 3px;
   padding:5px;
   padding-bottom:20px;
   padding-top:10px;
 }
+
 .titulo-proyecto{
   display: block;
 }
@@ -85,18 +87,47 @@
 
 .pantalla-edicion{
   position:absolute;
-  background-color: rgba(4, 4, 18, 0.803);
+  background-color: linear-gradient(90deg,rgba(10, 10, 36, 0.641), rgba(0, 0, 0, 0));
   margin:20px;
   width: 320px;
-  height: auto;
+  height: 100px;
   border-radius: 3px;
   padding:5px;
   padding-bottom:20px;
   padding-top:10px;
   opacity: 0%;
-  z-index: 2050;
 }
 
 .pantalla-edicion:hover{
   opacity: 100%;
+}
+
+.boton{
+  color: rgba(252, 252, 252, 0.647);
+  background-color: rgb(20, 28, 55);
+  border-radius: 4px ;
+  border:none;
+  margin-top: 5px;
+  cursor:pointer;
+  height: 25px;
+}
+
+.boton:hover{
+  background-color: rgba(56, 63, 80, 0.765);
+}
+
+.delete-imagen{
+  height: 15px;
+}
+
+.boton-editar{
+  position: absolute;
+  top:10px;
+  right: 15px;
+}
+
+.boton-eliminar{
+  position: absolute;
+  top:10px;
+  left: 15px;
 }

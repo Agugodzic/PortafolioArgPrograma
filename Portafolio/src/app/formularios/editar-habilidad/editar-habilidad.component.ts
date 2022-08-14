@@ -1,6 +1,5 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { VirtualTimeScheduler } from 'rxjs';
 import { DatosService } from 'src/app/datos.service';
 
 @Component({
@@ -15,12 +14,7 @@ export class EditarHabilidadComponent implements OnInit {
 
   Habilidad:any;
 
-  mostrarElemento(){
-    alert(this.id)
-  }
-
-  constructor(private datos:DatosService) {
-   }
+  constructor(private datos:DatosService) {}
 
   editar():boolean{
     return this.accion == "editar";
@@ -28,16 +22,10 @@ export class EditarHabilidadComponent implements OnInit {
   agregar():boolean{
     return this.accion == "agregar";
   }
-
-
   editarHabilidad = new FormGroup(
     {}
   )
   agregarHabilidad = new FormGroup(
-    {}
-  )
-
-  info = new FormGroup(
     {}
   )
 
