@@ -21,7 +21,7 @@
   display:inline;
   opacity:70%;
   padding:0px;
-  background-color: rgba(74, 74, 74, 0.203);
+  background-color: rgba(0, 0, 0, 0.658);
   border:none;
   padding-left: 3px;
   padding-right: 3px;
@@ -41,8 +41,8 @@
   margin:20px;
   height: fit-content;
   width: 320px;
-  border-radius: 3px;
-  padding:5px;
+  border-radius: 5px;
+  padding:8px;
   padding-bottom:20px;
   padding-top:10px;
 }
@@ -63,8 +63,8 @@
 
 .boton-proyecto{
   border:none;
-  background-color: rgba(255, 255, 255, 0.591);
-  color:rgba(0, 0, 0, 0.984);
+  background-color: rgb(27, 28, 65);
+  color:rgba(255, 255, 255, 0.904);
   padding:3px 5px 3px 5px;
   border-radius: 4px;
   font-size: 14px;
@@ -72,7 +72,7 @@
 
 .boton-proyecto:hover{
   cursor:pointer;
-  background-color: rgba(255, 255, 255, 0.885);
+  background-color: rgba(156, 156, 156, 0.527);
 }
 
 .imagen-proyecto{
@@ -104,7 +104,7 @@
 
 .boton{
   color: rgba(252, 252, 252, 0.647);
-  background-color: rgb(20, 28, 55);
+  background-color: rgba(0, 0, 0, 0.705);
   border-radius: 4px ;
   border:none;
   margin-top: 5px;
@@ -130,4 +130,33 @@
   position: absolute;
   top:10px;
   left: 15px;
+}
+
+#mas-boton{
+  display:block;
+  background-color: rgba(47, 48, 78, 0.347);
+  border:none;
+  cursor:pointer;
+  border-radius: 5px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+#mas-boton:hover{
+  background-color: rgba(56, 63, 80, 0.664);
+}
+
+#mas-icono{
+  height: 15px;
+  margin:8px 4px 5px 4px;
+  opacity: 80%;
+}
+
+#actualizar-vista{
+  position:fixed;
+  top:0px;
+  left:0px;
 }

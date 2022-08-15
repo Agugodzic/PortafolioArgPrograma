@@ -1,3 +1,5 @@
+<div class="section"><span id="actualizar-vista"></span>
+
 <div class="section">
 
       <!-- Formularios -->
@@ -17,7 +19,7 @@
 
     <div class="pantalla-edicion">
       <button class="boton boton-eliminar"><img class="delete-imagen" [src]="Imagen.delete" ></button>
-      <button class="boton boton-editar" (click)="switchProyecto('editar',proyecto.id)">Editar</button>
+      <button class="boton boton-editar" (click)="switchProyecto('editar',proyecto.id)"  href="#actualizar-vista">Editar</button>
     </div>
 
     <div class="proyecto">
@@ -25,10 +27,11 @@
       <div class="titulo-proyecto"><p class="texto-titulo-proyecto">{{proyecto.titulo}}</p></div>
       <div class="estado">{{proyecto.estado}}</div>
       <div class="descripcion-proyecto"><p class="texto-descripcion-proyecto">{{proyecto.descripcion}}</p></div>
-      <a class="boton-proyecto" href="google.com" >Repositorio</a>
+      <a class="boton-proyecto" href="http://www.google.com" target="_blank" >Repositorio</a>
     </div>
 
     </div>
   </div>
+   <button id="mas-boton" (click)="switchProyecto('agregar',0)"><img id="mas-icono" [src]="Imagen.mas" ></button>
 </div>
 

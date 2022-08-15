@@ -3,9 +3,9 @@
   <div id="contenedor-form-controls">
   <p id="titulo">Editar proyecto:</p>
   <p><input class="form-control" type="text" [value]="proyecto.titulo" placeholder="Titulo" formControlName="titulo"></p>
-  <p><input class="form-control" type="text" [value]="proyecto.estado" placeholder="Estado" formControlName=""></p>
-  <p><input class="form-control" type="text" [value]="proyecto.linkImagen" placeholder="Imagen" formControlName="email" ngModel></p>
-  <p><input class="form-control" type="link" [value]="proyecto.linkGitHub" placeholder="Link del repositorio" formControlName="edad"></p>
+  <p><input class="form-control" type="text" [value]="proyecto.estado" placeholder="Estado" formControlName="estado"></p>
+  <p><input class="form-control" type="text" [value]="proyecto.linkImagen" placeholder="Imagen (url)" formControlName="imagen" ngModel></p>
+  <p><input class="form-control" type="text" [value]="proyecto.linkGitHub" placeholder="Link del repositorio" formControlName="repositorios"></p>
 <p><textarea class="campo-de-texto scroll" [value]="proyecto.descripcion" placeholder="Descripcion del proyecto"></textarea></p>
   <input class="form-control guardar" value="Guardar" type="submit">
   </div>
@@ -16,9 +16,9 @@
   <div id="contenedor-form-controls">
   <p id="titulo">Agregar proyecto:</p>
   <p><input class="form-control" type="text" placeholder="Titulo" formControlName="titulo"></p>
-  <p><input class="form-control" type="text" placeholder="Estado" formControlName=""></p>
-  <p><input class="form-control" type="text" placeholder="Imagen" formControlName="email" ngModel></p>
-  <p><input class="form-control" type="link" placeholder="Link del repositorio" formControlName="edad"></p>
+  <p><input class="form-control" type="text" placeholder="Estado" formControlName="estado"></p>
+  <p><input class="form-control" type="text" placeholder="Imagen" formControlName="imagen" ngModel></p>
+  <p><input class="form-control" type="link" placeholder="Link del repositorio" formControlName="repositorio"></p>
 <p><textarea class="campo-de-texto scroll" [value]="proyecto.descripcion" placeholder="Descripcion del proyecto"></textarea></p>
   <input class="form-control guardar" value="Guardar" type="submit">
   </div>

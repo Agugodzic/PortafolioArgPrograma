@@ -22,7 +22,6 @@
   color:rgba(213, 224, 249, 0.815);
 }
 
-
 .editar{
   display:inline;
   opacity:70%;
@@ -54,17 +53,22 @@
 }
 
 .botones{
-  background-color:rgba(0, 0, 0, 0.219);
+  background-color:rgba(0, 0, 0, 0.205);
   position: absolute;
   border-radius: 5px;
   height:180px;
   width: 140px;
-  transform: translateY(-150px);
+  transform: translateY(-5px);
   opacity: 0;
+  transition:0.1s;
 }
 
 .botones:hover{
   opacity:100%;
+}
+
+.circulo-progreso{
+  z-index:2000;
 }
 
 #contenedor-formulario{
@@ -79,7 +83,6 @@
   align-items: center;
   margin: 0;
 }
-
 
 #actualizar-vista{
   position:fixed;

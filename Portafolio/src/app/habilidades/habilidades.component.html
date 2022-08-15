@@ -17,7 +17,17 @@
   </div>
   <div id="contenedor-habilidades">
     <div class="habilidad" *ngFor="let habilidad of Habilidades">
-    <circle-progress
+
+      <div class="botones">
+        <a class="editar"(click)="switchHabilidad('editar',habilidad.id)" href="#actualizar-vista">
+          <img class="lapiz-editar" [src]="Imagen.lapiz">
+        </a>
+          <a class="editar" href="#actualizar-vista">
+            <img class="borrar" [src]="Imagen.delete">
+          </a>
+      </div>
+
+    <circle-progress class="circulo-progreso"
     [percent]="habilidad.nivel"
     [title]="habilidad.habilidad"
     [radius]="60"
@@ -29,18 +39,8 @@
     [backgroundPadding]="0"
     ></circle-progress>
 
-    <div class="botones">
-      <a class="editar"(click)="switchHabilidad('editar',habilidad.id)" href="#actualizar-vista">
-        <img class="lapiz-editar" [src]="Imagen.lapiz">
-      </a>
-        <a class="editar" href="#actualizar-vista">
-          <img class="borrar" [src]="Imagen.delete">
-        </a>
     </div>
-    </div>
-
     <button id="mas-boton" (click)="switchHabilidad('agregar',0)"><img id="mas-icono" [src]="Imagen.mas" ></button>
-
   </div>
 </div>
 
