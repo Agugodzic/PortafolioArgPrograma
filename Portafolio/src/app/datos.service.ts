@@ -182,4 +182,41 @@ export class DatosService {
     }
   ];
 
+  Cursos = [
+    {
+      id:0,
+      titulo:"Programador Web Full-Stack Junior",
+      institucion:"Argentina Programa",
+      descripcion:""
+    },
+    {
+      id:1,
+      titulo:"Fundamentos del Marketing Digital",
+      institucion:"Google Activate",
+      descripcion:""
+    }
+  ];
+
+  TituloSecundario = {
+    institucion:"Colegio Nuestra Señora de Guadalupe",
+  };
+
+  TituloUniversitario = [];
+
+  Terciario = [];
+
+  UniversitarioIncompleto = [
+    {
+      id:0,
+      carrera:"Licenciatura en Economia",
+      institucion:"Facultad de ciencias economicas - UNL FCE"
+
+    },
+    {
+      id:0,
+      carrera:"Analista Industrial",
+      institucion:"Facultad ingenieria quimica - UNL FIQ"
+    }
+  ];
+
 }

@@ -21,26 +21,42 @@
   <div id="estudios">
     <div id="titulo-secundario">
       <p class="titulo2">TITULO SECUNDARIO</p>
-      <p class="titulo3 margin-bottom">Colegio Nuestra Señora de Guadalupe</p>
+      <div class="botones-titulo-secundario">
+        <a class="boton-secundario boton-editar-secundario">
+          <abbr title="Editar "><img class="lapiz" [src]="Imagen.lapiz"></abbr>
+        </a>
+        <button class="boton-secundario">
+          <abbr title="Eliminar"><img class="delete delete-secundario" [src]="Imagen.delete"></abbr>
+        </button>
+      </div>
+      <p class="titulo3 margin-bottom">{{TituloSecundario.institucion}}</p>
     </div>
 
-    <p class="titulo2">MATERIAS UNIVERSITARIAS APROBADAS</p>
-    <div class="descripcion">
+    <p class="titulo2">Universitario en curso</p>
+    <div class="materias-universitarias">
+      <div id="cursos">
+        <p class="titulo2">CURSOS</p>
+        <div *ngFor="let carrera of UniversitarioIncompleto">
 
-      <p class="titulo3">Facultad de ciencias economicas - UNL FCE</p>
-      <div class="materias">
-        <p class="texto-descripcion">Ciencias Sociales - 9</p>
-        <p class="texto-descripcion">Introduccion a la Contabilidad - 9</p>
-        <p class="texto-descripcion">Analisis Matematico - 7</p>
-        <p class="texto-descripcion">Matematica Basica 1ra Parte - 7</p>
+          <div class="botones-curso">
+            <a class="boton">
+              <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
+            </a>
+            <button class="boton  boton-delete">
+              <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
+            </button>
+          </div>
+          <div class="curso">
+            <p class="titulo-curso">{{carrera.carrera}}<img class="info" [src]="Imagen.info"></p>
+            <p class="titulo3">{{carrera.institucion}}</p>
+            <div class="descripcion">
+              <p class="texto-descripcion"></p>
+            </div>
+          </div>
       </div>
-
-      <p class="titulo3 margin-top">Facultad ingenieria quimica - UNL FIQ</p>
-      <div class="materias">
-        <p class="texto-descripcion">Introduccion a la Quimica - 8</p>
-        <p class="texto-descripcion">Matematica A (Algebra, Calculo) - 7</p>
-        <p class="texto-descripcion">Matematica B (Calculo Vectorial) - 9</p>
-      </div>
+      <button id="mas-boton"><img id="mas-icono" [src]="Imagen.mas" ></button>
+    </div>
+  </div>
 
     </div>
     </div>
@@ -49,17 +65,24 @@
   <div class="contenedor-estudios">
     <div id="cursos">
       <p class="titulo2">CURSOS</p>
+      <div *ngFor="let curso of Cursos">
 
-      <p class="titulo2 curso">Programador Web Full-Stack Junior<img class="info" [src]="Imagen.info"></p>
-      <p class="titulo3">Argentina Programa</p>
-      <div class="descripcion">
-        <p class="texto-descripcion"></p>
-      </div>
-
-      <p class="titulo2 curso">Fundamentos del Marketing Digital<img class="info" [src]="Imagen.info"></p>
-      <p class="titulo3">Google Activate</p>
-      <div class="descripcion">
-        <p class="texto-descripcion"></p>
-      </div>
+        <div class="botones-curso">
+          <a class="boton">
+            <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
+          </a>
+          <button class="boton  boton-delete">
+            <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
+          </button>
+        </div>
+        <div class="curso">
+          <p class="titulo-curso">{{curso.titulo}}<img class="info" [src]="Imagen.info"></p>
+          <p class="titulo3">{{curso.institucion}}</p>
+          <div class="descripcion">
+            <p class="texto-descripcion"></p>
+          </div>
+        </div>
+    </div>
+    <button id="mas-boton"><img id="mas-icono" [src]="Imagen.mas" ></button>
   </div>
 </div>

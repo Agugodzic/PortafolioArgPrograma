@@ -11,6 +11,12 @@ export class EstudiosComponent implements OnInit {
   constructor(private datos:DatosService) { }
 
   Imagen = this.datos.Imagen;
+  Cursos = this.datos.Cursos;
+  TituloSecundario = this.datos.TituloSecundario;
+  UniversitarioIncompleto = this.datos.UniversitarioIncompleto;
+  TituloUniversitario = this.datos.TituloUniversitario;
+  Terciario = this.datos.Terciario;
+
   mostrarEditarEstudios:boolean = false;
 
   switchEstudios():void{
