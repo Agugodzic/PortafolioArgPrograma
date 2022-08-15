@@ -209,13 +209,13 @@ export class DatosService {
     {
       id:0,
       carrera:"Licenciatura en Economia",
-      institucion:"Facultad de ciencias economicas - UNL FCE"
+      institucion:"Facultad de ciencias economicas - UNL"
 
     },
     {
       id:0,
       carrera:"Analista Industrial",
-      institucion:"Facultad ingenieria quimica - UNL FIQ"
+      institucion:"Facultad ingenieria quimica - UNL"
     }
   ];
 
