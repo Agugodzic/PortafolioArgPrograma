@@ -17,10 +17,10 @@ export class DatosService {
     ];
 
   Foto = [
-    {id:1 , link:"https://i.postimg.cc/Yq1STwMq/imagenCV.png"},
-    {id:2 , link:"https://i.postimg.cc/TKBs7w71/perfil2.jpg"},
-    {id:3 , link:"https://i.postimg.cc/Xp7tXtBj/perfil3.jpg"},
-    {id:4 , link:"https://i.postimg.cc/VJJTWMF2/perfil4.jpg"},
+    {id:0 , link:"https://i.postimg.cc/Yq1STwMq/imagenCV.png"},
+    {id:1 , link:"https://i.postimg.cc/TKBs7w71/perfil2.jpg"},
+    {id:2 , link:"https://i.postimg.cc/Xp7tXtBj/perfil3.jpg"},
+    {id:3 , link:"https://i.postimg.cc/VJJTWMF2/perfil4.jpg"},
   ]
 
   Imagen = {
@@ -69,7 +69,6 @@ export class DatosService {
     email:"agugodzic@gmail.com",
     titulo:"Full Stack Developer Jr",
     sobreMi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    experiencia:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
   };
 
   Experiencia = [
@@ -218,5 +217,4 @@ export class DatosService {
       institucion:"Facultad ingenieria quimica - UNL"
     }
   ];
-
 }
