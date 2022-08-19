@@ -11,16 +11,18 @@ export class ExperienciaComponent{
   Experiencia:any;
   Info:any;
   Imagen:any;
-  accion:string = '';
-  id:number = 0;
+  accion:string;
+  id:number;
+  editarExperiencia:boolean;
 
   constructor( private datos:DatosService ) {
+    this.editarExperiencia = false
+    this.accion="";
+    this.id=0;
     this.Experiencia  = this.datos.Experiencia;
     this.Info = this.datos.Info;
     this.Imagen = this.datos.Imagen;
   }
-
-  editarExperiencia:boolean = false;
 
   switchExperiencia(accion:string,id:number):void{
     this.id = id;
