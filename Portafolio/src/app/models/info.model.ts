@@ -1,3 +1,5 @@
+import { InfoService } from "../servicios/info.service";
+
 export interface infoModel{
   nombre:String;
   apellido:String;

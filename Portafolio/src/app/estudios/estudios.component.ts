@@ -1,5 +1,8 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
+import { CursoModel } from '../models/curso-model';
+import { CursosService } from '../servicios/cursos.service';
 
 @Component({
   selector: 'app-estudios',
@@ -7,17 +10,23 @@ import { DatosService } from '../datos.service';
   styleUrls: ['./estudios.component.css']
 })
 export class EstudiosComponent implements OnInit {
-  Imagen:any;
-  Cursos:any;
-  TituloSecundario:any;
-  UniversitarioIncompleto:any;
-  TituloUniversitario:any;
-  Terciario:any;
+  public Imagen:any;
+  public Cursos:any;
+  public TituloSecundario:any;
+  public UniversitarioIncompleto:any;
+  public TituloUniversitario:any;
+  public Terciario:any;
+  public mostrarEditarEstudios:boolean = false;
+
   private _objeto:string;
   private _id:number;
   private _accion:string;
 
-  constructor(private datos:DatosService) {
+  public curso: CursoModel | undefined;
+  public editarCurso : CursoModel | undefined;
+  public listaDeCursos:any;
+
+  constructor(private datos:DatosService, private cursos:CursosService) {
     this._objeto = "";
     this._id = 0;
     this._accion = "";
@@ -39,8 +48,16 @@ export class EstudiosComponent implements OnInit {
     return this._accion;
   }
 
-
-  mostrarEditarEstudios:boolean = false;
+  public listarCursos(){
+    this.cursos.listarCursos().subscribe({
+      next: (response: CursoModel)  =>{
+        this.curso = response
+      },
+        error:(error:HttpErrorResponse) =>{
+          alert(error.message)
+        }
+    })
+  }
 
   switchEstudios(objeto:string,id:number,accion:string):void{
     this._accion = accion;
@@ -54,6 +71,7 @@ export class EstudiosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.listaDeCursos = this.listarCursos()
   }
 }
 
