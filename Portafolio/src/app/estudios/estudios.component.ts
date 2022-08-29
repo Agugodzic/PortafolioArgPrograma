@@ -65,6 +65,44 @@ export class EstudiosComponent implements OnInit {
     location.reload();
   }
 
+  //--------------Terciario----------------//
+
+  public listarCursosd(){
+    this.cursos.listarCursos().subscribe({
+      next: (response: CursoModel[])  =>{
+        this.listaDeCursos = response;
+      },
+        error:(error:HttpErrorResponse) =>{
+          alert(error.message)
+        }
+      })
+  }
+
+  public eliminarCursdo(id:number){
+    this.cursos.eliminarCurso(id).subscribe();
+    location.reload();
+  }
+
+  //--------------Universitario----------------//
+
+  public listarCurddsos(){
+    this.cursos.listarCursos().subscribe({
+      next: (response: CursoModel[])  =>{
+        this.listaDeCursos = response;
+      },
+        error:(error:HttpErrorResponse) =>{
+          alert(error.message)
+        }
+    })
+  }
+
+  //------------------------------------------//
+
+  public eliminarCurddso(id:number){
+    this.cursos.eliminarCurso(id).subscribe();
+    location.reload();
+  }
+
   //-----------------------------------//
 
   switchEstudios(objeto:string,id:number,accion:string):void{

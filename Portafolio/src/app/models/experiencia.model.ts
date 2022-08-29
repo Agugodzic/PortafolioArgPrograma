@@ -1,6 +1,6 @@
-export interface experienciaModel{
+export interface ExperienciaModel{
   id:number;
-  cargo:string;
+  puesto:string;
   empresa:string;
   tiempo:number;
   unidad:string;

@@ -1,6 +1,6 @@
 import { InfoService } from "../servicios/info.service";
 
-export interface infoModel{
+export interface InfoModel{
   nombre:String;
   apellido:String;
   edad:number;

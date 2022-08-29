@@ -34,7 +34,7 @@ export class HabilidadesComponent implements OnInit {
     })
   }
 
-  public eliminarCurso(id:number){
+  public eliminarHabilidad(id:number){
     this.habilidadesService.eliminar(id).subscribe();
     location.reload();
   }

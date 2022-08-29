@@ -12,7 +12,7 @@
 
   <p class="titulo">EXPERIENCIA</p>
   <div id="contenedor-pestañas" >
-    <div id="generador-pestañas" *ngFor="let elemento of Experiencia">
+    <div id="generador-pestañas" *ngFor="let elemento of listaDeExperiencias">
       <div class="pestaña">
         <div class="contenedor-punto">
           <img class="punto-blanco" [src]="Imagen.puntoBlanco">
@@ -34,7 +34,7 @@
           <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
         </a>
 
-        <button class="boton  boton-delete">
+        <button class="boton  boton-delete (click)=eliminarExperiencia(experiencia.id)">
           <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
         </button>
 

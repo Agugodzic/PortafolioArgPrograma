@@ -1,4 +1,4 @@
-export interface proyectosModel{
+export interface ProyectosModel{
   id:number;
   titulo:string;
   descripcion:string;
