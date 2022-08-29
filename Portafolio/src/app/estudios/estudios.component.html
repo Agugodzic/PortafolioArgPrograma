@@ -13,6 +13,8 @@
 
   <p class="titulo margin-top">ESTUDIOS</p>
 
+    <!--------  SECUNDARIO --------->
+
   <div class="contenedor-estudios">
   <div id="estudios">
     <div id="titulo-secundario">
@@ -29,6 +31,8 @@
     </div>
 
     <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+
+        <!--------  UNIVERSITARIO EN CURSO --------->
 
     <p class="titulo2 margin-top">UNIVERSITARIO EN CURSO</p>
     <div class="descripcion">
@@ -52,6 +56,8 @@
       </div>
       <button class="mas-boton" (click)="switchEstudios('UniversitarioEnCurso',0,'agregar')"><img class="mas-icono" [src]="Imagen.mas" ></button>
       </div>
+
+        <!--------  TITULO UNIVERSITARIO --------->
 
       <div id="terciario">
         <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
@@ -79,6 +85,8 @@
     </div>
     </div>
 
+      <!--------  TITULO TERCIARIO --------->
+
   <div class="contenedor-estudios">
     <div id="terciario">
       <p class="titulo2">TITULO TERCIARIO</p>
@@ -102,18 +110,18 @@
     </div>
     <button class="mas-boton"  (click)="switchEstudios('UniversitarioEnCurso',0,'agregar')"><img class="mas-icono" [src]="Imagen.mas" ></button>
   </div>
-
+      <!-----------  CURSOS ------------->
     <div id="cursos">
   <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
 
       <p class="titulo2">CURSOS</p>
-      <div *ngFor="let curso of Cursos">
+      <div *ngFor="let curso of listaDeCursos">
 
         <div class="botones-curso">
           <a class="boton"  (click)="switchEstudios('Cursos',curso.id,'editar')">
             <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
           </a>
-          <button class="boton  boton-delete">
+          <button class="boton  boton-delete" (click)="eliminarCurso(curso.id)">
             <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
           </button>
         </div>

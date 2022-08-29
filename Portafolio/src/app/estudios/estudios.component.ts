@@ -22,9 +22,8 @@ export class EstudiosComponent implements OnInit {
   private _id:number;
   private _accion:string;
 
-  public curso: CursoModel | undefined;
   public editarCurso : CursoModel | undefined;
-  public listaDeCursos:any;
+  public listaDeCursos: CursoModel[] | undefined;
 
   constructor(private datos:DatosService, private cursos:CursosService) {
     this._objeto = "";
@@ -48,16 +47,25 @@ export class EstudiosComponent implements OnInit {
     return this._accion;
   }
 
+  //--------------Cursos----------------//
+
   public listarCursos(){
     this.cursos.listarCursos().subscribe({
-      next: (response: CursoModel)  =>{
-        this.curso = response
+      next: (response: CursoModel[])  =>{
+        this.listaDeCursos = response;
       },
         error:(error:HttpErrorResponse) =>{
           alert(error.message)
         }
     })
   }
+
+  public eliminarCurso(id:number){
+    this.cursos.eliminarCurso(id).subscribe();
+    location.reload();
+  }
+
+  //-----------------------------------//
 
   switchEstudios(objeto:string,id:number,accion:string):void{
     this._accion = accion;
@@ -71,7 +79,7 @@ export class EstudiosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.listaDeCursos = this.listarCursos()
+    this.listarCursos()
   }
 }
 
