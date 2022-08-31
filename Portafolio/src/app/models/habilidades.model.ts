@@ -1,4 +1,4 @@
-export interface HabilidadesModel{
+export class HabilidadesModel{
   id:number;
   habilidad:string;
   nivel:number;

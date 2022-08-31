@@ -1,6 +1,7 @@
 import { Component, OnInit,Input, OnChanges } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { DatosService } from 'src/app/datos.service';
+import { ExperienciaModel } from 'src/app/models/experiencia.model';
 
 @Component({
   selector: 'app-editar-experiencia',
@@ -11,6 +12,7 @@ export class EditarExperienciaComponent implements OnInit{
   @Input() id:any;
   @Input() accion:any;
   experiencia:any;
+  nuevaExperiencia: ExperienciaModel = new ExperienciaModel()
 
   constructor(private datos:DatosService ) {
   }
@@ -33,8 +35,12 @@ export class EditarExperienciaComponent implements OnInit{
   agregarExperiencia = new FormGroup(
     {}
   )
-  ngOnChanges():void{
 
+  onSubmit():void{
+    alert(this.experiencia)
+  }
+
+  ngOnChanges():void{
   }
 
   ngOnInit(): void {

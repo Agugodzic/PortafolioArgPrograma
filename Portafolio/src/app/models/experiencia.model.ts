@@ -1,4 +1,4 @@
-export interface ExperienciaModel{
+export class ExperienciaModel{
   id:number;
   puesto:string;
   empresa:string;

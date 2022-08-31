@@ -20,8 +20,10 @@
     "module": "es2020",
     "lib": [
       "es2020",
-      "dom"
-    ]
+      "dom",
+    ],
+    "strictPropertyInitialization" : false
+
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

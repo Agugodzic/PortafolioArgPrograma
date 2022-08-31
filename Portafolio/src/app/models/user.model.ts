@@ -1,3 +1,3 @@
-export interface UserModel{
+export class UserModel{
 
 }

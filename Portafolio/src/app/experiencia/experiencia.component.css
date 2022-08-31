@@ -4,8 +4,8 @@
 }
 
 #titulo{
+  display:block;
   opacity:70%;
-  margin-top: 40px;
 }
 
 p{
@@ -15,8 +15,6 @@ p{
 }
 
 #contenedor-pestañas{
-  margin-top: 30px;
-  margin-bottom: 30px;
   display: inline;
 }
 
@@ -120,7 +118,7 @@ p{
 }
 
 #mas-icono{
-  height: 15px;
+  height: 10px;
   margin:8px 4px 5px 4px;
   opacity: 80%;
 }

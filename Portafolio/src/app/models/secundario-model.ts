@@ -1,4 +1,4 @@
-export interface SecundarioModel {
+export class SecundarioModel {
   id:number;
   institucion:string;
 }
