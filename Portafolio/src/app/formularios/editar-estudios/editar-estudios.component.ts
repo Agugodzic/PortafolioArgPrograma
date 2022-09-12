@@ -1,6 +1,15 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { DatosService } from 'src/app/datos.service';
+import { CursoModel } from 'src/app/models/curso-model';
+import { TerciarioModel } from 'src/app/models/terciario-model';
+import { UniversitarioEnCursoModel } from 'src/app/models/universitario-en-curso-model';
+import { UniversitarioModel } from 'src/app/models/universitario-model';
+import { CursosService } from 'src/app/servicios/cursos.service';
+import { SecundarioService } from 'src/app/servicios/secundario.service';
+import { TerciarioService } from 'src/app/servicios/terciario.service';
+import { UniversitarioEnCursoService } from 'src/app/servicios/universitario-en-curso.service';
+import { UniversitarioService } from 'src/app/servicios/universitario.service';
 
 @Component({
   selector: 'app-editar-estudios',
@@ -8,35 +17,59 @@ import { DatosService } from 'src/app/datos.service';
   styleUrls: ['./editar-estudios.component.css']
 })
 export class EditarEstudiosComponent implements OnInit {
-  private Cursos:any;
-  private Terciario:any;
-  private Universitario:any;
-  private UniversitarioEnCurso:any;
-  private _Objeto:any;
-  private _objetoTitulo:any;
+  @Input() public id:number;
+  @Input() public accion:string;
+  @Input() public objeto:string;
 
-  @Input() private id:any;
-  @Input() private _accion:any;
-  @Input() private objeto:string;
+  public listaDeCursos:CursoModel[];
+  public listaTerciarios:TerciarioModel[];
+  public listaUniversitarios:UniversitarioModel[];
+  public listaUniversitariosEnCurso:UniversitarioEnCursoModel[];
+  public Objeto:any;
+  public objetoTitulo:string;
 
-  constructor(private datos:DatosService) {
-    this.objeto="";
-    this.Cursos = this.datos.Cursos;
-    this.Terciario = this.datos.Terciario;
-    this.Universitario = this.datos.TituloUniversitario;
-    this.UniversitarioEnCurso = this.datos.UniversitarioIncompleto;
+  constructor(
+    private cursosService:CursosService,
+    private terciarioService:TerciarioService,
+    private universitarioService:UniversitarioService,
+    private secundarioService:SecundarioService,
+    private universitarioEnCursoService:UniversitarioEnCursoService
+    ){
   }
 
-  public get accion():string{
-    return this._accion;
+  public listarCursos(){
+    this.cursosService.listar().subscribe({
+      next: (response: CursoModel[])  =>{
+        this.listaDeCursos = response;
+      },
+        error:(error:HttpErrorResponse) => {
+          alert(error.message)
+        }
+    })
   }
 
-  public get Objeto():any{
-    return this._Objeto;
+  public listarTerciarios(){
+    this.terciarioService.listar().subscribe({
+      next: (response: TerciarioModel[])  =>{
+        this.listaTerciarios = response;
+      }
+    })
   }
 
-  public get objetoTitulo():String{
-    return this._objetoTitulo;
+  public listarUniversitarios(){
+    this.universitarioService.listar().subscribe({
+      next: (response: UniversitarioModel[])  =>{
+        this.listaUniversitarios = response;
+      }
+    })
+  }
+
+  public listarUniversitariosEnCurso(){
+    this.universitarioEnCursoService.listar().subscribe({
+      next: (response: UniversitarioEnCursoModel[])  =>{
+        this.listaUniversitariosEnCurso = response;
+      }
+    })
   }
 
   info = new FormGroup(
@@ -46,29 +79,35 @@ export class EditarEstudiosComponent implements OnInit {
   vincularObjeto(objeto:any){
     switch(objeto){
       case "Cursos":
-        this._Objeto = this.Cursos.find((elemento:any) => elemento.id == this.id);
-        this._objetoTitulo = "curso";
+        this.listarCursos();
+        alert("lista de cursos: "+ this.listaDeCursos)
+        this.objetoTitulo = "curso";
+        //alert(this.Objeto + "1")
+        //this.Objeto = this.listaDeCursos.find((elemento) => elemento["id"] === 1);
+        //alert(this.Objeto  + "2")
         break;
 
       case "Universitario":
-        this._Objeto = this.Universitario.find((elemento:any) => elemento.id == this.id);
-        this._objetoTitulo = "titulo";
+        this.listarUniversitarios();
+        this.objetoTitulo = "titulo";
+        //this.Objeto = this.listaUniversitarios.find((elemento) => elemento.id == this.id);
         break;
 
       case "Terciario":
-        this._Objeto = this.Terciario.find((elemento:any) => elemento.id == this.id);
-        this._objetoTitulo = "terciario";
+        this.listarTerciarios();
+        this.objetoTitulo = "titulo";
+        //this.Objeto = this.listaTerciarios.find((elemento:any) => elemento.id == this.id);
         break;
 
       case "UniversitarioEnCurso":
-        this._Objeto = this.UniversitarioEnCurso.find((elemento:any) => elemento.id == this.id);
-        this._objetoTitulo = "";
+        this.listarUniversitariosEnCurso();
+        this.objetoTitulo = "";
+        //this.Objeto = this.UniversitarioEnCurso.find((elemento:any) => elemento.id == this.id);
         break;
     }
   }
 
   ngOnInit(): void {
-    this.vincularObjeto(this.objeto)
+    this.vincularObjeto(this.objeto);
   }
-
 }

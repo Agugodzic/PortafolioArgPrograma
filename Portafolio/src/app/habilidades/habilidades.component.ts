@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from '../datos.service';import { HabilidadesModel} from '../models/habilidades.model';
-;
+import { DatosService } from '../datos.service';
+import { HabilidadesModel} from '../models/habilidades.model';
 import { HabilidadesService } from '../servicios/habilidades.service';
 
 @Component({

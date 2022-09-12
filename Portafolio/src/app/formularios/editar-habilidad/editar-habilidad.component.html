@@ -2,6 +2,9 @@
 
   <div id="contenedor-form-controls">
     <p id="titulo">Editar habilidad:</p>
+    <div *ngFor="let habilidad of listaDeHabilidades">
+      {{habilidad.habilidad}}
+    </div>
 
     <p><input class="form-control"
       type="text"

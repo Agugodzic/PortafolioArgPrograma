@@ -5,7 +5,7 @@
     <div id="contenedor-formulario" *ngIf="mostrarEditarEstudios">
       <div class="centrar">
         <button class="cerrar" (click)="switchEstudios(objeto,id,accion)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
-        <app-editar-estudios></app-editar-estudios>
+        <app-editar-estudios [objeto]="objeto" [id]="id" [accion]="accion"></app-editar-estudios>
       </div>
     </div>
 
@@ -29,7 +29,6 @@
       </div>
       <p class="titulo3 margin-bottom">{{TituloSecundario.institucion}}</p>
     </div>
-
     <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
 
         <!--------  UNIVERSITARIO EN CURSO --------->
@@ -93,7 +92,7 @@
       <div *ngFor="let curso of Cursos">
 
         <div class="botones-curso">
-          <a class="boton" (click)="switchEstudios('Cursos',curso.id,'editar')">
+          <a class="boton" (click)="switchEstudios('Terciario',curso.id,'editar')">
             <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
           </a>
           <button class="boton  boton-delete">
@@ -108,9 +107,11 @@
           </div>
         </div>
     </div>
-    <button class="mas-boton"  (click)="switchEstudios('UniversitarioEnCurso',0,'agregar')"><img class="mas-icono" [src]="Imagen.mas" ></button>
+    <button class="mas-boton"  (click)="switchEstudios('Terciario',0,'agregar')"><img class="mas-icono" [src]="Imagen.mas" ></button>
   </div>
+
       <!-----------  CURSOS ------------->
+
     <div id="cursos">
   <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
 

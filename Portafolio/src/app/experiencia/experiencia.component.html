@@ -11,6 +11,7 @@
     <!----------------->
 
   <p id="titulo">EXPERIENCIA</p>
+
   <div id="contenedor-pestañas">
     <div id="generador-pestañas"*ngFor="let elemento of listaDeExperiencias">
       <div class="pestaña">
@@ -34,7 +35,7 @@
           <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
         </a>
 
-        <button class="boton  boton-delete (click)=eliminarExperiencia(experiencia.id)">
+        <button class="boton  boton-delete" (click)="eliminarExperiencia(elemento.id)">
           <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
         </button>
 
