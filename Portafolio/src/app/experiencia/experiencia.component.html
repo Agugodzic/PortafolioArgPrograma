@@ -3,8 +3,8 @@
 
     <div id="contenedor-formulario" *ngIf="editarExperiencia">
       <div class="centrar">
-        <button class="cerrar" (click)="switchExperiencia('',0)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
-        <app-editar-experiencia [accion]="accion" [id]="id"></app-editar-experiencia>
+        <button class="cerrar" (click)="switchExperiencia('',0,null)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
+        <app-editar-experiencia [accion]="accion" [id]="id" [experiencia]="experiencia"></app-editar-experiencia>
       </div>
     </div>
 
@@ -31,7 +31,7 @@
 
       <div class="botones">
 
-        <a class="boton" (click)="switchExperiencia('editar', elemento.id)" href="#actualizar-vista">
+        <a class="boton" (click)="switchExperiencia('editar', elemento.id , elemento)" href="#actualizar-vista">
           <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
         </a>
 
@@ -42,4 +42,4 @@
       </div>
     </div>
   </div>
-  <button id="mas-boton" (click)="switchExperiencia('agregar',0)"><img id="mas-icono" [src]="Imagen.mas" ></button>
+  <button id="mas-boton" (click)="switchExperiencia('agregar',0,null)"><img id="mas-icono" [src]="Imagen.mas" ></button>

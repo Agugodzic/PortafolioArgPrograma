@@ -13,11 +13,11 @@ import { HabilidadesService } from '../servicios/habilidades.service';
 export class HabilidadesComponent implements OnInit {
   id:number=0;
   accion:string="";
+  habilidad:HabilidadesModel;
   listaDeHabilidades:HabilidadesModel[] | undefined;
 
   constructor(private datos:DatosService, private habilidadesService:HabilidadesService) { }
 
-  Habilidades = this.datos.Habilidades;
   Imagen = this.datos.Imagen;
   mostrarEditarHabilidad = false;
 
@@ -34,16 +34,17 @@ export class HabilidadesComponent implements OnInit {
     })
   }
 
-  public eliminarHabilidad(id:number){
+  public eliminarHabilidad(id:number):void{
     this.habilidadesService.eliminar(id).subscribe();
     location.reload();
   }
 
   //-----------------------------------//
 
-  switchHabilidad(accion:string,id:number):void{
+  switchHabilidad(accion:string,id:number,habilidad:any):void{
     this.id = id;
     this.accion = accion;
+    this.habilidad = habilidad;
     if(this.mostrarEditarHabilidad == true){
       this.mostrarEditarHabilidad = false;
     }else{

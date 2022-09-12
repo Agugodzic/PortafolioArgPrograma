@@ -4,22 +4,18 @@
 
    <div id="contenedor-formulario" *ngIf="mostrarEditarHabilidad">
     <div class="centrar">
-      <button class="cerrar" (click)="switchHabilidad('',0)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
-      <app-editar-habilidad [id]="id" [accion]="accion"></app-editar-habilidad>
+      <button class="cerrar" (click)="switchHabilidad('',0,null)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
+      <app-editar-habilidad [id]="id" [accion]="accion" [habilidad]="habilidad"></app-editar-habilidad>
     </div>
   </div>
 
   <!----------------->
 
   <p class="titulo">HABILIDADES</p>
-  <div>
-
-  </div>
   <div id="contenedor-habilidades">
     <div class="habilidad" *ngFor="let habilidad of listaDeHabilidades">
-
       <div class="botones">
-        <a class="editar"(click)="switchHabilidad('editar',habilidad.id)" href="#actualizar-vista">
+        <a class="editar"(click)="switchHabilidad('editar',habilidad.id,habilidad)" href="#actualizar-vista">
           <img class="lapiz-editar" [src]="Imagen.lapiz">
         </a>
           <a class="editar" href="#actualizar-vista" (click)="eliminarHabilidad(habilidad.id)">
@@ -40,7 +36,7 @@
     ></circle-progress>
 
     </div>
-    <button id="mas-boton" (click)="switchHabilidad('agregar',0)"><img id="mas-icono" [src]="Imagen.mas" ></button>
+    <button id="mas-boton" (click)="switchHabilidad('agregar',0,null)"><img id="mas-icono" [src]="Imagen.mas" ></button>
   </div>
 </div>
 

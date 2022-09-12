@@ -14,18 +14,19 @@ export class EditarHabilidadComponent implements OnInit {
 
   @Input() id:any;
   @Input() accion:any;
-  public listaDeHabilidades:HabilidadesModel[];
+  @Input() habilidad:any;
 
-  Habilidad:any;
+  public Habilidad:any;
+  public listaDeHabilidades:HabilidadesModel[] ;
 
   constructor(private datos:DatosService, private habilidadesService:HabilidadesService) {}
 
   editar():boolean{
     return this.accion == "editar";
-  }
+  };
   agregar():boolean{
     return this.accion == "agregar";
-  }
+  };
 
   public listarHabilidades(){
     this.habilidadesService.listar().subscribe({
@@ -36,21 +37,14 @@ export class EditarHabilidadComponent implements OnInit {
           alert(error.message)
         }
     })
-  }
-  editarHabilidad = new FormGroup(
-    {}
-  )
-  agregarHabilidad = new FormGroup(
-    {}
-  )
+  };
+
+  editarHabilidad = new FormGroup({});
+  agregarHabilidad = new FormGroup({});
 
   ngOnInit(): void {
     this.listarHabilidades()
-    alert(this.id)
-    for(let habilidad of this.listaDeHabilidades){
-      alert(habilidad.id)
-    }
-    //this.Habilidad = this.listaDeHabilidades.find((elemento:HabilidadesModel) => elemento["id"] == this.id);
-  }
+    this.Habilidad = this.habilidad
 
+  }
 }

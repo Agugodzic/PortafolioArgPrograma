@@ -12,6 +12,7 @@ import { ExperienciaService } from '../servicios/experiencia.service';
 })
 export class ExperienciaComponent implements OnInit{
   Experiencia:any;
+  experiencia:any;
   Info:any;
   Imagen:any;
   accion:string;
@@ -48,9 +49,10 @@ export class ExperienciaComponent implements OnInit{
 
     //-----------------------------------//
 
-  switchExperiencia(accion:string,id:number):void{
+  switchExperiencia(accion:string,id:number,experiencia:any):void{
     this.id = id;
     this.accion = accion;
+    this.experiencia = experiencia;
     if(this.editarExperiencia == false){
       this.editarExperiencia = true;
     }else{
