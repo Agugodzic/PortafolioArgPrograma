@@ -21,7 +21,7 @@
   display:inline;
   opacity:70%;
   padding:0px;
-  background-color: rgba(0, 0, 0, 0.658);
+  background-color: rgba(126, 126, 126, 0.658);
   border:none;
   padding-left: 3px;
   padding-right: 3px;
@@ -37,7 +37,7 @@
 }
 
 .proyecto{
-  background-color: rgba(0, 0, 255, 0.06);
+  background-color: rgba(10, 14, 73, 0.356);
   margin:20px;
   height: fit-content;
   width: 320px;
@@ -53,12 +53,15 @@
 
 .descripcion-poyecto{
   display: block;
+
 }
 
 .texto-descripcion-proyecto{
-  opacity: 85%;
-  font-size: 13px;
+  opacity: 95%;
+  font-size: 13.5px;
   margin:20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100px;
 }
 
 .boton-proyecto{

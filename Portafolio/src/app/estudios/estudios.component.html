@@ -1,17 +1,18 @@
 <div class="section">
 
-    <!-- Formularios -->
+    <!--------  Formularios  ------->
 
     <div id="contenedor-formulario" *ngIf="mostrarEditarEstudios">
       <div class="centrar">
-        <button class="cerrar" (click)="switchEstudios(objeto,id,accion)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
-        <app-editar-estudios [objeto]="objeto" [id]="id" [accion]="accion"></app-editar-estudios>
+        <button class="cerrar" (click)="switchEstudios(objeto,id,accion,null)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
+        <app-editar-estudios [tipo]="objeto" [id]="id" [accion]="accion" [elemento]="elemento"></app-editar-estudios>
       </div>
     </div>
 
-    <!----------------->
+    <!----------------------------->
 
   <p class="titulo margin-top">ESTUDIOS</p>
+  <span id="actualizar-vista"></span>
 
     <!--------  SECUNDARIO --------->
 
@@ -38,7 +39,8 @@
         <div *ngFor="let carrera of UniversitarioIncompleto">
 
           <div class="botones-curso">
-            <a class="boton"  (click)="switchEstudios('UniversitarioEnCurso',0,'agregar')">
+            <a class="boton"  (click)="switchEstudios('UniversitarioEnCurso',0,'editar.3
+            ',carrera)" href="#actualizar-vista">
               <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
             </a>
             <button class="boton  boton-delete">
@@ -53,7 +55,7 @@
             </div>
           </div>
       </div>
-      <button class="mas-boton" (click)="switchEstudios('UniversitarioEnCurso',0,'agregar')"><img class="mas-icono" [src]="Imagen.mas" ></button>
+      <button class="mas-boton" (click)="switchEstudios('UniversitarioEnCurso',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
       </div>
 
         <!--------  TITULO UNIVERSITARIO --------->
@@ -64,7 +66,7 @@
         <div *ngFor="let curso of Cursos">
 
           <div class="botones-curso">
-            <a class="boton" (click)="switchEstudios('Universitario',0,'editar')">
+            <a class="boton" (click)="switchEstudios('Universitario',0,'editar',curso)" href="#actualizar-vista">
               <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
             </a>
             <button class="boton  boton-delete">
@@ -79,7 +81,7 @@
             </div>
           </div>
       </div>
-      <button class="mas-boton" (click)="switchEstudios('Universitario',0,'agregar')"><img class="mas-icono" [src]="Imagen.mas" ></button>
+      <button class="mas-boton" (click)="switchEstudios('Universitario',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
     </div>
     </div>
     </div>
@@ -92,7 +94,7 @@
       <div *ngFor="let curso of Cursos">
 
         <div class="botones-curso">
-          <a class="boton" (click)="switchEstudios('Terciario',curso.id,'editar')">
+          <a class="boton" (click)="switchEstudios('Terciario',curso.id,'editar',curso)" href="#actualizar-vista">
             <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
           </a>
           <button class="boton  boton-delete">
@@ -107,7 +109,7 @@
           </div>
         </div>
     </div>
-    <button class="mas-boton"  (click)="switchEstudios('Terciario',0,'agregar')"><img class="mas-icono" [src]="Imagen.mas" ></button>
+    <button class="mas-boton"  (click)="switchEstudios('Terciario',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
   </div>
 
       <!-----------  CURSOS ------------->
@@ -119,7 +121,7 @@
       <div *ngFor="let curso of listaDeCursos">
 
         <div class="botones-curso">
-          <a class="boton"  (click)="switchEstudios('Cursos',curso.id,'editar')">
+          <a class="boton"  (click)="switchEstudios('Cursos',curso.id,'editar',curso)" href="#actualizar-vista">
             <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
           </a>
           <button class="boton  boton-delete" (click)="eliminarCurso(curso.id)">
@@ -134,7 +136,7 @@
           </div>
         </div>
     </div>
-    <button class="mas-boton"  (click)="switchEstudios('Cursos',0,'agregar')"><img class="mas-icono" [src]="Imagen.mas" ></button>
+    <button class="mas-boton"  (click)="switchEstudios('Cursos',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
   </div>
 </div>
 

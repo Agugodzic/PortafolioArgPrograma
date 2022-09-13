@@ -1,4 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { CursoModel } from 'src/app/models/curso-model';
@@ -19,13 +20,9 @@ import { UniversitarioService } from 'src/app/servicios/universitario.service';
 export class EditarEstudiosComponent implements OnInit {
   @Input() public id:number;
   @Input() public accion:string;
-  @Input() public objeto:string;
+  @Input() public tipo:string;
+  @Input() public elemento:any;
 
-  public listaDeCursos:CursoModel[];
-  public listaTerciarios:TerciarioModel[];
-  public listaUniversitarios:UniversitarioModel[];
-  public listaUniversitariosEnCurso:UniversitarioEnCursoModel[];
-  public Objeto:any;
   public objetoTitulo:string;
 
   constructor(
@@ -37,77 +34,32 @@ export class EditarEstudiosComponent implements OnInit {
     ){
   }
 
-  public listarCursos(){
-    this.cursosService.listar().subscribe({
-      next: (response: CursoModel[])  =>{
-        this.listaDeCursos = response;
-      },
-        error:(error:HttpErrorResponse) => {
-          alert(error.message)
-        }
-    })
-  }
-
-  public listarTerciarios(){
-    this.terciarioService.listar().subscribe({
-      next: (response: TerciarioModel[])  =>{
-        this.listaTerciarios = response;
-      }
-    })
-  }
-
-  public listarUniversitarios(){
-    this.universitarioService.listar().subscribe({
-      next: (response: UniversitarioModel[])  =>{
-        this.listaUniversitarios = response;
-      }
-    })
-  }
-
-  public listarUniversitariosEnCurso(){
-    this.universitarioEnCursoService.listar().subscribe({
-      next: (response: UniversitarioEnCursoModel[])  =>{
-        this.listaUniversitariosEnCurso = response;
-      }
-    })
-  }
-
   info = new FormGroup(
     {}
   )
 
-  vincularObjeto(objeto:any){
-    switch(objeto){
+  vincularObjeto(tipo:any,elemento:any){
+
+    switch(tipo){
       case "Cursos":
-        this.listarCursos();
-        alert("lista de cursos: "+ this.listaDeCursos)
         this.objetoTitulo = "curso";
-        //alert(this.Objeto + "1")
-        //this.Objeto = this.listaDeCursos.find((elemento) => elemento["id"] === 1);
-        //alert(this.Objeto  + "2")
         break;
 
       case "Universitario":
-        this.listarUniversitarios();
         this.objetoTitulo = "titulo";
-        //this.Objeto = this.listaUniversitarios.find((elemento) => elemento.id == this.id);
         break;
 
       case "Terciario":
-        this.listarTerciarios();
         this.objetoTitulo = "titulo";
-        //this.Objeto = this.listaTerciarios.find((elemento:any) => elemento.id == this.id);
         break;
 
       case "UniversitarioEnCurso":
-        this.listarUniversitariosEnCurso();
         this.objetoTitulo = "";
-        //this.Objeto = this.UniversitarioEnCurso.find((elemento:any) => elemento.id == this.id);
         break;
     }
   }
 
   ngOnInit(): void {
-    this.vincularObjeto(this.objeto);
+    this.vincularObjeto(this.tipo,this.elemento);
   }
 }

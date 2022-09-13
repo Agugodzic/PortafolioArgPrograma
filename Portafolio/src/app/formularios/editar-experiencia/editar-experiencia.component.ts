@@ -17,12 +17,7 @@ export class EditarExperienciaComponent implements OnInit{
 
   constructor(private datos:DatosService ) {
   }
-  mostrarElemento(){
-    alert(this.id)
-  }
-  returnElemento():number{
-    return this.id
-  }
+
   editar():boolean{
     return this.accion == "editar";
   }
@@ -38,7 +33,6 @@ export class EditarExperienciaComponent implements OnInit{
   )
 
   onSubmit():void{
-    alert(this.experiencia)
   }
 
   ngOnInit(): void {

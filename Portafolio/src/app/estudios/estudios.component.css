@@ -248,6 +248,12 @@
   text-align: left;
 }
 
+#actualizar-vista{
+  position:fixed;
+  top:0px;
+  left:0px;
+}
+
 @media (max-width:800px){
   #estudios,#cursos{
     display: block;

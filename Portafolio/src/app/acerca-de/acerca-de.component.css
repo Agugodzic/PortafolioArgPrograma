@@ -31,9 +31,10 @@
 }
 
 #titulo{
-  opacity:30%;
-  font-size: 14px;
+  opacity:60%;
+  font-size: 13px;
   margin:0px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #editar-portada{
@@ -79,7 +80,7 @@
 }
 
 #sobre-mi{
-  opacity: 80%;
+  opacity: 90%;
   margin-left:30vw;
   margin-right: 20vw;
   margin-top: 50px;
@@ -89,6 +90,11 @@
   padding-right: 15px;
 }
 
+#sobre-mi-texto{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 100px;
+}
 
 .editar{
   display:inline;
@@ -119,6 +125,7 @@
   text-align: left;
   opacity:50%;
   font-size: 13px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .info-columna{

@@ -25,6 +25,7 @@ export class EstudiosComponent implements OnInit {
   public TituloUniversitario:any;
   public Terciario:any;
   public mostrarEditarEstudios:boolean = false;
+  public elemento:any;
 
   private _objeto:string;
   private _id:number;
@@ -152,10 +153,11 @@ export class EstudiosComponent implements OnInit {
 
     //------Funcion-Generar-Formulario--------//
 
-  switchEstudios(objeto:string,id:number,accion:string):void{
+  switchEstudios(objeto:string,id:number,accion:string,elemento:any):void{
     this._accion = accion;
     this._id = id;
     this._objeto = objeto;
+    this.elemento = elemento
 
     if(this.mostrarEditarEstudios == true){
       this.mostrarEditarEstudios = false;
