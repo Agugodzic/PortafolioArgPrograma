@@ -17,10 +17,10 @@ export class DatosService {
     ];
 
   Foto = [
-    {id:1 , link:"https://i.postimg.cc/Yq1STwMq/imagenCV.png"},
-    {id:2 , link:"https://i.postimg.cc/TKBs7w71/perfil2.jpg"},
-    {id:3 , link:"https://i.postimg.cc/Xp7tXtBj/perfil3.jpg"},
-    {id:4 , link:"https://i.postimg.cc/VJJTWMF2/perfil4.jpg"},
+    {id:0 , link:"https://i.postimg.cc/Yq1STwMq/imagenCV.png"},
+    {id:1 , link:"https://i.postimg.cc/TKBs7w71/perfil2.jpg"},
+    {id:2 , link:"https://i.postimg.cc/Xp7tXtBj/perfil3.jpg"},
+    {id:3 , link:"https://i.postimg.cc/VJJTWMF2/perfil4.jpg"},
   ]
 
   Imagen = {
@@ -40,6 +40,7 @@ export class DatosService {
     lapizNegro:"https://i.postimg.cc/Ss6YBNCn/edit-icon-icons-com-50403.png",
     puntoBlanco:"https://i.postimg.cc/XN2VHdTt/punto-Blanco.png",
     delete:"https://i.postimg.cc/2SdQtMJS/delete.png",
+    deleteNegro:"https://i.postimg.cc/D042wHhw/delete-black.png",
     mas: "https://i.postimg.cc/qv6m2hrY/mas3.png",
     subir:"https://i.postimg.cc/7Ym5YF4K/subir.png",
     separadorNegro:"https://i.postimg.cc/CLZYWxMK/separador-Negro.png",
@@ -68,7 +69,6 @@ export class DatosService {
     email:"agugodzic@gmail.com",
     titulo:"Full Stack Developer Jr",
     sobreMi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    experiencia:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
   };
 
   Experiencia = [
@@ -104,38 +104,47 @@ export class DatosService {
 
   Habilidades = [
     {
+      id:0,
       habilidad:"Photoshop",
       nivel:75
     },
     {
+      id:1,
       habilidad:"Word",
       nivel:90
     },
     {
+      id:2,
       habilidad:"Excel",
       nivel:70
     },
     {
+      id:3,
       habilidad:"Python",
       nivel:65
     },
     {
+      id:4,
       habilidad:"Angular",
       nivel:75
     },
     {
+      id:5,
       habilidad:"Html",
       nivel:80
     },
     {
+      id:6,
       habilidad:"CSS",
       nivel:70
     },
     {
+      id:7,
       habilidad:"GitHub",
       nivel:80
     },
     {
+      id:8,
       habilidad:"Typescript",
       nivel:70
     }
@@ -144,6 +153,7 @@ export class DatosService {
 
   Proyectos = [
     {
+      id:0,
       titulo:"Portafolio Argentina",
       descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
       linkPreview:"",
@@ -152,6 +162,7 @@ export class DatosService {
       estado:"En desarrollo"
     },
     {
+      id:1,
       titulo:"Tienda Online de Hardware",
       descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
       linkPreview:"",
@@ -160,6 +171,7 @@ export class DatosService {
       estado:"En desarrollo"
     },
     {
+      id:2,
       titulo:"Backing Tracks Online",
       descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
       linkPreview:"",
@@ -169,4 +181,40 @@ export class DatosService {
     }
   ];
 
+  Cursos = [
+    {
+      id:0,
+      titulo:"Programador Web Full-Stack Junior",
+      institucion:"Argentina Programa",
+      descripcion:""
+    },
+    {
+      id:1,
+      titulo:"Fundamentos del Marketing Digital",
+      institucion:"Google Activate",
+      descripcion:""
+    }
+  ];
+
+  TituloSecundario = {
+    institucion:"Colegio Nuestra Señora de Guadalupe",
+  };
+
+  TituloUniversitario = [];
+
+  Terciario = [];
+
+  UniversitarioIncompleto = [
+    {
+      id:0,
+      carrera:"Licenciatura en Economia",
+      institucion:"Facultad de ciencias economicas - UNL"
+
+    },
+    {
+      id:0,
+      carrera:"Analista Industrial",
+      institucion:"Facultad ingenieria quimica - UNL"
+    }
+  ];
 }

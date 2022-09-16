@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { DatosService } from 'src/app/datos.service';
-
 
 @Component({
   selector: 'app-editar-proyectos',
@@ -10,15 +9,28 @@ import { DatosService } from 'src/app/datos.service';
 })
 export class EditarProyectosComponent implements OnInit {
 
+  @Input() id:any;
+  @Input() accion:any;
+
+  proyecto:any;
+
   constructor(private datos:DatosService) { }
 
-  Info = this.datos.Info;
-  info = new FormGroup(
+  editar():boolean{
+    return this.accion == "editar";
+  }
+  agregar():boolean{
+    return this.accion == "agregar";
+  }
+  editarProyecto = new FormGroup(
+    {}
+  )
+  agregarProyecto = new FormGroup(
     {}
   )
 
-
   ngOnInit(): void {
+    this.proyecto = this.datos.Proyectos.find((elemento:any) => elemento.id == this.id);
   }
 
 }

@@ -1,18 +1,45 @@
-<form class="scroll" [formGroup]="info" *ngIf="cargarFormulario">
-  <div id="contenedor-form-controls">
-  <p id="titulo">Informacion de contacto:</p>
-  <p><input class="form-control" type="text" [value]="Info.nombre" placeholder="Nombre" formControlName="nombre"></p>
-  <p><input class="form-control" type="text" [value]="apellido" placeholder="Apellido" formControlName="apellido"></p>
-  <p><input class="form-control" type="email" [value]="Info.email" placeholder="Email" formControlName="email" ngModel></p>
-  <p><input class="form-control" type="number"[value]="Info.edad" placeholder="Edad" formControlName="edad"></p>
-  <p><input class="form-control" type="text" [value]="Info.titulo" placeholder="Titulo o Profesion" formControlName="titulo"></p>
-  <p><input class="form-control" type="tel"  [value]="Info.telefono" placeholder="Telefono" formControlName="telefono"></p>
-  <p><input class="form-control" type="text" [value]="Info.ciudad" placeholder="Ciudad" formControlName="nombre"></p>
-  <p><input class="form-control" type="text" [value]="Info.codigoPostal" placeholder="Codigo postal" formControlName="nombre"></p>
-  <p><input class="form-control" type="text" [value]="Info.pais" placeholder="Pais" formControlName="nombre"></p>
-  <p><input class="form-control" type="text" [value]="Info.otros" placeholder="Otro" formControlName="nombre"></p>
-  <p><textarea class="campo-de-texto scroll" [value]="Info.sobreMi " placeholder="Informacion sobre ti."></textarea></p>
-  <input class="form-control guardar" value="Guardar" type="submit">
+<form (ngSubmit)="enviar()" class="scroll" [formGroup]="editarHabilidad" *ngIf="editar()">
 
+  <div id="contenedor-form-controls">
+    <p id="titulo">Editar habilidad:</p>
+
+    <p><input class="form-control"
+      type="text"
+      placeholder="habilidad"
+      formControlName="habilidad"></p>
+
+    <p><input class="form-control"
+      type="text"
+      placeholder="nivel (1 - 100)"
+      formControlName="nivel"></p>
+
+    <input class="form-control guardar"
+      value="Guardar"
+      type="submit"
+      [disabled]="editarHabilidad.invalid"
+      >
+      <p [ngStyle]="{'color':'green'}">invalido:{{editarHabilidad.invalid}}</p>
+  </div>
+</form>
+
+<form class="scroll" [formGroup]="agregarHabilidad" *ngIf="agregar()">
+
+  <div id="contenedor-form-controls">
+    <p id="titulo">Agregar Habilidad:</p>
+
+    <p><input class="form-control"
+      type="text"
+      placeholder="habilidad"
+      formControlName="habilidad"></p>
+
+    <p><input class="form-control"
+      type="text"
+      placeholder="nivel (1 - 100)"
+      formControlName="nivel"></p>
+
+    <input class="form-control guardar"
+      value="Guardar"
+      type="submit"
+      [disabled]="agregarHabilidad.invalid">
   </div>
 </form>

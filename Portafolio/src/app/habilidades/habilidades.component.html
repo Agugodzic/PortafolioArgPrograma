@@ -2,25 +2,28 @@
 
    <!-- Formularios -->
 
-   <div id="contenedor-formulario" *ngIf="mostrarEditarHabilidades">
-    <button class="cerrar" (click)="switchHabilidades()"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
+   <div id="contenedor-formulario" *ngIf="mostrarEditarHabilidad">
     <div class="centrar">
-      <app-editar-habilidad></app-editar-habilidad>
+      <button class="cerrar" (click)="switchHabilidad('',0,null)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
+      <app-editar-habilidad [id]="id" [accion]="accion" [habilidad]="habilidad"></app-editar-habilidad>
     </div>
   </div>
 
   <!----------------->
 
-
-  <p class="titulo">HABILIDADES
-    <a class="editar"(click)="switchHabilidades()" href="#actualizar-vista">
-      <img class="lapiz-editar" [src]="Imagen.lapiz">
-    </a>
-  </p>
-
+  <p class="titulo">HABILIDADES</p>
   <div id="contenedor-habilidades">
-    <div class="habilidad" *ngFor="let habilidad of Habilidades">
-    <circle-progress
+    <div class="habilidad" *ngFor="let habilidad of listaDeHabilidades">
+      <div class="botones">
+        <a class="editar"(click)="switchHabilidad('editar',habilidad.id,habilidad)">
+          <img class="lapiz-editar" [src]="Imagen.lapiz">
+        </a>
+          <a class="editar" (click)="eliminarHabilidad(habilidad.id)">
+            <img class="borrar" [src]="Imagen.delete">
+          </a>
+      </div>
+
+    <circle-progress class="circulo-progreso"
     [percent]="habilidad.nivel"
     [title]="habilidad.habilidad"
     [radius]="60"
@@ -30,9 +33,10 @@
     [subtitleFontSize]="'20'"
     [showSubtitle]="false"
     [backgroundPadding]="0"
-
     ></circle-progress>
+
     </div>
+    <button id="mas-boton" (click)="switchHabilidad('agregar',0,null)"><img id="mas-icono" [src]="Imagen.mas" ></button>
   </div>
 </div>
 

@@ -21,6 +21,7 @@ import { EditarInfoComponent } from './formularios/editar-info/editar-info.compo
 import { EditarFotoComponent } from './formularios/editar-foto/editar-foto.component';
 import { EditarEstudiosComponent } from './formularios/editar-estudios/editar-estudios.component';
 import { EditarProyectosComponent } from './formularios/editar-proyectos/editar-proyectos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { EditarProyectosComponent } from './formularios/editar-proyectos/editar-
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     NgCircleProgressModule.forRoot({
       "radius": 60,
       "space": -10,

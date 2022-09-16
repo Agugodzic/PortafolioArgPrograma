@@ -1,18 +1,18 @@
-<form [formGroup]="editarExperiencia" *ngIf="editar()">
+<form (ngSubmit)="onSubmit()" [formGroup]="editarExperiencia" *ngIf="editar()">
   <p class="titulo">Editar experiencia</p>
   <div id="contenedor-form-controls">
   <p><input class="form-control" type="text" [value]="experiencia.puesto" placeholder="Puesto" formControlName="puesto"></p>
   <p><input class="form-control" type="text" [value]="experiencia.empresa" placeholder="Empresa o institucion" formControlName="empresa"></p>
-  <p><input class="form-control tiempo" [value]="tiempo_value" type="number" placeholder="Tiempo" formControlName="tiempo">
+  <p><input class="form-control tiempo" [value]="experiencia.tiempo" type="number" placeholder="Tiempo" formControlName="tiempo">
   <select name="tiempo en">
     <option value="1">Años</option>
     <option value="2">Meses</option>
   </select></p>
-  <input class="form-control guardar" (click)="mostrarElemento()" value="Guardar" type="submit">
+  <input class="form-control guardar" value="Guardar" type="submit">
   </div>
 </form>
 
-<form [formGroup]="agregarExperiencia" *ngIf="agregar()">
+<form [formGroup]="agregarExperiencia" (ngSubmit)="onSubmit()" *ngIf="agregar()">
   <p class="titulo">Agregar experiencia</p>
   <div id="contenedor-form-controls">
     <p><input class="form-control" type="text" placeholder="Puesto" formControlName="puesto"></p>

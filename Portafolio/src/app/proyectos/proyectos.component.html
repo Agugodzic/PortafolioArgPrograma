@@ -1,27 +1,37 @@
+<div class="section"><span id="actualizar-vista"></span>
+
 <div class="section">
 
-      <!-- Formularios -->
+      <!----------- Formularios ----------->
 
       <div id="contenedor-formulario" *ngIf="mostrarEditarProyecto">
-        <button class="cerrar" (click)="switchProyecto()"><img class="imagen-cerrar" [src]="Imagen.atras"></button>
         <div class="centrar">
-          <app-editar-estudios></app-editar-estudios>
+          <button class="cerrar" (click)="switchProyecto('',0)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
+          <app-editar-proyectos [accion]="accion" [id]="id"></app-editar-proyectos>
         </div>
       </div>
 
-      <!----------------->
+      <!----------------------------------->
 
-  <p class="titulo">PROYECTOS <button (click)="switchProyecto()">Editar</button></p>
+  <p class="titulo">PROYECTOS </p>
   <div class="contenedor-proyectos">
-  <div *ngFor=" let proyecto of Proyectos">
+  <div class="generador-proyectos" *ngFor=" let proyecto of Proyectos">
+
+    <div class="pantalla-edicion">
+      <button class="boton boton-eliminar"><img class="delete-imagen" [src]="Imagen.delete" ></button>
+      <button class="boton boton-editar" (click)="switchProyecto('editar',proyecto.id)"  href="#actualizar-vista">Editar</button>
+    </div>
+
     <div class="proyecto">
       <img class="imagen-proyecto" [src]="proyecto.linkImagen">
       <div class="titulo-proyecto"><p class="texto-titulo-proyecto">{{proyecto.titulo}}</p></div>
       <div class="estado">{{proyecto.estado}}</div>
       <div class="descripcion-proyecto"><p class="texto-descripcion-proyecto">{{proyecto.descripcion}}</p></div>
-      <a class="boton-proyecto" href="google.com">Repositorio</a>
+      <a class="boton-proyecto" href="http://www.google.com" target="_blank" >Repositorio</a>
     </div>
+
     </div>
   </div>
+   <button id="mas-boton" (click)="switchProyecto('agregar',0)"><img id="mas-icono" [src]="Imagen.mas" ></button>
 </div>
 

@@ -16,7 +16,6 @@ export class EditarInfoComponent implements OnInit {
   )
 
   apellido="godzic";
-  propagar = new EventEmitter<string>();
   cargarFormulario=true;
 
   ngOnInit(): void {
