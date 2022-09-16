@@ -15,10 +15,10 @@
   <div id="contenedor-habilidades">
     <div class="habilidad" *ngFor="let habilidad of listaDeHabilidades">
       <div class="botones">
-        <a class="editar"(click)="switchHabilidad('editar',habilidad.id,habilidad)" href="#actualizar-vista">
+        <a class="editar"(click)="switchHabilidad('editar',habilidad.id,habilidad)">
           <img class="lapiz-editar" [src]="Imagen.lapiz">
         </a>
-          <a class="editar" href="#actualizar-vista" (click)="eliminarHabilidad(habilidad.id)">
+          <a class="editar" (click)="eliminarHabilidad(habilidad.id)">
             <img class="borrar" [src]="Imagen.delete">
           </a>
       </div>

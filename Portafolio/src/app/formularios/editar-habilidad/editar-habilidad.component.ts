@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DatosService } from 'src/app/datos.service';
 import { HabilidadesModel } from 'src/app/models/habilidades.model';
 import { HabilidadesService } from 'src/app/servicios/habilidades.service';
@@ -18,8 +18,10 @@ export class EditarHabilidadComponent implements OnInit {
 
   public Habilidad:any;
   public listaDeHabilidades:HabilidadesModel[] ;
+  public editarHabilidad:FormGroup;
+  public agregarHabilidad:FormGroup;
 
-  constructor(private datos:DatosService, private habilidadesService:HabilidadesService) {}
+  constructor(private formBuilder:FormBuilder, private datos:DatosService, private habilidadesService:HabilidadesService) {}
 
   editar():boolean{
     return this.accion == "editar";
@@ -39,12 +41,32 @@ export class EditarHabilidadComponent implements OnInit {
     })
   };
 
-  editarHabilidad = new FormGroup({});
-  agregarHabilidad = new FormGroup({});
+  enviar():any{
+    this.habilidadesService.editar(this.editarHabilidad.value)
+    alert("Datos enviados")
+  }
+
 
   ngOnInit(): void {
     this.listarHabilidades()
     this.Habilidad = this.habilidad
+    this.editarHabilidad = this.formBuilder.group(
+      {
+        habilidad:['',[Validators.required]],
+        nivel:['',[Validators.required,Validators.max(100),Validators.min(0)]]
+      }
+    )
+    this.editarHabilidad = this.formBuilder.group(
+      {
+        habilidad:['',[Validators.required]],
+        nivel:['',Validators.required,Validators.max(100),Validators.min(0)]
+      }
+    )
+
+    this.editarHabilidad.patchValue({
+      habilidad:this.habilidad.habilidad,
+      nivel:this.habilidad.nivel,
+    })
 
   }
 }

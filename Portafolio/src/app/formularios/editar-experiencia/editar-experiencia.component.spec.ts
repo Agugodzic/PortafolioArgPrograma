@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EditarExperienciaComponent } from './editar-experiencia.component';
 
 describe('EditarExperienciaComponent', () => {
