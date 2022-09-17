@@ -8,15 +8,16 @@ import { PortadaModel } from '../models/portada-model';
   providedIn: 'root'
 })
 export class PortadaService {
+
   private apiServerUrl = environment.apiBaseUrl;
-    constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   public listar():Observable<PortadaModel[]>{
-      return this.http.get<PortadaModel[]>(`${this.apiServerUrl}/portada/listar`)
+    return this.http.get<PortadaModel[]>(`${this.apiServerUrl}/portada/listar`)
   }
 
   public editar(portada:PortadaModel):Observable<PortadaModel>{
-    return this.http.put<PortadaModel>(`${this.apiServerUrl}/portada/listar`,portada)
+    return this.http.put<PortadaModel>(`${this.apiServerUrl}/portada/editar`,portada)
   }
 
   public eliminar(id:number):Observable<any>{

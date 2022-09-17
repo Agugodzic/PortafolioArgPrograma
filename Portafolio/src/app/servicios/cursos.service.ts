@@ -16,7 +16,7 @@ export class CursosService {
  }
 
  public editar(curso:CursoModel):Observable<CursoModel>{
-  return this.http.put<CursoModel>(`${this.apiServerUrl}/cursos/listar`,curso)
+  return this.http.put<CursoModel>(`${this.apiServerUrl}/cursos/editar`,curso)
 }
 
  public eliminar(id:number):Observable<any>{

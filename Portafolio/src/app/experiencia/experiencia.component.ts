@@ -1,6 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { ThisReceiver } from '@angular/compiler';
-import { Component, Input, OnInit  } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { DatosService } from '../datos.service';
 import { ExperienciaModel } from '../models/experiencia.model';
 import { ExperienciaService } from '../servicios/experiencia.service';
