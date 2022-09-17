@@ -8,6 +8,7 @@ body::-webkit-scrollbar{
   width: 9px;
   height: 0px;
   position:absolute;
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar-track{

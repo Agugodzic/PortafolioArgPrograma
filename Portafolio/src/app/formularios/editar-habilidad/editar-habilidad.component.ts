@@ -21,7 +21,7 @@ export class EditarHabilidadComponent implements OnInit {
   public editarHabilidad:FormGroup;
   public agregarHabilidad:FormGroup;
 
-  constructor(private formBuilder:FormBuilder, private datos:DatosService, private habilidadesService:HabilidadesService) {}
+  constructor(private formBuilder:FormBuilder, private datos:DatosService, private habilidadesService:HabilidadesService){}
 
   editar():boolean{
     return this.accion == "editar";
@@ -41,9 +41,13 @@ export class EditarHabilidadComponent implements OnInit {
     })
   };
 
-  enviar():any{
-    this.habilidadesService.editar(this.editarHabilidad.value)
-    alert("Datos enviados")
+  submitEditar():any{
+    this.habilidadesService.editar(this.editarHabilidad.value).subscribe();
+    location.reload();
+  }
+  submitAgregar():any{
+    this.habilidadesService.agregar(this.agregarHabilidad.value).subscribe();
+    location.reload();
   }
 
 
@@ -52,18 +56,20 @@ export class EditarHabilidadComponent implements OnInit {
     this.Habilidad = this.habilidad
     this.editarHabilidad = this.formBuilder.group(
       {
+        id:[],
         habilidad:['',[Validators.required]],
-        nivel:['',[Validators.required,Validators.max(100),Validators.min(0)]]
+        nivel:['',[Validators.required]]
       }
     )
-    this.editarHabilidad = this.formBuilder.group(
+    this.agregarHabilidad = this.formBuilder.group(
       {
         habilidad:['',[Validators.required]],
-        nivel:['',Validators.required,Validators.max(100),Validators.min(0)]
+        nivel:['',Validators.required]
       }
     )
 
     this.editarHabilidad.patchValue({
+      id:this.habilidad.id,
       habilidad:this.habilidad.habilidad,
       nivel:this.habilidad.nivel,
     })

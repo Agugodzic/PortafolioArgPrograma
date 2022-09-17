@@ -11,6 +11,10 @@ p{
   text-align: center;
 }
 
+.selector{
+  min-height:29px;
+}
+
 form{
   background-color: rgb(235, 235, 235);
   width: 350px;
