@@ -13,15 +13,19 @@ export class UniversitarioService {
   constructor(private http: HttpClient) { }
 
   public listar():Observable<UniversitarioModel[]>{
-    return this.http.get<UniversitarioModel[]>(`${this.apiServerUrl}/universitario/listar`)
+    return this.http.get<UniversitarioModel[]>(`${this.apiServerUrl}/titulo-universitario/listar`)
  }
 
  public editar(titulo:UniversitarioModel):Observable<UniversitarioModel>{
-  return this.http.put<UniversitarioModel>(`${this.apiServerUrl}/universitario/listar`,titulo)
+  return this.http.put<UniversitarioModel>(`${this.apiServerUrl}/titulo-universitario/editar`,titulo)
+}
+
+public agregar(titulo:UniversitarioModel):Observable<UniversitarioModel>{
+  return this.http.put<UniversitarioModel>(`${this.apiServerUrl}/titulo-universitario/agregar`,titulo)
 }
 
  public eliminar(id:number):Observable<any>{
-  return this.http.delete(`${this.apiServerUrl}/universitario/${id}`)
+  return this.http.delete(`${this.apiServerUrl}/titulo-universitario/${id}`)
  }
 
 }

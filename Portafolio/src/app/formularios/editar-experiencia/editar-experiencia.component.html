@@ -1,9 +1,9 @@
 <form (ngSubmit)="submitEditar()" [formGroup]="editarExperiencia" *ngIf="editar()">
   <p class="titulo">Editar experiencia</p>
   <div id="contenedor-form-controls">
-  <p><input class="form-control" type="text" [value]="experiencia.puesto" placeholder="Puesto" formControlName="puesto"></p>
-  <p><input class="form-control" type="text" [value]="experiencia.empresa" placeholder="Empresa o institucion" formControlName="empresa"></p>
-  <p><input class="form-control tiempo" [value]="experiencia.tiempo" type="number" placeholder="Tiempo" formControlName="tiempo">
+  <p><input class="form-control" type="text" placeholder="Puesto" formControlName="puesto"></p>
+  <p><input class="form-control" type="text" placeholder="Empresa o institucion" formControlName="empresa"></p>
+  <p><input class="form-control tiempo" type="number" placeholder="Tiempo" formControlName="tiempo">
   <select class="selector" formControlName="unidad">
     <option value="años">Años</option>
     <option value="meses">Meses</option>
