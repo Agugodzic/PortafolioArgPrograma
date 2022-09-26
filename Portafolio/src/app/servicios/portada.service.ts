@@ -20,6 +20,10 @@ export class PortadaService {
     return this.http.put<PortadaModel>(`${this.apiServerUrl}/portada/editar`,portada)
   }
 
+  public agregar(portada:PortadaModel):Observable<PortadaModel>{
+    return this.http.put<PortadaModel>(`${this.apiServerUrl}/portada/agregar`,portada)
+  }
+
   public eliminar(id:number):Observable<any>{
     return this.http.delete(`${this.apiServerUrl}/portada/${id}`)
   }

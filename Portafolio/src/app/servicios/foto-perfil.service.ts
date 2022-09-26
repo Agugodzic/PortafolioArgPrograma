@@ -13,14 +13,14 @@ export class FotoPerfilService {
   constructor(private http: HttpClient) { }
 
   public listar():Observable<FotoPerfilModel[]>{
-    return this.http.get<FotoPerfilModel[]>(`${this.apiServerUrl}/fotoPerfil/listar`)
+    return this.http.get<FotoPerfilModel[]>(`${this.apiServerUrl}/foto-perfil/listar`)
   }
 
-  public editar(fotoPerfil:FotoPerfilModel):Observable<FotoPerfilModel>{
-    return this.http.put<FotoPerfilModel>(`${this.apiServerUrl}/fotoPerfil/listar`,fotoPerfil)
+  public agregar(fotoPerfil:FotoPerfilModel):Observable<FotoPerfilModel>{
+    return this.http.put<FotoPerfilModel>(`${this.apiServerUrl}/foto-perfil/agregar`,fotoPerfil)
   }
 
   public eliminar(id:number):Observable<any>{
-    return this.http.delete(`${this.apiServerUrl}/fotoPerfil/${id}`)
+    return this.http.delete(`${this.apiServerUrl}/foto-perfil/${id}`)
   }
 }

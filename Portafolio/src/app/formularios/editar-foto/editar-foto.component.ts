@@ -1,5 +1,10 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, Validators } from '@angular/forms';
 import { DatosService } from 'src/app/datos.service';
+import { FotoPerfilModel } from 'src/app/models/foto-perfil-model';
+import { FotoPerfilService } from 'src/app/servicios/foto-perfil.service';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-editar-foto',
@@ -8,13 +13,35 @@ import { DatosService } from 'src/app/datos.service';
 })
 export class EditarFotoComponent implements OnInit {
 
-  constructor(private datos:DatosService) { }
+  public listaDeFotos:FotoPerfilModel[];
+  public agregarFoto:FormGroup;
+  public Foto:any = this.datos.Foto;
+  public foto:string = this.Foto.banner3;
+  public textoAgregar:string = "Agregar"
+  public mostrarAgregar:boolean = false;
 
-  Foto:any = this.datos.Foto;
-  foto:string = this.Foto.banner3;
-  textoAgregar:string = "Agregar"
+  constructor(private datos:DatosService, private fotoService:FotoPerfilService , private formBuilder:FormBuilder) { }
 
-  mostrarAgregar:boolean = false;
+  public listar(){
+    this.fotoService.listar().subscribe({
+      next: (response: FotoPerfilModel[])  =>{
+        this.listaDeFotos = response;
+      },
+        error:(error:HttpErrorResponse) =>{
+          alert(error.message)
+        }
+    })
+  }
+
+  submitAgregar():any{
+    this.fotoService.agregar(this.agregarFoto.value).subscribe();
+    location.reload()
+  }
+
+  eliminar(id:number){
+    this.fotoService.eliminar(id).subscribe();
+    location.reload()
+  }
 
   agregarSwitch():void{
     if( this.mostrarAgregar == false ){
@@ -31,6 +58,10 @@ export class EditarFotoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.listar()
+    this.agregarFoto = this.formBuilder.group({
+      link:["",[Validators.required]]
+    })
   }
 
 }

@@ -1,15 +1,21 @@
 <div id="ventana">
   <p id="titulo">Seleccionar:</p>
   <div class="contenedor-fotos">
-  <div class="preview" *ngFor = "let foto of Foto">
-    <a class="foto" (click)="fotoClick(foto)">
-      <img class="imagen" [src]="foto.link">
+  <div class="preview" *ngFor = "let foto of listaDeFotos">
+    <a class="foto" (click)="fotoClick(foto.link)">
+      <div class="control">
+        <button class="boton-seleccionar">Seleccionar</button>
+        <button class="boton-eliminar" (click)="eliminar(foto.id)">x</button>
+      </div>
+        <img class="imagen" [src]="foto.link">
     </a>
   </div>
   </div>
   <div *ngIf="mostrarAgregar">
-    <input id="input-link" type="link" placeholder="Link">
-    <input id="input-ok" type="submit" id="ok" value="Ok">
+    <form (ngSubmit)="submitAgregar()" [formGroup]="agregarFoto">
+      <input id="input-link" type="string" placeholder="Link" formControlName="link">
+      <input id="input-ok" type="submit" id="ok" value="Ok">
+    </form>
   </div>
   <button id="agregar" (click)="agregarSwitch()">{{textoAgregar}}</button>
 </div>

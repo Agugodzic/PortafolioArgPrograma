@@ -2,8 +2,7 @@
   width: max-content;
   height: max-content;
   display: inline-block;
-  margin:40px;
-
+  margin:35px;
 }
 
 .titulo{
@@ -69,6 +68,7 @@
 
 .circulo-progreso{
   z-index:2000;
+  margin-left: 10px;
 }
 
 #contenedor-formulario{
