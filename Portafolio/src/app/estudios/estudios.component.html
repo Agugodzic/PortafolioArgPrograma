@@ -36,13 +36,13 @@
 
     <p class="titulo2 margin-top">UNIVERSITARIO EN CURSO</p>
     <div class="descripcion">
-        <div *ngFor="let universitario of listaUniversitario">
+        <div *ngFor="let universitario of listaUniversitarioEnCurso">
 
           <div class="botones-curso">
             <a class="boton"  (click)="switchEstudios('UniversitarioEnCurso',universitario.id,'editar',universitario)" href="#actualizar-vista">
               <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
             </a>
-            <button class="boton  boton-delete">
+            <button class="boton  boton-delete" (click)="eliminarUniversitarioEnCurso(universitario.id)">
               <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
             </button>
           </div>
@@ -68,7 +68,7 @@
             <a class="boton" (click)="switchEstudios('Universitario',universitario.id,'editar',universitario)" href="#actualizar-vista">
               <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
             </a>
-            <button class="boton  boton-delete">
+            <button class="boton  boton-delete" (click)="eliminarUniversitario(universitario.id)">
               <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
             </button>
           </div>
@@ -96,7 +96,7 @@
           <a class="boton" (click)="switchEstudios('Terciario',terciario.id,'editar',terciario)" href="#actualizar-vista">
             <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
           </a>
-          <button class="boton  boton-delete">
+          <button class="boton  boton-delete" (click)="eliminarTerciario(terciario.id)">
             <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
           </button>
         </div>

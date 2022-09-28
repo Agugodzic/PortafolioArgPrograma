@@ -115,12 +115,12 @@ export class EstudiosComponent implements OnInit {
     location.reload();
   }
 
-    //--------------Universitario----------------//
+    //---------Universitario-en-curso---------//
 
     public listarUniversitarioEnCurso(){
       this.universitarioEnCurso.listar().subscribe({
         next: (response: UniversitarioEnCursoModel[])  =>{
-          this.listaUniversitario = response;
+          this.listaUniversitarioEnCurso = response;
         },
           error:(error:HttpErrorResponse) =>{
             alert(error.message)

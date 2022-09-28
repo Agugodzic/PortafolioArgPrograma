@@ -26,38 +26,38 @@
   <!---------------------------------->
 
 <div id="contenedor-banner">
-  <img id="banner" [src]="Imagen.banner3">
+  <img id="banner" [src]="datosDeUsuario.portada">
   <button id="editar-portada" (click)="switchPortada()"><img id="lapiz-banner" [src]="Imagen.lapiz">Editar portada</button>
 </div>
 
 <div id="contenedor-perfil">
-  <img id="foto-perfil" [src]="Imagen.perfil">
+  <img id="foto-perfil" [src]="datosDeUsuario.perfil">
   <div id="editar-foto" (click)="switchFoto()">
     <img id="lapiz-foto" [src]="Imagen.lapizNegro">
   </div>
-  <p id="nombre">{{ Info.nombre.toUpperCase() +" "+ Info.apellido.toUpperCase()  }}</p>
-  <p id="titulo">{{ Info.titulo }}</p>
+  <p id="nombre">{{ datosDeUsuario.nombre.toUpperCase() +" "+ datosDeUsuario.apellido.toUpperCase()  }}</p>
+  <p id="titulo">{{ datosDeUsuario.titulo }}</p>
 </div>
 
 <div id="sobre-mi">SOBRE MI
   <a class="editar" (click)="switchInfo()" href="#actualizar-vista-info">
     <img class="lapiz-editar" [src]="Imagen.lapiz">
   </a>
-  <p id="sobre-mi-texto">{{Info.sobreMi}}</p>
+  <p id="sobre-mi-texto">{{datosDeUsuario.sobremi}}</p>
 </div>
 
 <div class="informacion-personal" *ngIf="verMas">
   <div class="info-columna">
-    <p class="texto-informacion-personal">Edad: {{Info.edad}} Años</p>
-    <p class="texto-informacion-personal">Cel: {{Info.telefono}} </p>
+    <p class="texto-informacion-personal">Edad: {{datosDeUsuario.edad}} Años</p>
+    <p class="texto-informacion-personal">Cel: {{datosDeUsuario.telefono}} </p>
   </div>
   <div class="info-columna">
-    <p class="texto-informacion-personal">{{Info.ciudad+" ("+Info.codigoPostal+")"}}</p>
-    <p class="texto-informacion-personal">Email: {{Info.email}}</p>
+    <p class="texto-informacion-personal">{{datosDeUsuario.ciudad+" ("+datosDeUsuario.codigopostal+")"}}</p>
+    <p class="texto-informacion-personal">Email: {{datosDeUsuario.email}}</p>
   </div>
   <div class="info-columna">
-    <p class="texto-informacion-personal">Nacionalidad: {{Info.pais}}</p>
-    <p class="texto-informacion-personal">{{Info.otros}}
+    <p class="texto-informacion-personal">Nacionalidad: {{datosDeUsuario.pais}}</p>
+    <p class="texto-informacion-personal">{{datosDeUsuario.otro}}
     </p>
   </div>
 </div>

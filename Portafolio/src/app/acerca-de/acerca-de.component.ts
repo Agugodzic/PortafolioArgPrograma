@@ -1,5 +1,8 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
+import { InfoModel } from '../models/info-model';
+import { InfoService } from '../servicios/info.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -7,16 +10,17 @@ import { DatosService } from '../datos.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
+  public datosDeUsuario:InfoModel;
+  public Imagen:any = this.datos.Imagen;
+  public Info:any = this.datos.Info;
+  public verMasTexto:String = "Ver mas";
+  public verMas:boolean = false;
+  public mostrarEditarPortada = false;
+  public mostrarEditarInfo = false;
+  public mostrarEditarFoto = false;
 
-  constructor(private datos:DatosService) { }
-  Imagen:any = this.datos.Imagen;
-  Info:any = this.datos.Info;
-  Banner:any = this.datos.Banner;
-  verMasTexto:String = "Ver mas";
-  verMas:boolean = false;
-  mostrarEditarPortada = false;
-  mostrarEditarInfo = false;
-  mostrarEditarFoto = false;
+  constructor(private datos:DatosService , private infoService:InfoService ) {
+  }
 
   verMasClick(){
     if(this.verMas == false){
@@ -50,7 +54,21 @@ export class AcercaDeComponent implements OnInit {
       this.mostrarEditarFoto = true;
     }
   }
+
+  public listarInfo(){
+    this.infoService.listar().subscribe({
+      next: (response: InfoModel[])  =>{
+        this.datosDeUsuario  = response[0];
+      },
+        error:(error:HttpErrorResponse) =>{
+          alert(error.message)
+        }
+    })
+  }
+
   ngOnInit(): void {
+    this.listarInfo();
+    alert(this.datosDeUsuario.apellido)
   }
 
 }
