@@ -12,7 +12,6 @@
     <!----------------------------->
 
   <p class="titulo margin-top">ESTUDIOS</p>
-  <span id="actualizar-vista"></span>
 
     <!--------  SECUNDARIO --------->
 
@@ -39,7 +38,7 @@
         <div *ngFor="let universitario of listaUniversitarioEnCurso">
 
           <div class="botones-curso">
-            <a class="boton"  (click)="switchEstudios('UniversitarioEnCurso',universitario.id,'editar',universitario)" href="#actualizar-vista">
+            <a class="boton"  (click)="switchEstudios('UniversitarioEnCurso',universitario.id,'editar',universitario)">
               <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
             </a>
             <button class="boton  boton-delete" (click)="eliminarUniversitarioEnCurso(universitario.id)">
@@ -65,7 +64,7 @@
         <div *ngFor="let universitario of listaUniversitario">
 
           <div class="botones-curso">
-            <a class="boton" (click)="switchEstudios('Universitario',universitario.id,'editar',universitario)" href="#actualizar-vista">
+            <a class="boton" (click)="switchEstudios('Universitario',universitario.id,'editar',universitario)">
               <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
             </a>
             <button class="boton  boton-delete" (click)="eliminarUniversitario(universitario.id)">
@@ -93,7 +92,7 @@
       <div *ngFor="let terciario of listaTerciario">
 
         <div class="botones-curso">
-          <a class="boton" (click)="switchEstudios('Terciario',terciario.id,'editar',terciario)" href="#actualizar-vista">
+          <a class="boton" (click)="switchEstudios('Terciario',terciario.id,'editar',terciario)">
             <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
           </a>
           <button class="boton  boton-delete" (click)="eliminarTerciario(terciario.id)">
@@ -120,7 +119,7 @@
       <div *ngFor="let curso of listaDeCursos">
 
         <div class="botones-curso">
-          <a class="boton"  (click)="switchEstudios('Cursos',curso.id,'editar',curso)" href="#actualizar-vista">
+          <a class="boton"  (click)="switchEstudios('Cursos',curso.id,'editar',curso)">
             <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
           </a>
           <button class="boton  boton-delete" (click)="eliminarCurso(curso.id)">

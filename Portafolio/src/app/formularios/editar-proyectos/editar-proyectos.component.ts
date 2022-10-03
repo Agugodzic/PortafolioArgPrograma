@@ -1,6 +1,9 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { DatosService } from 'src/app/datos.service';
+import { ProyectosModel } from 'src/app/models/proyectos-model';
+import { ProyectosService } from 'src/app/servicios/proyectos.service';
 
 @Component({
   selector: 'app-editar-proyectos',
@@ -11,10 +14,34 @@ export class EditarProyectosComponent implements OnInit {
 
   @Input() id:any;
   @Input() accion:any;
+  @Input() proyecto:ProyectosModel;
 
-  proyecto:any;
+  public editarProyecto:FormGroup;
+  public agregarProyecto:FormGroup;
 
-  constructor(private datos:DatosService) { }
+
+  constructor(private datos:DatosService,private proyectoService:ProyectosService, private formBuilder:FormBuilder) { }
+
+  private listarProyectos(){
+    this.proyectoService.listar().subscribe({
+      next: (response: ProyectosModel[])  =>{
+        this.proyecto  = response[0];
+      },
+        error:(error:HttpErrorResponse) =>{
+          alert(error.message)
+        }
+    })
+  }
+
+  submitEditar():any{
+    this.proyectoService.editar(this.editarProyecto.value).subscribe();
+    location.reload();
+  }
+
+  submitAgregar():any{
+    this.proyectoService.editar(this.editarProyecto.value).subscribe();
+    location.reload();
+  }
 
   editar():boolean{
     return this.accion == "editar";
@@ -22,15 +49,29 @@ export class EditarProyectosComponent implements OnInit {
   agregar():boolean{
     return this.accion == "agregar";
   }
-  editarProyecto = new FormGroup(
-    {}
-  )
-  agregarProyecto = new FormGroup(
-    {}
-  )
+
 
   ngOnInit(): void {
-    this.proyecto = this.datos.Proyectos.find((elemento:any) => elemento.id == this.id);
+    this.editarProyecto = this.formBuilder.group(
+      {
+        id:["",[]],
+        titulo:["",[]],
+        estado:["",[]],
+        imagen:["",[]],
+        repositorio:["",[]],
+        descripcion:["",[]],
+      }
+    )
+
+    this.agregarProyecto = this.formBuilder.group(
+      {
+        titulo:["",[]],
+        estado:["",[]],
+        imagen:["",[]],
+        repositorio:["",[]],
+        descripcion:["",[]],
+      }
+    )
   }
 
 }

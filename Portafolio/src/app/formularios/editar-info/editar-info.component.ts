@@ -18,7 +18,7 @@ export class EditarInfoComponent implements OnInit {
   constructor(private infoService:InfoService ,private formBuilder:FormBuilder) {
   }
 
-  public listarInfo(){
+  private listarInfo(){
     this.infoService.listar().subscribe({
       next: (response: InfoModel[])  =>{
         this.datosDeUsuario  = response[0];
@@ -48,10 +48,10 @@ export class EditarInfoComponent implements OnInit {
         telefono:['',Validators.required],
         ciudad:['',Validators.required],
         email:['',Validators.required],
-        codigoPostal:['',Validators.required],
+        codigopostal:['',Validators.required],
         titulo:['',Validators.required],
         otro:['',Validators.required],
-        sobreMi:['',Validators.required]
+        sobremi:['',Validators.required]
       }
     )
     this.editarInfo.patchValue({
