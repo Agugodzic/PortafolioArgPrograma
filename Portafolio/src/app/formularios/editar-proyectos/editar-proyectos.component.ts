@@ -12,9 +12,8 @@ import { ProyectosService } from 'src/app/servicios/proyectos.service';
 })
 export class EditarProyectosComponent implements OnInit {
 
-  @Input() id:any;
   @Input() accion:any;
-  @Input() proyecto:ProyectosModel;
+  @Input() proyecto:any;
 
   public editarProyecto:FormGroup;
   public agregarProyecto:FormGroup;
@@ -39,7 +38,7 @@ export class EditarProyectosComponent implements OnInit {
   }
 
   submitAgregar():any{
-    this.proyectoService.editar(this.editarProyecto.value).subscribe();
+    this.proyectoService.editar(this.agregarProyecto.value).subscribe();
     location.reload();
   }
 
@@ -72,6 +71,14 @@ export class EditarProyectosComponent implements OnInit {
         descripcion:["",[]],
       }
     )
+
+    this.editarProyecto.patchValue({
+      titulo:this.proyecto.titulo,
+      estado:this.proyecto.estado,
+      imagen:this.proyecto.linkImagen,
+      repositorio:this.proyecto.linkGitHub,
+      descripcion:this.proyecto.descripcion
+    })
   }
 
 }

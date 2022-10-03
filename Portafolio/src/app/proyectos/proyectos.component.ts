@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
+import { ProyectosModel } from '../models/proyectos-model';
 
 @Component({
   selector: 'app-proyectos',
@@ -8,14 +9,17 @@ import { DatosService } from '../datos.service';
 })
 export class ProyectosComponent implements OnInit {
 
+  public Experiencia = this.datos.Experiencia;
+  public Proyectos = this.datos.Proyectos;
+  public Imagen = this.datos.Imagen;
+  public proyecto:any;
+  public accion:string="";
+  public mostrarEditarProyecto:boolean = false;
+
   constructor(private datos:DatosService) { }
 
-  id:number=0;
-  accion:string="";
-  mostrarEditarProyecto:boolean = false;
-
-  switchProyecto(accion:string,id:number):void{
-    this.id = id;
+  switchProyecto(accion:string,proyecto:any):void{
+    this.proyecto = proyecto;
     this.accion = accion;
 
     if(this.mostrarEditarProyecto == true){
@@ -24,10 +28,6 @@ export class ProyectosComponent implements OnInit {
       this.mostrarEditarProyecto = true;
     }
   }
-
-  Experiencia = this.datos.Experiencia;
-  Proyectos = this.datos.Proyectos;
-  Imagen = this.datos.Imagen;
 
   ngOnInit(): void {
   }
