@@ -1,10 +1,10 @@
 <div id="ventana">
   <p id="titulo">Seleccionar:</p>
   <div class="preview" *ngFor = "let portada of listaDePortadas">
-    <a class="banner" (click)="bannerClick(portada.link)">
+    <a class="banner">
       <div class="control">
-        <button class="boton-seleccionar">Seleccionar</button>
-        <button class="boton-eliminar">x</button>
+        <button class="boton-seleccionar" (click)="bannerClick(portada.link)">Seleccionar</button>
+        <button class="boton-eliminar" (click)="eliminar(portada.id)">x</button>
       </div>
       <img class="imagen-banner" [src]="portada.link">
     </a>

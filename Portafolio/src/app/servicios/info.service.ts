@@ -15,12 +15,12 @@ export class InfoService {
     return this.http.get<InfoModel[]>(`${this.apiServerUrl}/datos/listar`)
   }
 
-  public editar(experiencia:InfoModel):Observable<InfoModel>{
-    return this.http.put<InfoModel>(`${this.apiServerUrl}/datos/editar`,experiencia)
+  public editar(info:InfoModel):Observable<InfoModel>{
+    return this.http.put<InfoModel>(`${this.apiServerUrl}/datos/editar`,info)
   }
 
-  public agregar(experiencia:InfoModel):Observable<InfoModel>{
-    return this.http.put<InfoModel>(`${this.apiServerUrl}/datos/agregar`,experiencia)
+  public agregar(info:InfoModel):Observable<InfoModel>{
+    return this.http.put<InfoModel>(`${this.apiServerUrl}/datos/agregar`,info)
   }
 
   public eliminar(id:number):Observable<any>{

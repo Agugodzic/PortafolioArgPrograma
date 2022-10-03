@@ -1,5 +1,3 @@
-import { LogInComponent } from "../formularios/log-in/log-in.component";
-
 export class InfoModel{
   id:number;
   perfil:String;
@@ -9,7 +7,6 @@ export class InfoModel{
   apellido:String;
   edad:number;
   pais:String;
-  nacionalidad:String;
   ciudad:String;
   codigopostal:String;
   email:String;

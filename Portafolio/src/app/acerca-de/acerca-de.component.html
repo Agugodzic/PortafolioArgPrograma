@@ -11,7 +11,7 @@
 
   <div id="contenedor-formulario" *ngIf="mostrarEditarInfo">
     <div class="centrar">
-      <app-editar-info></app-editar-info>
+      <app-editar-info [datos]="datosDeUsuario" ></app-editar-info>
       <button class="cerrar" (click)="switchInfo()"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
     </div>
   </div>

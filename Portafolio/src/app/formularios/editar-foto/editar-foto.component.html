@@ -2,9 +2,9 @@
   <p id="titulo">Seleccionar:</p>
   <div class="contenedor-fotos">
   <div class="preview" *ngFor = "let foto of listaDeFotos">
-    <a class="foto" (click)="fotoClick(foto.link)">
+    <a class="foto" >
       <div class="control">
-        <button class="boton-seleccionar">Seleccionar</button>
+        <button class="boton-seleccionar" (click)="fotoClick(foto.link)">Seleccionar</button>
         <button class="boton-eliminar" (click)="eliminar(foto.id)">x</button>
       </div>
         <img class="imagen" [src]="foto.link">

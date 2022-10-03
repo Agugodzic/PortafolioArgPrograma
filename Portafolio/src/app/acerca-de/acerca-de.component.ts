@@ -68,7 +68,5 @@ export class AcercaDeComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarInfo();
-    alert(this.datosDeUsuario.apellido)
   }
-
 }
