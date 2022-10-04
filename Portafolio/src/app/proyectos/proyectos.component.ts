@@ -13,7 +13,7 @@ export class ProyectosComponent implements OnInit {
 
   public Proyectos:ProyectosModel[];
   public Imagen = this.datos.Imagen;
-  public proyecto:any;
+  public proyecto:ProyectosModel;
   public accion:string="";
   public mostrarEditarProyecto:boolean = false;
 
@@ -28,6 +28,11 @@ export class ProyectosComponent implements OnInit {
           alert(error.message)
         }
     })
+  }
+
+  public eliminarProyecto(id:number):void{
+    this.proyectoService.eliminar(id).subscribe();
+    location.reload();
   }
 
   switchProyecto(accion:string,proyecto:any):void{

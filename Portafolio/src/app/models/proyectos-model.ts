@@ -3,7 +3,7 @@ export class ProyectosModel{
   titulo:string;
   descripcion:string;
   linkPreview:string;
-  linkGitHub:string;
+  linkRepository:string;
   linkImagen:string;
-  estado:boolean;
+  terminado:boolean;
 }

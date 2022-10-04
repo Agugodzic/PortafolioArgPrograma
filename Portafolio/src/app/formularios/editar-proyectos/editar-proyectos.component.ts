@@ -38,7 +38,7 @@ export class EditarProyectosComponent implements OnInit {
   }
 
   public submitAgregar():any{
-    this.proyectoService.editar(this.agregarProyecto.value).subscribe();
+    this.proyectoService.agregar(this.agregarProyecto.value).subscribe();
     location.reload();
   }
 
@@ -56,9 +56,9 @@ export class EditarProyectosComponent implements OnInit {
       {
         id:["",[]],
         titulo:["",[]],
-        estado:["",[]],
-        imagen:["",[]],
-        repositorio:["",[]],
+        terminado:["",[]],
+        linkImagen:["",[]],
+        linkRepository:["",[]],
         descripcion:["",[]],
       }
     )
@@ -66,18 +66,19 @@ export class EditarProyectosComponent implements OnInit {
     this.agregarProyecto = this.formBuilder.group(
       {
         titulo:["",[]],
-        estado:["",[]],
-        imagen:["",[]],
-        repositorio:["",[]],
+        terminado:["",[]],
+        linkImagen:["",[]],
+        linkRepository:["",[]],
         descripcion:["",[]],
       }
     )
 
     this.editarProyecto.patchValue({
+      id:this.proyecto.id,
       titulo:this.proyecto.titulo,
-      estado:this.proyecto.estado,
-      imagen:this.proyecto.linkImagen,
-      repositorio:this.proyecto.linkGitHub,
+      terminado:this.proyecto.terminado,
+      linkImagen:this.proyecto.linkImagen,
+      linkRepository:this.proyecto.linkRepository,
       descripcion:this.proyecto.descripcion
     })
   }
