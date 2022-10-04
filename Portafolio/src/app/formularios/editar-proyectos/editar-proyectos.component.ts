@@ -32,20 +32,21 @@ export class EditarProyectosComponent implements OnInit {
     })
   }
 
-  submitEditar():any{
+  public submitEditar():any{
     this.proyectoService.editar(this.editarProyecto.value).subscribe();
     location.reload();
   }
 
-  submitAgregar():any{
+  public submitAgregar():any{
     this.proyectoService.editar(this.agregarProyecto.value).subscribe();
     location.reload();
   }
 
-  editar():boolean{
+  public editar():boolean{
     return this.accion == "editar";
   }
-  agregar():boolean{
+
+  public agregar():boolean{
     return this.accion == "agregar";
   }
 
