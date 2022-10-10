@@ -18,6 +18,15 @@ export class EditarInfoComponent implements OnInit {
   constructor(private infoService:InfoService ,private formBuilder:FormBuilder) {
   }
 
+  public disabled(){
+    if(this.editarInfo.value == true){
+      return 'false';
+    }
+    else{
+      return 'true';
+    }
+  }
+
   private listarInfo(){
     this.infoService.listar().subscribe({
       next: (response: InfoModel[])  =>{
@@ -41,17 +50,17 @@ export class EditarInfoComponent implements OnInit {
         id:[],
         perfil:[],
         portada:[],
-        nombre:['',[Validators.required]],
-        apellido:['',Validators.required],
-        edad:['',Validators.required],
-        pais:['',Validators.required],
-        telefono:['',Validators.required],
-        ciudad:['',Validators.required],
-        email:['',Validators.required],
-        codigopostal:['',Validators.required],
-        titulo:['',Validators.required],
-        otro:['',Validators.required],
-        sobremi:['',Validators.required]
+        nombre:['',[Validators.required,Validators.maxLength(15)]],
+        apellido:['',[Validators.required,Validators.maxLength(15)]],
+        edad:['',[Validators.required]],
+        pais:['',[Validators.required,Validators.maxLength(20)]],
+        telefono:['',[Validators.required]],
+        ciudad:['',[Validators.required]],
+        email:['',[Validators.required,Validators.email]],
+        codigopostal:['',[Validators.required]],
+        titulo:['',[Validators.required]],
+        otro:['',[Validators.required]],
+        sobremi:['',[Validators.required]]
       }
     )
     this.editarInfo.patchValue({

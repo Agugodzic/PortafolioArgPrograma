@@ -10,11 +10,13 @@
     <p id="titulo">Editar habilidad:</p>
 
     <p><input class="form-control"
+      [ngStyle]="editarHabilidad.get('habilidad')?.errors?.['required'] && {'background-color': '#FCEAEA'}"
       type="text"
       placeholder="habilidad"
       formControlName="habilidad"></p>
 
     <p><input class="form-control"
+      [ngStyle]="editarHabilidad.get('nivel')?.errors?.['pattern'] && {'background-color': '#FCEAEA'}"
       type="Number"
       placeholder="nivel (1 - 100)"
       formControlName="nivel"></p>
@@ -22,6 +24,7 @@
     <input class="form-control guardar"
       value="Guardar"
       type="submit"
+      [disabled]="editarHabilidad.valid !== true"
       >
   </div>
 </form>
@@ -37,11 +40,13 @@
       formControlName="habilidad"></p>
 
     <p><input class="form-control"
+      [ngStyle]="agregarHabilidad.get('nivel')?.errors?.['pattern'] && {'background-color': '#FCEAEA'}"
       type="Number"
       placeholder="nivel (1 - 100)"
       formControlName="nivel"></p>
 
     <input class="form-control guardar"
+      [disabled]="editarHabilidad.valid !== true"
       value="Guardar"
       type="submit">
   </div>

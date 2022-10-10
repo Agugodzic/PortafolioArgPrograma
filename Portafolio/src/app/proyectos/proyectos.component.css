@@ -39,8 +39,9 @@
 .proyecto{
   background-color: rgba(10, 14, 73, 0.356);
   margin:20px;
+  margin-top:30px;
   height: fit-content;
-  width: 320px;
+  width: 270px;
   border-radius: 5px;
   padding:8px;
   padding-bottom:20px;
@@ -79,7 +80,7 @@
 }
 
 .imagen-proyecto{
-  width:314px;
+  width:260px;
   border-radius: 3px;
   }
 

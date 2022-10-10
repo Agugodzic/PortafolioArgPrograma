@@ -4,7 +4,11 @@
   height: 25px;
   font-size: 15px;
   padding-left: 5px;
+  border-radius:3px;
+  border:solid;
+  border-width:1px;
 }
+
 
 p{
   color:black;

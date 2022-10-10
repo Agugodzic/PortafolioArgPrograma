@@ -1,9 +1,10 @@
 html{
-  background-color: rgb(1, 3, 33);
+  background-color: rgb(4, 7, 39);
  /* font-family: Microsoft PhagsPa;*/
   font-family: 'Mulish', sans-serif;
   color: white;
   font-size: 14px;
+
 }
 
 body::-webkit-scrollbar{

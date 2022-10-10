@@ -4,6 +4,9 @@
   height: 25px;
   font-size: 15px;
   padding-left: 5px;
+  border-radius:3px;
+  border:solid;
+  border-width:1px;
 }
 
 p{
@@ -14,10 +17,9 @@ p{
 form{
   background-color: rgb(235, 235, 235);
   width: 350px;
-  height: 88vh;
+  height: 80vh;
   border-radius: 4px;
   display:flex;
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   padding-top:15px;
@@ -59,7 +61,6 @@ form{
   margin-top: 25px;
   display:block;
   text-align: center;
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 25px;

@@ -7,6 +7,7 @@
   width: 95vw;
   opacity: 85%;
   box-shadow: 10px 5px 30px 5px rgba(0, 0, 0, 0.842);
+  transform: translateX(-8px);
 }
 
 #foto-perfil{

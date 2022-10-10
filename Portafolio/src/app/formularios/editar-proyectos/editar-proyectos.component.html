@@ -15,9 +15,9 @@
   <p id="titulo">Agregar proyecto:</p>
   <p><input class="form-control" type="text" placeholder="Titulo" formControlName="titulo"></p>
   <p><input class="form-control" type="boolean" placeholder="Estado" formControlName="terminado"></p>
-  <p><input class="form-control" type="text" placeholder="Imagen" formControlName="linkImagen"></p>
+  <p><input class="form-control" type="text" placeholder="Imagen (url)" formControlName="linkImagen"></p>
   <p><input class="form-control" type="link" placeholder="Link del repositorio" formControlName="linkRepository"></p>
-<p><textarea class="campo-de-texto scroll" [value]="proyecto.descripcion" placeholder="Descripcion del proyecto"></textarea></p>
+<p><textarea class="campo-de-texto scroll" placeholder="Descripcion del proyecto"></textarea></p>
   <input class="form-control guardar" value="Guardar" type="submit">
   </div>
 </form>

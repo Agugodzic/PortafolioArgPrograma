@@ -58,13 +58,13 @@ export class EditarHabilidadComponent implements OnInit {
       {
         id:[],
         habilidad:['',[Validators.required]],
-        nivel:['',[Validators.required]]
+        nivel:['',[Validators.required,Validators.pattern("[0-9][0-9]")]],
       }
     )
     this.agregarHabilidad = this.formBuilder.group(
       {
         habilidad:['',[Validators.required]],
-        nivel:['',Validators.required]
+        nivel:['',[Validators.required,Validators.pattern("[0-9][0-9]")]]
       }
     )
 
