@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CursoModel } from 'src/app/models/curso-model';
 import { TerciarioModel } from 'src/app/models/terciario-model';
 import { UniversitarioEnCursoModel } from 'src/app/models/universitario-en-curso-model';
@@ -23,43 +23,93 @@ export class EditarEstudiosComponent implements OnInit {
   @Input() public tipo:string;
   @Input() public elemento:any;
 
+  public editarEstudio:FormGroup;
+  public agregarEstudio:FormGroup;
   public objetoTitulo:string;
+  private servicio:any;
 
   constructor(
     private cursosService:CursosService,
     private terciarioService:TerciarioService,
     private universitarioService:UniversitarioService,
     private secundarioService:SecundarioService,
-    private universitarioEnCursoService:UniversitarioEnCursoService
+    private universitarioEnCursoService:UniversitarioEnCursoService,
+    private formBuilder:FormBuilder
     ){
   }
 
-  info = new FormGroup(
-    {}
-  )
+  submitEditar():any{
+    this.servicio.editar(this.editarEstudio.value).subscribe();
+    location.reload();
+  }
+  submitAgregar():any{
+    this.servicio.agregar(this.agregarEstudio.value).subscribe();
+    location.reload();
+  }
+
 
   vincularObjeto(tipo:any,elemento:any){
 
     switch(tipo){
       case "Cursos":
         this.objetoTitulo = "curso";
+        this.servicio = this.cursosService;
         break;
 
       case "Universitario":
         this.objetoTitulo = "titulo";
+        this.servicio = this.universitarioService;
+        break;
+
+      case "UniversitarioEnCurso":
+        this.objetoTitulo = "titulo";
+        this.servicio = this.universitarioEnCursoService;
         break;
 
       case "Terciario":
         this.objetoTitulo = "titulo";
+        this.servicio = this.terciarioService;
         break;
 
       case "UniversitarioEnCurso":
         this.objetoTitulo = "";
+        this.servicio = this.universitarioService;
         break;
     }
   }
-
+  public listar(){
+    this.cursosService.listar().subscribe({
+      next: (response: CursoModel[])  =>{
+      },
+        error:(error:HttpErrorResponse) =>{
+          alert(error.message)
+        }
+    })
+  };
   ngOnInit(): void {
+    this.listar()
     this.vincularObjeto(this.tipo,this.elemento);
+    this.editarEstudio = this.formBuilder.group(
+      {
+        id:[],
+        titulo:['',[Validators.required]],
+        institucion:['',[Validators.required]],
+        info:['',[Validators.required]]
+      }
+    )
+    this.agregarEstudio = this.formBuilder.group(
+      {
+        titulo:['',[Validators.required]],
+        institucion:['',[Validators.required]],
+        info:['',[Validators.required]]
+      }
+    )
+
+    this.editarEstudio.patchValue({
+      id:this.elemento.id,
+      titulo:this.elemento.titulo,
+      institucion:this.elemento.institucion,
+      info:this.elemento.descripcion
+    })
   }
 }

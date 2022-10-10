@@ -1,3 +1,8 @@
+
+body{
+  scroll-behavior: smooth;
+}
+
 #top{
   position:absolute;
   margin:0;
@@ -80,6 +85,8 @@ p{
   border:none;
   opacity: 70%;
   cursor:pointer;
+  margin-right: 15px;
+  border-radius: 3px;
 
 }
 
@@ -88,7 +95,7 @@ p{
 }
 
 #subir-icono{
-  height: 25px;
+  height: 20px;
 }
 
 #contenedor-subir{
@@ -141,3 +148,28 @@ p{
   direction:row;
 }
 
+#firma-footer{
+  text-align: center;
+  opacity: 60%;
+  margin-right: 30px;
+}
+
+#github-footer{
+  position:absolute;
+  transform: translateY(-6px);
+}
+
+#linkedin-footer{
+  position:absolute;
+  transform: translate(40px,-6px);
+}
+
+#footer{
+  opacity:90%;
+  padding-top: 15px;
+  height: 30px;
+  margin-top:40px;
+  background-color:rgba(4, 4, 22, 0.589);
+  text-align:center;
+  transform: translate(-8px,8px);
+}

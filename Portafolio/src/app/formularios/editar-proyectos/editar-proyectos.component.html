@@ -1,25 +1,23 @@
-<form class="scroll" [formGroup]="editarProyecto" *ngIf="editar()">
-
+<form class="scroll" (ngSubmit)="submitEditar()" [formGroup]="editarProyecto" *ngIf="editar()">
   <div id="contenedor-form-controls">
   <p id="titulo">Editar proyecto:</p>
-  <p><input class="form-control" type="text" [value]="proyecto.titulo" placeholder="Titulo" formControlName="titulo"></p>
-  <p><input class="form-control" type="text" [value]="proyecto.estado" placeholder="Estado" formControlName="estado"></p>
-  <p><input class="form-control" type="text" [value]="proyecto.linkImagen" placeholder="Imagen (url)" formControlName="imagen" ngModel></p>
-  <p><input class="form-control" type="text" [value]="proyecto.linkGitHub" placeholder="Link del repositorio" formControlName="repositorios"></p>
-<p><textarea class="campo-de-texto scroll" [value]="proyecto.descripcion" placeholder="Descripcion del proyecto"></textarea></p>
+  <p><input class="form-control" type="text" placeholder="Titulo" formControlName="titulo"></p>
+  <p><input class="form-control" type="boolean" placeholder="Estado" formControlName="terminado"></p>
+  <p><input class="form-control" type="text" placeholder="Imagen (url)" formControlName="linkImagen"></p>
+  <p><input class="form-control" type="text" placeholder="Link del repositorio" formControlName="linkRepository"></p>
+<p><textarea class="campo-de-texto scroll" placeholder="Descripcion del proyecto" formControlName="descripcion"></textarea></p>
   <input class="form-control guardar" value="Guardar" type="submit">
   </div>
 </form>
 
-<form class="scroll" [formGroup]="agregarProyecto" *ngIf="agregar()">
-
+<form class="scroll" (ngSubmit)="submitAgregar()" [formGroup]="agregarProyecto" *ngIf="agregar()">
   <div id="contenedor-form-controls">
   <p id="titulo">Agregar proyecto:</p>
   <p><input class="form-control" type="text" placeholder="Titulo" formControlName="titulo"></p>
-  <p><input class="form-control" type="text" placeholder="Estado" formControlName="estado"></p>
-  <p><input class="form-control" type="text" placeholder="Imagen" formControlName="imagen" ngModel></p>
-  <p><input class="form-control" type="link" placeholder="Link del repositorio" formControlName="repositorio"></p>
-<p><textarea class="campo-de-texto scroll" [value]="proyecto.descripcion" placeholder="Descripcion del proyecto"></textarea></p>
+  <p><input class="form-control" type="boolean" placeholder="Estado" formControlName="terminado"></p>
+  <p><input class="form-control" type="text" placeholder="Imagen (url)" formControlName="linkImagen"></p>
+  <p><input class="form-control" type="link" placeholder="Link del repositorio" formControlName="linkRepository"></p>
+<p><textarea class="campo-de-texto scroll" placeholder="Descripcion del proyecto"></textarea></p>
   <input class="form-control guardar" value="Guardar" type="submit">
   </div>
 </form>

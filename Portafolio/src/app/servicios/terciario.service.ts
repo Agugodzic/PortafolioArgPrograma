@@ -13,15 +13,19 @@ export class TerciarioService {
   constructor(private http: HttpClient) { }
 
   public listar():Observable<TerciarioModel[]>{
-    return this.http.get<TerciarioModel[]>(`${this.apiServerUrl}/terciario/listar`)
- }
+    return this.http.get<TerciarioModel[]>(`${this.apiServerUrl}/titulo-terciario/listar`)
+  }
 
- public editar(titulo:TerciarioModel):Observable<TerciarioModel>{
-  return this.http.put<TerciarioModel>(`${this.apiServerUrl}/terciario/listar`,titulo)
-}
+  public editar(titulo:TerciarioModel):Observable<TerciarioModel>{
+    return this.http.put<TerciarioModel>(`${this.apiServerUrl}/titulo-terciario/editar`,titulo)
+  }
+
+  public agregar(titulo:TerciarioModel):Observable<TerciarioModel>{
+    return this.http.put<TerciarioModel>(`${this.apiServerUrl}/titulo-terciario/agregar`,titulo)
+  }
 
  public eliminar(id:number):Observable<any>{
-  return this.http.delete(`${this.apiServerUrl}/terciario/${id}`)
+  return this.http.delete(`${this.apiServerUrl}/titulo-terciario/${id}`)
  }
 
 }

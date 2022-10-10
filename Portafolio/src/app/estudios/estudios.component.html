@@ -12,7 +12,6 @@
     <!----------------------------->
 
   <p class="titulo margin-top">ESTUDIOS</p>
-  <span id="actualizar-vista"></span>
 
     <!--------  SECUNDARIO --------->
 
@@ -36,20 +35,19 @@
 
     <p class="titulo2 margin-top">UNIVERSITARIO EN CURSO</p>
     <div class="descripcion">
-        <div *ngFor="let carrera of UniversitarioIncompleto">
+        <div *ngFor="let universitario of listaUniversitarioEnCurso">
 
           <div class="botones-curso">
-            <a class="boton"  (click)="switchEstudios('UniversitarioEnCurso',0,'editar.3
-            ',carrera)" href="#actualizar-vista">
+            <a class="boton"  (click)="switchEstudios('UniversitarioEnCurso',universitario.id,'editar',universitario)">
               <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
             </a>
-            <button class="boton  boton-delete">
+            <button class="boton  boton-delete" (click)="eliminarUniversitarioEnCurso(universitario.id)">
               <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
             </button>
           </div>
           <div class="curso">
-            <p class="titulo-curso">{{carrera.carrera}}<img class="info" [src]="Imagen.info"></p>
-            <p class="titulo3">{{carrera.institucion}}</p>
+            <p class="titulo-curso">{{universitario.titulo}}<img class="info" [src]="Imagen.info"></p>
+            <p class="titulo3">{{universitario.institucion}}</p>
             <div class="descripcion">
               <p class="texto-descripcion"></p>
             </div>
@@ -63,19 +61,19 @@
       <div id="terciario">
         <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
         <p class="titulo2">TITULO UNIVERSITARIO</p>
-        <div *ngFor="let curso of Cursos">
+        <div *ngFor="let universitario of listaUniversitario">
 
           <div class="botones-curso">
-            <a class="boton" (click)="switchEstudios('Universitario',0,'editar',curso)" href="#actualizar-vista">
+            <a class="boton" (click)="switchEstudios('Universitario',universitario.id,'editar',universitario)">
               <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
             </a>
-            <button class="boton  boton-delete">
+            <button class="boton  boton-delete" (click)="eliminarUniversitario(universitario.id)">
               <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
             </button>
           </div>
           <div class="curso">
-            <p class="titulo-curso">{{curso.titulo}}<img class="info" [src]="Imagen.info"></p>
-            <p class="titulo3">{{curso.institucion}}</p>
+            <p class="titulo-curso">{{universitario.titulo}}<img class="info" [src]="Imagen.info"></p>
+            <p class="titulo3">{{universitario.institucion}}</p>
             <div class="descripcion">
               <p class="texto-descripcion"></p>
             </div>
@@ -91,19 +89,19 @@
   <div class="contenedor-estudios">
     <div id="terciario">
       <p class="titulo2">TITULO TERCIARIO</p>
-      <div *ngFor="let curso of Cursos">
+      <div *ngFor="let terciario of listaTerciario">
 
         <div class="botones-curso">
-          <a class="boton" (click)="switchEstudios('Terciario',curso.id,'editar',curso)" href="#actualizar-vista">
+          <a class="boton" (click)="switchEstudios('Terciario',terciario.id,'editar',terciario)">
             <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
           </a>
-          <button class="boton  boton-delete">
+          <button class="boton  boton-delete" (click)="eliminarTerciario(terciario.id)">
             <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
           </button>
         </div>
         <div class="curso">
-          <p class="titulo-curso">{{curso.titulo}}<img class="info" [src]="Imagen.info"></p>
-          <p class="titulo3">{{curso.institucion}}</p>
+          <p class="titulo-curso">{{terciario.titulo}}<img class="info" [src]="Imagen.info"></p>
+          <p class="titulo3">{{terciario.institucion}}</p>
           <div class="descripcion">
             <p class="texto-descripcion"></p>
           </div>
@@ -121,7 +119,7 @@
       <div *ngFor="let curso of listaDeCursos">
 
         <div class="botones-curso">
-          <a class="boton"  (click)="switchEstudios('Cursos',curso.id,'editar',curso)" href="#actualizar-vista">
+          <a class="boton"  (click)="switchEstudios('Cursos',curso.id,'editar',curso)">
             <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
           </a>
           <button class="boton  boton-delete" (click)="eliminarCurso(curso.id)">

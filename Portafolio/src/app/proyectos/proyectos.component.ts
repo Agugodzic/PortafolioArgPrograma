@@ -1,5 +1,8 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
+import { ProyectosModel } from '../models/proyectos-model';
+import { ProyectosService } from '../servicios/proyectos.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -8,14 +11,32 @@ import { DatosService } from '../datos.service';
 })
 export class ProyectosComponent implements OnInit {
 
-  constructor(private datos:DatosService) { }
+  public Proyectos:ProyectosModel[];
+  public Imagen = this.datos.Imagen;
+  public proyecto:ProyectosModel;
+  public accion:string="";
+  public mostrarEditarProyecto:boolean = false;
 
-  id:number=0;
-  accion:string="";
-  mostrarEditarProyecto:boolean = false;
+  constructor(private datos:DatosService, private proyectoService:ProyectosService) { }
 
-  switchProyecto(accion:string,id:number):void{
-    this.id = id;
+  private listarProyectos(){
+    this.proyectoService.listar().subscribe({
+      next: (response: ProyectosModel[])  =>{
+        this.Proyectos  = response;
+      },
+        error:(error:HttpErrorResponse) =>{
+          alert(error.message)
+        }
+    })
+  }
+
+  public eliminarProyecto(id:number):void{
+    this.proyectoService.eliminar(id).subscribe();
+    location.reload();
+  }
+
+  switchProyecto(accion:string,proyecto:any):void{
+    this.proyecto = proyecto;
     this.accion = accion;
 
     if(this.mostrarEditarProyecto == true){
@@ -25,10 +46,7 @@ export class ProyectosComponent implements OnInit {
     }
   }
 
-  Experiencia = this.datos.Experiencia;
-  Proyectos = this.datos.Proyectos;
-  Imagen = this.datos.Imagen;
-
   ngOnInit(): void {
+    this.listarProyectos();
   }
 }

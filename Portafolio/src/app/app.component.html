@@ -31,14 +31,19 @@
 <app-experiencia></app-experiencia>
 <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
 
-<a id="contenedor-subir" href="#top"><button id="boton-subir"><img id="subir-icono" [src]="Imagen.subir"> </button></a>
+<div id="contenedor-subir"><a  href="#top"><button id="boton-subir"><img id="subir-icono" [src]="Imagen.subir"> </button></a></div>
 
 <app-habilidades></app-habilidades>
 <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
-
 
 <app-estudios></app-estudios>
 <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
 
 <app-proyectos></app-proyectos>
+
+<div id="footer">
+  <a id="firma-footer">@agugodzic 2022</a>
+  <a id="github-footer" [href]="Link.gitHub" target="_blank"><img class="logo-red boton"  [src]="Imagen.gitHub"></a>
+  <a id="linkedin-footer" [href]="Link.linkedin" target="_blank"><img class="logo-red boton"  [src]="Imagen.linkedin"></a>
+</div>
 

@@ -1,18 +1,86 @@
-<form class="scroll" [formGroup]="info" *ngIf="cargarFormulario">
+<form [formGroup]="editarInfo" class="scroll" (ngSubmit)="submit()">
   <div id="contenedor-form-controls">
   <p id="titulo">Informacion de contacto:</p>
-  <p><input class="form-control" type="text" [value]="Info.nombre" placeholder="Nombre" formControlName="nombre"></p>
-  <p><input class="form-control" type="text" [value]="Info.apellido" placeholder="Apellido" formControlName="apellido"></p>
-  <p><input class="form-control" type="email" [value]="Info.email" placeholder="Email" formControlName="email" ngModel></p>
-  <p><input class="form-control" type="number"[value]="Info.edad" placeholder="Edad" formControlName="edad"></p>
-  <p><input class="form-control" type="text" [value]="Info.titulo" placeholder="Titulo o Profesion" formControlName="titulo"></p>
-  <p><input class="form-control" type="tel"  [value]="Info.telefono" placeholder="Telefono" formControlName="telefono"></p>
-  <p><input class="form-control" type="text" [value]="Info.ciudad" placeholder="Ciudad" formControlName="nombre"></p>
-  <p><input class="form-control" type="text" [value]="Info.codigoPostal" placeholder="Codigo postal" formControlName="nombre"></p>
-  <p><input class="form-control" type="text" [value]="Info.pais" placeholder="Pais" formControlName="nombre"></p>
-  <p><input class="form-control" type="text" [value]="Info.otros" placeholder="Otro" formControlName="nombre"></p>
-  <p><textarea class="campo-de-texto scroll" [value]="Info.sobreMi " placeholder="Informacion sobre ti."></textarea></p>
-  <input class="form-control guardar" value="Guardar" type="submit">
-
+  <p><input
+    [ngStyle]="editarInfo.get('nombre')?.errors?.['required'] && {'background-color': '#FFEEEE'}"
+    class="form-control"
+    type="text"
+    placeholder="Nombre"
+    formControlName="nombre">
+  </p>
+  <p><input
+    [ngStyle]="editarInfo.get('apellido')?.errors?.['required'] && {'background-color': '#FFEEEE'}"
+    class="form-control"
+    type="text"
+    placeholder="Apellido"
+    formControlName="apellido">
+  </p>
+  <p><input
+    [ngStyle]="editarInfo.get('apellido')?.errors?.['email'] && {'background-color': '#FFEEEE'}"
+    class="form-control"
+    type="email"
+    placeholder="Email"
+    formControlName="email">
+  </p>
+  <p><input
+    [ngStyle]="editarInfo.get('edad')?.errors?.['required'] && {'background-color': '#FFEEEE'}"
+    class="form-control"
+    type="Number"
+    placeholder="Edad"
+    formControlName="edad">
+  </p>
+  <p><input
+    class="form-control"
+    [ngStyle]="editarInfo.get('titulo')?.errors?.['required'] && {'background-color': '#FFEEEE'}"
+    type="text"
+    placeholder="Titulo o Profesion"
+    formControlName="titulo">
+  </p>
+  <p><input
+    class="form-control"
+    [ngStyle]="editarInfo.get('telefono')?.errors?.['required'] && {'background-color': '#FFEEEE'}"
+    type="tel"
+    placeholder="Telefono"
+    formControlName="telefono">
+  </p>
+  <p><input
+    class="form-control"
+    [ngStyle]="editarInfo.get('pais')?.errors?.['required'] && {'background-color': '#FFEEEE'}"
+    type="text"
+    placeholder="Pais"
+    formControlName="pais">
+  </p>
+  <p><input
+    class="form-control"
+    [ngStyle]="editarInfo.get('ciudad')?.errors?.['required'] && {'background-color': '#FFEEEE'}"
+    type="text"
+    placeholder="Ciudad"
+    formControlName="ciudad">
+  </p>
+  <p><input
+    class="form-control"
+    [ngStyle]="editarInfo.get('codigopostal')?.errors?.['required'] && {'background-color': '#FFEEEE'}"
+    type="text"
+    placeholder="Codigo postal"
+    formControlName="codigopostal">
+  </p>
+  <p><input
+    class="form-control"
+    [ngStyle]="editarInfo.get('otro')?.errors?.['required'] && {'background-color': '#FFEEEE'}"
+    type="text"
+    placeholder="Otro"
+    formControlName="otro">
+  </p>
+  <p><textarea
+    class="campo-de-texto scroll"
+    [ngStyle]="editarInfo.get('sobremi')?.errors?.['required'] && {'background-color': '#FFEEEE'}"
+    placeholder="Informacion sobre ti."
+    formControlName="sobremi">
+  </textarea></p>
+  <input
+  class="form-control guardar"
+  [disabled]="editarInfo.valid !== true"
+  value="Guardar"
+  type="submit">
   </div>
 </form>

@@ -1,8 +1,19 @@
 <div id="ventana">
   <p id="titulo">Seleccionar:</p>
-  <div class="preview" *ngFor = "let banner of Banner">
-    <a class="banner" (click)="bannerClick(banner)">
-      <img class="imagen-banner" [src]="banner.link">
+  <div class="preview" *ngFor = "let portada of listaDePortadas">
+    <a class="banner">
+      <div class="control">
+        <button class="boton-seleccionar" (click)="bannerClick(portada.link)">Seleccionar</button>
+        <button class="boton-eliminar" (click)="eliminar(portada.id)">x</button>
+      </div>
+      <img class="imagen-banner" [src]="portada.link">
     </a>
   </div>
+  <div *ngIf="mostrarAgregar">
+    <form (ngSubmit)="submitAgregar()" [formGroup]="agregarPortada">
+      <input id="input-link" type="string" placeholder="Link" formControlName="link">
+      <input id="input-ok" type="submit" id="ok" value="Ok">
+    </form>
+  </div>
+  <button id="agregar" (click)="agregarSwitch()">{{textoAgregar}}</button>
 </div>

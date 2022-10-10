@@ -16,12 +16,12 @@ export class ExperienciaService {
     return this.http.get<ExperienciaModel[]>(`${this.apiServerUrl}/experiencia/listar`)
   }
 
-  public editar(curso:ExperienciaModel):Observable<ExperienciaModel>{
-    return this.http.put<ExperienciaModel>(`${this.apiServerUrl}/experiencia/editar`,curso)
+  public editar(experiencia:ExperienciaModel):Observable<ExperienciaModel>{
+    return this.http.put<ExperienciaModel>(`${this.apiServerUrl}/experiencia/editar`,experiencia)
   }
 
-  public agregar(curso:ExperienciaModel):Observable<ExperienciaModel>{
-    return this.http.put<ExperienciaModel>(`${this.apiServerUrl}/experiencia/editar`,curso)
+  public agregar(experiencia:ExperienciaModel):Observable<ExperienciaModel>{
+    return this.http.put<ExperienciaModel>(`${this.apiServerUrl}/experiencia/agregar`,experiencia)
   }
 
   public eliminar(id:number):Observable<any>{

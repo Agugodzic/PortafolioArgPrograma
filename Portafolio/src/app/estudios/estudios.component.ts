@@ -48,11 +48,7 @@ export class EstudiosComponent implements OnInit {
     {
     this._id = 0;
     this.Imagen = this.datos.Imagen;
-    this.Cursos = this.datos.Cursos;
     this.TituloSecundario = this.datos.TituloSecundario;
-    this.UniversitarioIncompleto = this.datos.UniversitarioIncompleto;
-    this.TituloUniversitario = this.datos.TituloUniversitario;
-    this.Terciario = this.datos.Terciario;
   }
 
   public get objeto():string{
@@ -119,12 +115,12 @@ export class EstudiosComponent implements OnInit {
     location.reload();
   }
 
-    //--------------Universitario----------------//
+    //---------Universitario-en-curso---------//
 
     public listarUniversitarioEnCurso(){
       this.universitarioEnCurso.listar().subscribe({
         next: (response: UniversitarioEnCursoModel[])  =>{
-          this.listaUniversitario = response;
+          this.listaUniversitarioEnCurso = response;
         },
           error:(error:HttpErrorResponse) =>{
             alert(error.message)
@@ -167,7 +163,10 @@ export class EstudiosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.listarCursos()
+    this.listarCursos();
+    this.listarUniversitario();
+    this.listarTerciario();
+    this.listarUniversitarioEnCurso();
   }
 }
 

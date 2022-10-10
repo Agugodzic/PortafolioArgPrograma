@@ -1,28 +1,35 @@
-<form (ngSubmit)="enviar()" class="scroll" [formGroup]="editarHabilidad" *ngIf="editar()">
+<!--
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+-->
+
+<form (ngSubmit)="submitEditar()" class="scroll" [formGroup]="editarHabilidad" *ngIf="editar()">
 
   <div id="contenedor-form-controls">
     <p id="titulo">Editar habilidad:</p>
 
     <p><input class="form-control"
+      [ngStyle]="editarHabilidad.get('habilidad')?.errors?.['required'] && {'background-color': '#FCEAEA'}"
       type="text"
       placeholder="habilidad"
       formControlName="habilidad"></p>
 
     <p><input class="form-control"
-      type="text"
+      [ngStyle]="editarHabilidad.get('nivel')?.errors?.['pattern'] && {'background-color': '#FCEAEA'}"
+      type="Number"
       placeholder="nivel (1 - 100)"
       formControlName="nivel"></p>
 
     <input class="form-control guardar"
       value="Guardar"
       type="submit"
-      [disabled]="editarHabilidad.invalid"
+      [disabled]="editarHabilidad.valid !== true"
       >
-      <p [ngStyle]="{'color':'green'}">invalido:{{editarHabilidad.invalid}}</p>
   </div>
 </form>
 
-<form class="scroll" [formGroup]="agregarHabilidad" *ngIf="agregar()">
+<form (ngSubmit)="submitAgregar()" class="scroll" [formGroup]="agregarHabilidad" *ngIf="agregar()">
 
   <div id="contenedor-form-controls">
     <p id="titulo">Agregar Habilidad:</p>
@@ -33,13 +40,14 @@
       formControlName="habilidad"></p>
 
     <p><input class="form-control"
-      type="text"
+      [ngStyle]="agregarHabilidad.get('nivel')?.errors?.['pattern'] && {'background-color': '#FCEAEA'}"
+      type="Number"
       placeholder="nivel (1 - 100)"
       formControlName="nivel"></p>
 
     <input class="form-control guardar"
+      [disabled]="editarHabilidad.valid !== true"
       value="Guardar"
-      type="submit"
-      [disabled]="agregarHabilidad.invalid">
+      type="submit">
   </div>
 </form>

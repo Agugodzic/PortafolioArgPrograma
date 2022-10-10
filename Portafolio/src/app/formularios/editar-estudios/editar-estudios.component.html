@@ -1,20 +1,19 @@
-<form *ngIf="accion === 'editar'" class="scroll" [formGroup]="info">
+<form (ngSubmit)="submitEditar()" *ngIf="accion === 'editar'" class="scroll" [formGroup]="editarEstudio">
   <div id="contenedor-form-controls">
   <p id="titulo">Editar {{" " + objetoTitulo + ":"}} </p>
-  <p><input class="form-control" type="text" [value]="elemento.titulo" placeholder="Título" formControlName="titulo"></p>
-  <p><input class="form-control" type="text" [value]="elemento.institucion" placeholder="Institución" formControlName="institucion"></p>
-<p><textarea class="campo-de-texto scroll" placeholder="Descripción"></textarea></p>
+  <p><input class="form-control" type="text" placeholder="Título" formControlName="titulo"></p>
+  <p><input class="form-control" type="text" placeholder="Institución" formControlName="institucion"></p>
+  <p><textarea class="campo-de-texto scroll" placeholder="Descripción"></textarea></p>
   <input class="form-control guardar" value="Guardar" type="submit">
   </div>
 </form>
 
-
-<form *ngIf="accion === 'agregar'" class="scroll" [formGroup]="info">
+<form (ngSubmit)="submitAgregar()" *ngIf="accion === 'agregar'" class="scroll" [formGroup]="agregarEstudio">
   <div id="contenedor-form-controls">
   <p id="titulo">Agregar {{" " + objetoTitulo + ":"}} </p>
   <p><input class="form-control" type="text" placeholder="Título" formControlName="titulo"></p>
   <p><input class="form-control" type="text" placeholder="Institución" formControlName="institucion"></p>
-<p><textarea class="campo-de-texto scroll" placeholder="Descripción"></textarea></p>
+  <p><textarea class="campo-de-texto scroll" placeholder="Descripción"></textarea></p>
   <input class="form-control guardar" value="Guardar" type="submit">
   </div>
 </form>

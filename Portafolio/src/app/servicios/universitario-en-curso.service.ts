@@ -18,7 +18,11 @@ export class UniversitarioEnCursoService {
  }
 
  public editar(carrera:UniversitarioEnCursoModel):Observable<UniversitarioEnCursoModel>{
-  return this.http.put<UniversitarioEnCursoModel>(`${this.apiServerUrl}/universitario-en-curso/listar`,carrera)
+  return this.http.put<UniversitarioEnCursoModel>(`${this.apiServerUrl}/universitario-en-curso/editar`,carrera)
+}
+
+public agregar(carrera:UniversitarioEnCursoModel):Observable<UniversitarioEnCursoModel>{
+  return this.http.put<UniversitarioEnCursoModel>(`${this.apiServerUrl}/universitario-en-curso/agregar`,carrera)
 }
 
  public eliminar(id:number):Observable<any>{

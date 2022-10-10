@@ -2,8 +2,7 @@
   width: max-content;
   height: max-content;
   display: inline-block;
-  margin:40px;
-
+  margin:35px;
 }
 
 .titulo{
@@ -36,14 +35,14 @@
 }
 
 .lapiz-editar{
-  height: 17px;
+  height: 13px;
 }
 
 .borrar{
   margin-right:2px;
   margin-left: 2px;
-  margin-top: 150px;
-  height: 17px;
+  margin-top: 142px;
+  height: 13px;
   opacity: 70%;
 }
 .editar:hover{
@@ -56,9 +55,9 @@
   background-color:rgba(0, 0, 0, 0.205);
   position: absolute;
   border-radius: 5px;
-  height:180px;
+  height:170px;
   width: 140px;
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   opacity: 0;
   transition:0.1s;
 }
@@ -69,6 +68,7 @@
 
 .circulo-progreso{
   z-index:2000;
+  margin-left: 10px;
 }
 
 #contenedor-formulario{
@@ -99,7 +99,7 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 #mas-boton:hover{

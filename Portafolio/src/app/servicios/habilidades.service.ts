@@ -16,12 +16,12 @@ export class HabilidadesService {
     return this.http.get<HabilidadesModel[]>(`${this.apiServerUrl}/habilidades/listar`)
  }
 
- public editar(curso:HabilidadesModel):Observable<HabilidadesModel>{
-  return this.http.put<HabilidadesModel>(`${this.apiServerUrl}/habilidades/editar`,curso)
+ public editar(habilidad:HabilidadesModel):Observable<HabilidadesModel>{
+  return this.http.put<HabilidadesModel>(`${this.apiServerUrl}/habilidades/editar`,habilidad)
  }
 
- public agregar(curso:HabilidadesModel):Observable<HabilidadesModel>{
-  return this.http.put<HabilidadesModel>(`${this.apiServerUrl}/habilidades/agregar`,curso)
+ public agregar(habilidad:HabilidadesModel):Observable<HabilidadesModel>{
+  return this.http.put<HabilidadesModel>(`${this.apiServerUrl}/habilidades/agregar`,habilidad)
  }
 
  public eliminar(id:number):Observable<any>{

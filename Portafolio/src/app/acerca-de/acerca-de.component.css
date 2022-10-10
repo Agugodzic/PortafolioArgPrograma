@@ -7,6 +7,7 @@
   width: 95vw;
   opacity: 85%;
   box-shadow: 10px 5px 30px 5px rgba(0, 0, 0, 0.842);
+  transform: translateX(-8px);
 }
 
 #foto-perfil{
@@ -20,7 +21,6 @@
   opacity: 90%;
   transform: translateY(-6vw);
   color:white;
-  font-size: 17px;
   font-family: Microsoft PhagsPa ;
   text-align: center;
 }
@@ -63,7 +63,7 @@
 #editar-foto{
   background-color: rgba(255, 255, 255, 0.54);
   position:absolute;
-  width: 25px;
+  width: 20px;
   border-radius: 100px;
   transform: translate(120px,-40px);
   cursor:pointer;
@@ -76,7 +76,7 @@
 #lapiz-foto{
   margin-left:auto;
   margin-right:auto;
-  width:15px;
+  width:14px;
 }
 
 #sobre-mi{
@@ -85,14 +85,13 @@
   margin-right: 20vw;
   margin-top: 50px;
   width: 60vw;
-  font-size: 17px;
   overflow: visible;
   padding-right: 15px;
 }
 
 #sobre-mi-texto{
   /*font-family: 'Montserrat', sans-serif;*/
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 1px;
 }
 
@@ -109,7 +108,7 @@
   transform: translateY(2px);
 }
 .lapiz-editar{
-  height: 17px;
+  height: 14px;
 }
 .editar:hover{
   cursor:pointer;
