@@ -3,6 +3,10 @@
   margin-top: 15px;
 }
 
+#contenedor-foto{
+  width: min-content;
+}
+
 #banner{
   width: 95vw;
   opacity: 85%;
@@ -177,3 +181,42 @@
     width: 55vw;
   }
 }
+
+
+@media (max-width:500px){
+  #sobre-mi{
+    display:block;
+    position:relative;
+    margin-left:8vw;
+    padding-right: 15px;
+    font-size:13px;
+    width: 90vw;
+  }
+
+  #foto-perfil{
+    width: 120px;
+  }
+
+  #contenedor-perfil{
+    width: 95vw ;
+    position:relative;
+    height: 75px;
+    transform: translate(-27px,-10vh);
+    opacity: 90%;
+    font-size: 13px;
+  }
+
+  #editar-foto{
+    transform: translate(94px,-30px);
+  }
+
+  #contenedor-foto{
+    width: min-content;
+    margin:0px auto
+  }
+
+  #sobre-mi-texto{
+    font-size:12px;
+  }
+}
+

@@ -4,8 +4,9 @@ html{
   font-family: 'Mulish', sans-serif;
   color: white;
   font-size: 14px;
-
 }
+
+body{width:100vw}
 
 body::-webkit-scrollbar{
   width: 9px;

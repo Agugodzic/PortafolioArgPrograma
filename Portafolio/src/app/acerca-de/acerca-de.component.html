@@ -31,9 +31,11 @@
 </div>
 
 <div id="contenedor-perfil">
-  <img id="foto-perfil" [src]="datosDeUsuario.perfil">
-  <div id="editar-foto" (click)="switchFoto()">
-    <img id="lapiz-foto" [src]="Imagen.lapizNegro">
+  <div id="contenedor-foto">
+    <img id="foto-perfil" [src]="datosDeUsuario.perfil">
+    <div id="editar-foto" (click)="switchFoto()">
+      <img id="lapiz-foto" [src]="Imagen.lapizNegro">
+    </div>
   </div>
   <p id="nombre">{{ datosDeUsuario.nombre.toUpperCase() +" "+ datosDeUsuario.apellido.toUpperCase()  }}</p>
   <p id="titulo">{{ datosDeUsuario.titulo }}</p>
