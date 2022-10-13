@@ -5,7 +5,7 @@
 
 #titulo{
   display:block;
-  opacity:70%;
+  opacity:90%;
 }
 
 p{
@@ -23,7 +23,7 @@ p{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
-  width:800vw;
+  width:100vw;
   margin-left: 100px;
 }
 
@@ -62,7 +62,7 @@ p{
 
 #titulo{
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 25px;
 }
 
 .punto-blanco{
@@ -113,6 +113,7 @@ p{
   border:none;
   cursor:pointer;
   border-radius: 5px;
+  margin-top: 20px;
 }
 #mas-boton:hover{
   background-color: rgba(56, 63, 80, 0.664);
@@ -131,3 +132,14 @@ p{
   left:0px;
 }
 
+@media (max-width:500px){
+  #generador-pestañas{
+    width:100vw;
+    margin-left: 0px;
+  }
+
+  .pestaña{
+    height: 70px;
+    width: 300px;
+  }
+}

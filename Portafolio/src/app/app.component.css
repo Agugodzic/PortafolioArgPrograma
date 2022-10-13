@@ -188,4 +188,21 @@ p{
     margin-right: 0px;
     transform:translateY(-5px)
   }
+  #firma-footer{
+    margin:10px;
+    display:block;
+  }
+
+  #footer{
+    height:80px
+  }
+
+  #github-footer{
+    position:relative;
+  }
+
+  #linkedin-footer{
+    position:relative;
+  }
+
 }
