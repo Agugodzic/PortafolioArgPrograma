@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
 import { HabilidadesModel} from '../models/habilidades.model';
 import { HabilidadesService } from '../servicios/habilidades.service';
@@ -11,16 +11,16 @@ import { HabilidadesService } from '../servicios/habilidades.service';
 })
 
 export class HabilidadesComponent implements OnInit {
-  id:number=0;
-  accion:string="";
-  habilidad:HabilidadesModel;
-  listaDeHabilidades:HabilidadesModel[] | undefined;
+  public id:number=0;
+  public accion:string="";
+  public habilidad:HabilidadesModel;
+  public listaDeHabilidades:HabilidadesModel[] | undefined;
+  public Imagen = this.datos.Imagen;
+  public mostrarEditarHabilidad = false;
 
   constructor(private datos:DatosService, private habilidadesService:HabilidadesService) { }
 
-  Imagen = this.datos.Imagen;
-  mostrarEditarHabilidad = false;
-
+  @Input() logeado:boolean;
   //-----------------------------------//
 
   public listarHabilidades(){
@@ -29,7 +29,7 @@ export class HabilidadesComponent implements OnInit {
         this.listaDeHabilidades = response;
       },
         error:(error:HttpErrorResponse) =>{
-          alert(error.message)
+          console.log(error.message)
         }
     })
   }

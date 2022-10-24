@@ -25,6 +25,7 @@ export class DatosService {
 
   Imagen = {
     logIn:"https://i.postimg.cc/N0YyV1d9/log-in.png",
+    logOut:"https://i.postimg.cc/qRHSh6rv/logOut.png",
     argPrograma:"https://i.postimg.cc/B6Jvb4cB/arg-programa2.png",
     facebook:"https://i.postimg.cc/xC5869TW/facebook.png",
     instagram:"https://i.postimg.cc/zDd3WDQh/instagram.png",

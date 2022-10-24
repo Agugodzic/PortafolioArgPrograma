@@ -27,13 +27,13 @@
 
 <div id="contenedor-banner">
   <img id="banner" [src]="datosDeUsuario.portada">
-  <button id="editar-portada" (click)="switchPortada()"><img id="lapiz-banner" [src]="Imagen.lapiz">Editar portada</button>
+  <button *ngIf="logeado" id="editar-portada" (click)="switchPortada()"><img id="lapiz-banner" [src]="Imagen.lapiz">Editar portada</button>
 </div>
 
 <div id="contenedor-perfil">
   <div id="contenedor-foto">
     <img id="foto-perfil" [src]="datosDeUsuario.perfil">
-    <div id="editar-foto" (click)="switchFoto()">
+    <div *ngIf="logeado" id="editar-foto" (click)="switchFoto()">
       <img id="lapiz-foto" [src]="Imagen.lapizNegro">
     </div>
   </div>
@@ -42,7 +42,7 @@
 </div>
 
 <div id="sobre-mi">SOBRE MI
-  <a class="editar" (click)="switchInfo()">
+  <a *ngIf="logeado" class="editar" (click)="switchInfo()">
     <img class="lapiz-editar" [src]="Imagen.lapiz">
   </a>
   <p id="sobre-mi-texto">{{datosDeUsuario.sobremi}}</p>

@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit  } from '@angular/core';
+import { Component, Input, OnInit  } from '@angular/core';
 import { DatosService } from '../datos.service';
 import { ExperienciaModel } from '../models/experiencia.model';
 import { ExperienciaService } from '../servicios/experiencia.service';
@@ -19,6 +19,8 @@ export class ExperienciaComponent implements OnInit{
   editarExperiencia:boolean;
   listaDeExperiencias: ExperienciaModel [] | undefined;
 
+  @Input() logeado:boolean;
+
   constructor( private datos:DatosService , private experienciaService:ExperienciaService ) {
     this.editarExperiencia = false
     this.accion="";
@@ -36,7 +38,7 @@ export class ExperienciaComponent implements OnInit{
           this.listaDeExperiencias = response;
         },
           error:(error:HttpErrorResponse) =>{
-            alert(error.message)
+            console.log(error.message)
           }
       })
     }

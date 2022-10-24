@@ -28,6 +28,7 @@
   margin: 8px;
   border-radius: 5px;
   transform: translateY(2px);
+
 }
 
 .editar:hover{
@@ -155,7 +156,7 @@
   left:0px;
 }
 
-@media (max-width:500px){
+@media (max-width:650px){
 
   .proyecto{
     display:block;

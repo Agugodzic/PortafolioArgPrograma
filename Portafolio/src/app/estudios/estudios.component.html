@@ -19,7 +19,7 @@
   <div id="estudios">
     <div id="titulo-secundario">
       <p class="titulo2">TITULO SECUNDARIO</p>
-      <div class="botones-titulo-secundario">
+      <div *ngIf="logeado" class="botones-titulo-secundario">
         <a class="boton-secundario boton-editar-secundario">
           <abbr title="Editar "><img class="lapiz" [src]="Imagen.lapiz"></abbr>
         </a>
@@ -36,8 +36,7 @@
     <p class="titulo2 margin-top">UNIVERSITARIO EN CURSO</p>
     <div class="descripcion">
         <div *ngFor="let universitario of listaUniversitarioEnCurso">
-
-          <div class="botones-curso">
+          <div *ngIf="logeado" class="botones-curso">
             <a class="boton"  (click)="switchEstudios('UniversitarioEnCurso',universitario.id,'editar',universitario)">
               <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
             </a>
@@ -53,7 +52,7 @@
             </div>
           </div>
       </div>
-      <button class="mas-boton" (click)="switchEstudios('UniversitarioEnCurso',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
+      <button *ngIf="logeado" class="mas-boton" (click)="switchEstudios('UniversitarioEnCurso',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
       </div>
 
         <!--------  TITULO UNIVERSITARIO --------->
@@ -63,7 +62,7 @@
         <p class="titulo2">TITULO UNIVERSITARIO</p>
         <div *ngFor="let universitario of listaUniversitario">
 
-          <div class="botones-curso">
+          <div *ngIf="logeado" class="botones-curso">
             <a class="boton" (click)="switchEstudios('Universitario',universitario.id,'editar',universitario)">
               <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
             </a>
@@ -79,7 +78,7 @@
             </div>
           </div>
       </div>
-      <button class="mas-boton" (click)="switchEstudios('Universitario',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
+      <button *ngIf="logeado" class="mas-boton" (click)="switchEstudios('Universitario',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
     </div>
     </div>
     </div>
@@ -91,7 +90,7 @@
       <p class="titulo2">TITULO TERCIARIO</p>
       <div *ngFor="let terciario of listaTerciario">
 
-        <div class="botones-curso">
+        <div *ngIf="logeado" class="botones-curso">
           <a class="boton" (click)="switchEstudios('Terciario',terciario.id,'editar',terciario)">
             <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
           </a>
@@ -107,7 +106,7 @@
           </div>
         </div>
     </div>
-    <button class="mas-boton"  (click)="switchEstudios('Terciario',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
+    <button *ngIf="logeado" class="mas-boton"  (click)="switchEstudios('Terciario',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
   </div>
 
       <!-----------  CURSOS ------------->
@@ -118,11 +117,11 @@
       <p class="titulo2">CURSOS</p>
       <div *ngFor="let curso of listaDeCursos">
 
-        <div class="botones-curso">
-          <a class="boton"  (click)="switchEstudios('Cursos',curso.id,'editar',curso)">
+        <div *ngIf="logeado" class="botones-curso">
+          <a *ngIf="logeado" class="boton"  (click)="switchEstudios('Cursos',curso.id,'editar',curso)">
             <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
           </a>
-          <button class="boton  boton-delete" (click)="eliminarCurso(curso.id)">
+          <button *ngIf="logeado" class="boton  boton-delete" (click)="eliminarCurso(curso.id)">
             <abbr title="Eliminar"><img class="delete" [src]="Imagen.delete"></abbr>
           </button>
         </div>
@@ -134,7 +133,7 @@
           </div>
         </div>
     </div>
-    <button class="mas-boton"  (click)="switchEstudios('Cursos',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
+    <button *ngIf="logeado" class="mas-boton"  (click)="switchEstudios('Cursos',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
   </div>
 </div>
 

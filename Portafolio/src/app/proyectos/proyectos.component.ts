@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
 import { ProyectosModel } from '../models/proyectos-model';
 import { ProyectosService } from '../servicios/proyectos.service';
@@ -17,6 +17,8 @@ export class ProyectosComponent implements OnInit {
   public accion:string="";
   public mostrarEditarProyecto:boolean = false;
 
+  @Input() logeado:boolean;
+
   constructor(private datos:DatosService, private proyectoService:ProyectosService) { }
 
   private listarProyectos(){
@@ -25,7 +27,7 @@ export class ProyectosComponent implements OnInit {
         this.Proyectos  = response;
       },
         error:(error:HttpErrorResponse) =>{
-          alert(error.message)
+          console.log(error.message)
         }
     })
   }

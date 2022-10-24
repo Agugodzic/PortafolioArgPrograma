@@ -16,7 +16,7 @@
   <div class="generador-proyectos" *ngFor="let proyecto of Proyectos">
 
     <div class="proyecto">
-      <div class="pantalla-edicion">
+      <div *ngIf="logeado" class="pantalla-edicion">
         <button class="boton boton-eliminar" (click)="eliminarProyecto(proyecto.id)"><img class="delete-imagen" [src]="Imagen.delete" ></button>
         <button class="boton boton-editar" (click)="switchProyecto('editar',proyecto)">Editar</button>
       </div>
@@ -30,6 +30,6 @@
 
     </div>
   </div>
-   <button id="mas-boton" (click)="switchProyecto('agregar',0)"><img id="mas-icono" [src]="Imagen.mas" ></button>
+   <button *ngIf="logeado" id="mas-boton" (click)="switchProyecto('agregar',0)"><img id="mas-icono" [src]="Imagen.mas" ></button>
 </div>
 
