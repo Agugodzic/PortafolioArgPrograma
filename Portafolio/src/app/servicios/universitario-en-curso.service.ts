@@ -10,7 +10,7 @@ import { UniversitarioEnCursoModel } from '../models/universitario-en-curso-mode
 
 export class UniversitarioEnCursoService {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
   constructor(private http: HttpClient) { }
 
   public listar():Observable<UniversitarioEnCursoModel[]>{

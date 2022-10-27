@@ -9,7 +9,7 @@ import { FotoPerfilModel } from '../models/foto-perfil-model';
 })
 export class FotoPerfilService {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
   constructor(private http: HttpClient) { }
 
   public listar():Observable<FotoPerfilModel[]>{

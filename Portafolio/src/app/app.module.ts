@@ -21,7 +21,9 @@ import { EditarInfoComponent } from './formularios/editar-info/editar-info.compo
 import { EditarFotoComponent } from './formularios/editar-foto/editar-foto.component';
 import { EditarEstudiosComponent } from './formularios/editar-estudios/editar-estudios.component';
 import { EditarProyectosComponent } from './formularios/editar-proyectos/editar-proyectos.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './servicios/interceptor.service';
+import { AuthService } from './servicios/auth.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,8 @@ import { HttpClientModule } from '@angular/common/http';
         }),
       ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService,
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

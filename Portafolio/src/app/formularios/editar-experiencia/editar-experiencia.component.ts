@@ -44,7 +44,7 @@ export class EditarExperienciaComponent implements OnInit{
         this.listaDeExperiencias = response;
       },
         error:(error:HttpErrorResponse) =>{
-          alert(error.message)
+          console.log(error.message)
         }
     })
   };

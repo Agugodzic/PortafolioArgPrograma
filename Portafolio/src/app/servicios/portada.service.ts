@@ -9,7 +9,7 @@ import { PortadaModel } from '../models/portada-model';
 })
 export class PortadaService {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
   constructor(private http: HttpClient) {}
 
   public listar():Observable<PortadaModel[]>{

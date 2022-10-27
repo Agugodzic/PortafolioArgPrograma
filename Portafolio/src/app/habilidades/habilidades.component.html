@@ -14,7 +14,7 @@
   <p class="titulo">HABILIDADES</p>
   <div id="contenedor-habilidades">
     <div class="habilidad" *ngFor="let habilidad of listaDeHabilidades">
-      <div class="botones">
+      <div *ngIf="logeado" class="botones">
         <a class="editar"(click)="switchHabilidad('editar',habilidad.id,habilidad)">
           <img class="lapiz-editar" [src]="Imagen.lapiz">
         </a>
@@ -36,7 +36,7 @@
     ></circle-progress>
 
     </div>
-    <button id="mas-boton" (click)="switchHabilidad('agregar',0,null)"><img id="mas-icono" [src]="Imagen.mas" ></button>
+    <button *ngIf="logeado" id="mas-boton" (click)="switchHabilidad('agregar',0,null)"><img id="mas-icono" [src]="Imagen.mas" ></button>
   </div>
 </div>
 

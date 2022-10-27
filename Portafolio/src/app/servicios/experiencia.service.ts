@@ -9,7 +9,7 @@ import { ExperienciaModel } from '../models/experiencia.model';
 })
 export class ExperienciaService {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
   constructor(private http: HttpClient) { }
 
   public listar():Observable<ExperienciaModel[]>{

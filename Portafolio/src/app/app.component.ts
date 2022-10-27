@@ -1,19 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DatosService } from './datos.service';
+import { AuthService } from './servicios/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  constructor(private Datos:DatosService){
+export class AppComponent implements OnInit{
+  public Imagen = this.Datos.Imagen;
+  public Link = this.Datos.Link;
+  public mostrarLogIn:boolean = false;
+  public log:any;
+
+  constructor(private Datos:DatosService,public authService:AuthService){
   }
-  Imagen = this.Datos.Imagen;
-  Link = this.Datos.Link;
 
-  mostrarLogIn:boolean = false;
+  logValued = () => this.authService.loggedIn();
 
+  logOut(){
+    this.authService.logoutUser();
+    this.logValued()
+    location.reload()
+  }
 
   switchLogIn():void{
     if(this.mostrarLogIn == true){
@@ -23,5 +32,8 @@ export class AppComponent {
     }
   }
 
-}
+  ngOnInit(): void {
+    this.log = this.authService.loggedIn();
+  }
 
+}

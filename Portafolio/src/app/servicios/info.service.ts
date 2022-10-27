@@ -8,7 +8,7 @@ import { InfoModel } from '../models/info-model';
   providedIn: 'root'
 })
 export class InfoService {
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
   constructor(private http: HttpClient) { }
 
   public listar():Observable<InfoModel[]>{

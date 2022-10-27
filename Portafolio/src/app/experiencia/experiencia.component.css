@@ -5,7 +5,7 @@
 
 #titulo{
   display:block;
-  opacity:70%;
+  opacity:90%;
 }
 
 p{
@@ -23,8 +23,9 @@ p{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
-  width:800vw;
-  margin-left: 100px;
+  width:85vw;
+  margin-left: 3vw;
+
 }
 
 .pestaña{
@@ -36,6 +37,7 @@ p{
   flex-direction: row;
   border-radius: 4px;
   padding: auto;
+  padding-right: 5px;
   align-items: center;
 }
 
@@ -62,7 +64,7 @@ p{
 
 #titulo{
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 25px;
 }
 
 .punto-blanco{
@@ -109,10 +111,14 @@ p{
 }
 
 #mas-boton{
+  display: block;
   background-color: rgba(47, 48, 78, 0.347);
   border:none;
   cursor:pointer;
   border-radius: 5px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #mas-boton:hover{
   background-color: rgba(56, 63, 80, 0.664);
@@ -131,3 +137,16 @@ p{
   left:0px;
 }
 
+@media (max-width:600px){
+  #generador-pestañas{
+    width:90vw;
+    margin-left: 0px;
+    justify-content:center;
+
+  }
+
+  .pestaña{
+    height: 70px;
+    width: 300px;
+  }
+}

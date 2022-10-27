@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <div class="botones">
+      <div *ngIf="logeado" class="botones">
 
         <a class="boton" (click)="switchExperiencia('editar', elemento.id , elemento)">
           <abbr title="Editar"><img class="lapiz" [src]="Imagen.lapiz"></abbr>
@@ -42,4 +42,4 @@
       </div>
     </div>
   </div>
-  <button id="mas-boton" (click)="switchExperiencia('agregar',0,null)"><img id="mas-icono" [src]="Imagen.mas" ></button>
+  <button *ngIf="logeado" id="mas-boton" (click)="switchExperiencia('agregar',0,null)"><img id="mas-icono" [src]="Imagen.mas" ></button>

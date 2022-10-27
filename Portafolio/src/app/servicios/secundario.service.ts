@@ -9,7 +9,7 @@ import { SecundarioModel } from '../models/secundario-model';
 })
 export class SecundarioService {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
   constructor(private http: HttpClient) { }
 
   public get():Observable<SecundarioModel>{

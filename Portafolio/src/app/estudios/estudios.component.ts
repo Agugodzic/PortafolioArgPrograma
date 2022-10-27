@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
 import { CursoModel } from '../models/curso-model';
 import { SecundarioModel } from '../models/secundario-model';
@@ -38,6 +38,8 @@ export class EstudiosComponent implements OnInit {
   public listaUniversitarioEnCurso: UniversitarioEnCursoModel[] | undefined;
   public tituloSecundario: SecundarioModel | undefined;
 
+  @Input() logeado:boolean;
+
   constructor(
     private datos:DatosService,
     private cursos:CursosService,
@@ -69,7 +71,7 @@ export class EstudiosComponent implements OnInit {
         this.listaDeCursos = response;
       },
         error:(error:HttpErrorResponse) => {
-          alert(error.message)
+          console.log(error.message)
         }
     })
   }
@@ -87,7 +89,7 @@ export class EstudiosComponent implements OnInit {
         this.listaTerciario = response;
       },
         error:(error:HttpErrorResponse) =>{
-          alert(error.message)
+          console.log(error.message)
         }
       })
   }
@@ -105,7 +107,7 @@ export class EstudiosComponent implements OnInit {
         this.listaUniversitario = response;
       },
         error:(error:HttpErrorResponse) =>{
-          alert(error.message)
+          console.log(error.message)
         }
     })
   }
@@ -123,7 +125,7 @@ export class EstudiosComponent implements OnInit {
           this.listaUniversitarioEnCurso = response;
         },
           error:(error:HttpErrorResponse) =>{
-            alert(error.message)
+            console.log(error.message)
           }
       })
     }
@@ -142,7 +144,7 @@ export class EstudiosComponent implements OnInit {
           this.TituloSecundario = response;
         },
           error:(error:HttpErrorResponse) =>{
-            alert(error.message)
+            console.log(error.message)
           }
       })
     }

@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input } from '@angular/core';
 import { DatosService } from '../datos.service';
 import { InfoModel } from '../models/info-model';
 import { InfoService } from '../servicios/info.service';
@@ -18,6 +18,8 @@ export class AcercaDeComponent implements OnInit {
   public mostrarEditarPortada = false;
   public mostrarEditarInfo = false;
   public mostrarEditarFoto = false;
+
+  @Input() logeado:boolean;
 
   constructor(private datos:DatosService , private infoService:InfoService ) {
   }
@@ -61,7 +63,7 @@ export class AcercaDeComponent implements OnInit {
         this.datosDeUsuario  = response[0];
       },
         error:(error:HttpErrorResponse) =>{
-          alert(error.message)
+          console.log(error.message)
         }
     })
   }

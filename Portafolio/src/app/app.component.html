@@ -1,4 +1,5 @@
 <span id="top"></span>
+
 <!-- Formularios -->
 
 <div id="contenedor-formulario" *ngIf="mostrarLogIn">
@@ -15,31 +16,32 @@
     <img id="logo-arg-programa"  [src]="Imagen.argPrograma">
     <p id="yo-programo">#YO PROGRAMO</p>
   </a>
-  <div id="botones"></div>
+  <p *ngIf="log | async">admin</p>
   <div id="login-redes">
     <a [href]="Link.instagram" target="_blank"><img class="logo-red boton"  [src]="Imagen.instagram"></a>
     <a [href]="Link.facebook" target="_blank"><img class="logo-red boton"  [src]="Imagen.facebook"></a>
     <a [href]="Link.gitHub" target="_blank"><img class="logo-red boton"  [src]="Imagen.gitHub"></a>
     <a [href]="Link.linkedin" target="_blank"><img class="logo-red boton"  [src]="Imagen.linkedin"></a>
 
-    <a class="boton" (click)="switchLogIn()"><img  id="log-in" [src]="Imagen.logIn"></a>
+    <a *ngIf="!log" class="boton" (click)="switchLogIn()"><img  id="log-in" [src]="Imagen.logIn"></a>
+    <a *ngIf="log" class="boton" (click)="logOut()"><img  id="log-in" [src]="Imagen.logOut"></a>
 </div>
-
-<app-acerca-de></app-acerca-de>
+</div>
+<app-acerca-de [logeado]="log"></app-acerca-de>
 <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
 
-<app-experiencia></app-experiencia>
+<app-experiencia [logeado]="log"></app-experiencia>
 <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
 
 <div id="contenedor-subir"><a  href="#top"><button id="boton-subir"><img id="subir-icono" [src]="Imagen.subir"> </button></a></div>
 
-<app-habilidades></app-habilidades>
+<app-habilidades [logeado]="log"></app-habilidades>
 <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
 
-<app-estudios></app-estudios>
+<app-estudios [logeado]="log"></app-estudios>
 <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
 
-<app-proyectos></app-proyectos>
+<app-proyectos [logeado]="log"></app-proyectos>
 
 <div id="footer">
   <a id="firma-footer">@agugodzic 2022</a>
