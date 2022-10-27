@@ -9,7 +9,7 @@ import { TerciarioModel } from '../models/terciario-model';
 })
 export class TerciarioService {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
   constructor(private http: HttpClient) { }
 
   public listar():Observable<TerciarioModel[]>{

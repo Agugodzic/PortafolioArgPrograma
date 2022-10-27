@@ -16,9 +16,17 @@ export class LogInComponent implements OnInit {
 
   constructor(private datos:DatosService, private authService:AuthService, private formBuilder:FormBuilder) { }
 
+  comprobar(){
+    if(this.authService.loggedIn()){
+      location.reload();
+    }else{
+      alert("El email o la contraseña son incorrectos.")
+    }
+  }
+
   ingresar(){
     this.authService.IniciarSesion(this.logIn.value).subscribe()
-    location.reload();
+    setTimeout(() => this.comprobar(),1000)
   }
 
   ngOnInit(): void {

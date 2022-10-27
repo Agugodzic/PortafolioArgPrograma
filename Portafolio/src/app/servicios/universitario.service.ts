@@ -9,7 +9,7 @@ import { UniversitarioModel } from '../models/universitario-model';
 })
 export class UniversitarioService {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
   constructor(private http: HttpClient) { }
 
   public listar():Observable<UniversitarioModel[]>{

@@ -8,26 +8,20 @@ import { map } from 'rxjs/operators';
 })
 
 export class AuthService {
-  private url = 'http://localhost:8080';
-  private currentUserSubject: BehaviorSubject<any>;
-  private _parcero = new BehaviorSubject<boolean>(false);
-  public parcero = this._parcero.asObservable();
+  private url = 'https://portafolio-back-ap.herokuapp.com/';
+  currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http: HttpClient) {
     this.currentUserSubject = new BehaviorSubject<any>(
-      JSON.parse(sessionStorage.getItem('currentUser') || '{}')
+      JSON.parse(sessionStorage.getItem('token') || '{}')
     );
-    const token = localStorage.getItem('currentUser');
-    this._parcero.next(!!token)
   }
 
   IniciarSesion(credenciales: any): Observable<any> {
     return this.http.post(`${this.url}/login`, credenciales).pipe(
       map((data) => {
-        sessionStorage.setItem('currentUser', JSON.stringify(data));
+        sessionStorage.setItem('token', JSON.stringify(data));
         this.currentUserSubject.next(data);
-        this._parcero.next(true);
-
         return data;
       })
     );
@@ -38,15 +32,14 @@ export class AuthService {
   }
 
   loggedIn() {
-    return this.parcero;
+    return sessionStorage.getItem('token') !== null;
   }
 
   logoutUser() {
-    this._parcero.next(false);
     sessionStorage.clear();
     localStorage.clear();
 
     this.currentUserSubject.next(null);
-    alert('Has cerrado sesión');
+    alert('Has finalizado la sesion.');
   }
 }

@@ -9,7 +9,7 @@ import { HabilidadesModel } from '../models/habilidades.model';
 })
 export class HabilidadesService {
 
-  private apiServerUrl = environment.apiBaseUrl;
+  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
   constructor(private http: HttpClient) { }
 
   public listar():Observable<HabilidadesModel[]>{

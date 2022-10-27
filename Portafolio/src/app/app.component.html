@@ -1,4 +1,5 @@
 <span id="top"></span>
+
 <!-- Formularios -->
 
 <div id="contenedor-formulario" *ngIf="mostrarLogIn">
@@ -15,7 +16,7 @@
     <img id="logo-arg-programa"  [src]="Imagen.argPrograma">
     <p id="yo-programo">#YO PROGRAMO</p>
   </a>
-  <p *ngIf="authService.parcero |async">admin</p>
+  <p *ngIf="log | async">admin</p>
   <div id="login-redes">
     <a [href]="Link.instagram" target="_blank"><img class="logo-red boton"  [src]="Imagen.instagram"></a>
     <a [href]="Link.facebook" target="_blank"><img class="logo-red boton"  [src]="Imagen.facebook"></a>
