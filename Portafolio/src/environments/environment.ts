@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: "https://portafolio-back-ap.herokuapp.com"
 };
 
 /*

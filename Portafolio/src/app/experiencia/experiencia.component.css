@@ -1,6 +1,7 @@
-.section{
+html{
   margin-top: 20px;
   text-align: center;
+  width:92vw ;
 }
 
 #titulo{
@@ -25,14 +26,13 @@ p{
   justify-content: start;
   width:85vw;
   margin-left: 3vw;
-
 }
 
 .pestaña{
   background-color:rgba(48, 48, 162, 0.168);
   margin: 15px;
   height: 70px;
-  width: 400px;
+  width: 350px;
   display: inline-flex;
   flex-direction: row;
   border-radius: 4px;
@@ -44,7 +44,7 @@ p{
 .descripcion{
   display:inline-flex;
   flex-direction: column;
-  width: 300px;
+  width: 250px;
 }
 
 
