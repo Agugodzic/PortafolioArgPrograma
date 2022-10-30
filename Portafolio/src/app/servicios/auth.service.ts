@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 })
 
 export class AuthService {
-  private url = 'https://portafolio-back-ap.herokuapp.com/';
+  private url = 'https://portafolio-back-ap.herokuapp.com';
   currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http: HttpClient) {

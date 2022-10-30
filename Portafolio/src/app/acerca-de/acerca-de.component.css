@@ -1,7 +1,13 @@
+.section{
+  width:92vw;
+}
+
 #contenedor-banner{
   text-align: center;
   margin-top: 15px;
+  width: 98.5vw;
 }
+
 
 #contenedor-foto{
   width: min-content;

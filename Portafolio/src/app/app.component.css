@@ -85,8 +85,7 @@ p{
   background-color: rgba(0, 0, 0, 0.357);
   border:none;
   opacity: 70%;
-  cursor:pointer;
-  margin-right: 15px;
+  cursor:pointer;;
   border-radius: 3px;
 
 }
