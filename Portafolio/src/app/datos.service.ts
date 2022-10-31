@@ -8,6 +8,8 @@ export class DatosService {
 
   constructor() { }
 
+  apiUrl = "http://localhost:8080"
+
   Banner = [
     {indice:0,link:"https://i.postimg.cc/vB4rzrQX/banner2.png"},
     {indice:1,link:"https://i.pinimg.com/originals/0f/81/ac/0f81ac43b11ce36b81d803077f7584b0.jpg"},

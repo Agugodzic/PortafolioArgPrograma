@@ -1,16 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';import { DatosService } from '../datos.service';
+;
 import { PortadaModel } from '../models/portada-model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PortadaService {
+  private apiServerUrl = this.datosService.apiUrl ;
 
-  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private datosService:DatosService) { }
 
   public listar():Observable<PortadaModel[]>{
     return this.http.get<PortadaModel[]>(`${this.apiServerUrl}/portada/listar`)

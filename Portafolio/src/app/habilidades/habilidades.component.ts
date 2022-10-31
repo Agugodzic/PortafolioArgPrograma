@@ -54,6 +54,8 @@ export class HabilidadesComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarHabilidades()
+    setTimeout(() => "",1000)
+
   }
 
 }

@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { CursoModel } from '../models/curso-model';
 import { Observable } from 'rxjs';
+import { DatosService } from '../datos.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CursosService {
-  private apiServerUrl = "http://localhost:8080";
-  constructor(private http: HttpClient) { }
+  private apiServerUrl = this.datosService.apiUrl ;
+
+  constructor(private http: HttpClient,private datosService:DatosService) { }
 
  public listar():Observable<CursoModel[]>{
     return this.http.get<CursoModel[]>(`${this.apiServerUrl}/cursos/listar`)

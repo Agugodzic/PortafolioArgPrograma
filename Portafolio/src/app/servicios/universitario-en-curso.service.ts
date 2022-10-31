@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { DatosService } from '../datos.service';
 import { UniversitarioEnCursoModel } from '../models/universitario-en-curso-model';
 
 @Injectable({
@@ -10,8 +10,9 @@ import { UniversitarioEnCursoModel } from '../models/universitario-en-curso-mode
 
 export class UniversitarioEnCursoService {
 
-  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
-  constructor(private http: HttpClient) { }
+  private apiServerUrl = this.datosService.apiUrl ;
+
+  constructor(private http: HttpClient,private datosService:DatosService) { }
 
   public listar():Observable<UniversitarioEnCursoModel[]>{
     return this.http.get<UniversitarioEnCursoModel[]>(`${this.apiServerUrl}/universitario-en-curso/listar`)
