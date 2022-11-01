@@ -34,7 +34,7 @@ export class ProyectosComponent implements OnInit {
 
   public eliminarProyecto(id:number):void{
     this.proyectoService.eliminar(id).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),1000)
   }
 
   switchProyecto(accion:string,proyecto:any):void{

@@ -1,7 +1,10 @@
 .section{
   text-align: center;;
   width:92vw ;
-  transform: translateX(45px);
+}
+
+.titulo{
+  transform: translateX(50px);
 }
 
 

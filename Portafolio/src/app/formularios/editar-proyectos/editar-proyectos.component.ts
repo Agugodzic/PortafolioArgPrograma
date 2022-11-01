@@ -34,12 +34,12 @@ export class EditarProyectosComponent implements OnInit {
 
   public submitEditar():any{
     this.proyectoService.editar(this.editarProyecto.value).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),2000)
   }
 
   public submitAgregar():any{
     this.proyectoService.agregar(this.agregarProyecto.value).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),2000)
   }
 
   public editar():boolean{

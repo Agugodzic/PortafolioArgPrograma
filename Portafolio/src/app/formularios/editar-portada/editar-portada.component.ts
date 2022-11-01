@@ -74,7 +74,7 @@ export class EditarPortadaComponent implements OnInit {
 
   submitAgregar():any{
     this.portadaService.agregar(this.agregarPortada.value).subscribe();
-    location.reload()
+    setTimeout(() => location.reload(),2000)
   }
 
   eliminar(id:number){

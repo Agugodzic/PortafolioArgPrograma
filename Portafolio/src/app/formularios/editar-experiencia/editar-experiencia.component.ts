@@ -31,11 +31,11 @@ export class EditarExperienciaComponent implements OnInit{
 
   submitEditar():any{
     this.experienciaService.editar(this.editarExperiencia.value).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),1500)
   }
   submitAgregar():any{
     this.experienciaService.agregar(this.agregarExperiencia.value).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),1500)
   }
 
   public listarExperiencias(){

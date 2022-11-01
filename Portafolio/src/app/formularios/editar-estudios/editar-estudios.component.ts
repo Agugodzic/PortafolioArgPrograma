@@ -40,11 +40,11 @@ export class EditarEstudiosComponent implements OnInit {
 
   submitEditar():any{
     this.servicio.editar(this.editarEstudio.value).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),2000)
   }
   submitAgregar():any{
     this.servicio.agregar(this.agregarEstudio.value).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),2000)
   }
 
 

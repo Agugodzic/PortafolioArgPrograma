@@ -25,7 +25,7 @@
       <div class="estado" *ngIf="proyecto.terminado == true">Finalizado</div>
       <div class="estado" *ngIf="proyecto.terminado == false">En desarrollo</div>
       <div class="descripcion-proyecto"><p class="texto-descripcion-proyecto">{{proyecto.descripcion}}</p></div>
-      <a class="boton-proyecto" href="http://www.google.com" target="_blank" >Repositorio</a>
+      <a class="boton-proyecto" [href]="proyecto.linkRepository" target="_blank" >Repositorio</a>
     </div>
 
     </div>
