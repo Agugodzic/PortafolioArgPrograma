@@ -33,6 +33,7 @@
 }
 
 .titulo-curso{
+  display:inline-block;
   margin-top:3px;
   margin-bottom: 2px;
 }
@@ -111,6 +112,7 @@
   height:25px;
   margin-left:4px;
   transform:translateY(7px);
+  z-index: 3500;
 }
 
 .info:hover{
@@ -143,6 +145,19 @@
 }
 
 #contenedor-formulario{
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:100vh;
+  width: 100vw;
+  background-color:rgba(0, 0, 0, 0.712);
+  z-index:1000;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+#contenedor-info{
   position:fixed;
   top:0px;
   left:0px;

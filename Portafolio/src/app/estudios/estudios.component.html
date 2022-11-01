@@ -1,11 +1,18 @@
 <div class="section">
 
-    <!--------  Formularios  ------->
+    <!--------  Formularios y Ventanas de texto ------->
 
     <div id="contenedor-formulario" *ngIf="mostrarEditarEstudios">
       <div class="centrar">
         <button class="cerrar" (click)="switchEstudios(objeto,id,accion,null)"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
         <app-editar-estudios [tipo]="objeto" [id]="id" [accion]="accion" [elemento]="elemento"></app-editar-estudios>
+      </div>
+    </div>
+
+    <div id="contenedor-info" *ngIf="mostrarInfo">
+      <div class="centrar">
+        <button class="cerrar" (click)="switchInfo('','')"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
+        <app-ventana-de-texto [texto]="textoInfo" [titulo]="tituloInfo"></app-ventana-de-texto>
       </div>
     </div>
 
@@ -44,7 +51,8 @@
             </button>
           </div>
           <div class="curso">
-            <p class="titulo-curso">{{universitario.titulo}}<img class="info" [src]="Imagen.info"></p>
+            <p class="titulo-curso">{{universitario.titulo}}</p>
+            <img class="info" [src]="Imagen.info" (click)="switchInfo(universitario.titulo,universitario.descripcion)">
             <p class="titulo3">{{universitario.institucion}}</p>
             <div class="descripcion">
               <p class="texto-descripcion"></p>
@@ -71,7 +79,8 @@
             </button>
           </div>
           <div class="curso">
-            <p class="titulo-curso">{{universitario.titulo}}<img class="info" [src]="Imagen.info"></p>
+            <p class="titulo-curso">{{universitario.titulo}}</p>
+            <img class="info" [src]="Imagen.info" (click)="switchInfo(universitario.titulo,universitario.descripcion)">
             <p class="titulo3">{{universitario.institucion}}</p>
             <div class="descripcion">
               <p class="texto-descripcion"></p>
@@ -99,7 +108,8 @@
           </button>
         </div>
         <div class="curso">
-          <p class="titulo-curso">{{terciario.titulo}}<img class="info" [src]="Imagen.info"></p>
+          <p class="titulo-curso">{{terciario.titulo}}</p>
+          <img class="info" [src]="Imagen.info" (click)="switchInfo(terciario.titulo,terciario.descripcion)">
           <p class="titulo3">{{terciario.institucion}}</p>
           <div class="descripcion">
             <p class="texto-descripcion"></p>
@@ -128,7 +138,8 @@
           </button>
         </div>
         <div class="curso">
-          <p class="titulo-curso">{{curso.titulo}}<img class="info" [src]="Imagen.info"></p>
+          <p class="titulo-curso">{{curso.titulo}}</p>
+          <img class="info" [src]="Imagen.info" (click)="switchInfo(curso.titulo,curso.descripcion)">
           <p class="titulo3">{{curso.institucion}}</p>
           <div class="descripcion">
             <p class="texto-descripcion"></p>
