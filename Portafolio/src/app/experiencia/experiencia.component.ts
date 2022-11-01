@@ -17,12 +17,12 @@ export class ExperienciaComponent implements OnInit{
   accion:string;
   id:number;
   editarExperiencia:boolean;
-  listaDeExperiencias: ExperienciaModel [] | undefined;
+  listaDeExperiencias:any= [];
 
   @Input() logeado:boolean;
 
   constructor( private datos:DatosService , private experienciaService:ExperienciaService ) {
-    this.editarExperiencia = false
+    this.editarExperiencia = false;
     this.accion="";
     this.id=0;
     this.Experiencia  = this.datos.Experiencia;

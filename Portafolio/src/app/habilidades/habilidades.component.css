@@ -10,12 +10,6 @@
   margin-bottom: 20px;
 }
 
-.section{
-  padding-left: 40px;
-  padding-right: 40px;
-  width:92vw ;
-  text-align: center;
-}
 
 .titulo-habilidad{
   text-align: center;
@@ -70,6 +64,10 @@
 .circulo-progreso{
   z-index:2000;
   margin-left: 10px;
+}
+
+#contenedor-habilidades{
+  margin-left: 70px;
 }
 
 #contenedor-formulario{

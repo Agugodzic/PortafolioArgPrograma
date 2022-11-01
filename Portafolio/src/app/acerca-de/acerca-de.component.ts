@@ -10,7 +10,7 @@ import { InfoService } from '../servicios/info.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  public datosDeUsuario:InfoModel;
+  public datosDeUsuario:any = {};
   public Imagen:any = this.datos.Imagen;
   public Info:any = this.datos.Info;
   public verMasTexto:String = "Ver mas";
@@ -18,6 +18,7 @@ export class AcercaDeComponent implements OnInit {
   public mostrarEditarPortada = false;
   public mostrarEditarInfo = false;
   public mostrarEditarFoto = false;
+  public mostrarRecurso = false;
 
   @Input() logeado:boolean;
 
@@ -70,5 +71,6 @@ export class AcercaDeComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarInfo();
+    setTimeout(() => this.mostrarRecurso = true ,3000)
   }
 }

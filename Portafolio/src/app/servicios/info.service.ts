@@ -1,15 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { DatosService } from '../datos.service';
 import { InfoModel } from '../models/info-model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InfoService {
-  private apiServerUrl = "https://portafolio-back-ap.herokuapp.com";
-  constructor(private http: HttpClient) { }
+  private apiServerUrl = this.datosService.apiUrl ;
+
+  constructor(private http: HttpClient,private datosService:DatosService) { }
 
   public listar():Observable<InfoModel[]>{
     return this.http.get<InfoModel[]>(`${this.apiServerUrl}/datos/listar`)
