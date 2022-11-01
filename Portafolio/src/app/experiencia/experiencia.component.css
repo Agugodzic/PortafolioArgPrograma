@@ -5,6 +5,7 @@ html{
 }
 
 #titulo{
+  margin-top: 35px;
   display:block;
   opacity:90%;
 }
@@ -15,51 +16,52 @@ p{
   display: inline;
 }
 
-#contenedor-pestañas{
+#contenedor-tarjetas{
+  background-color: blueviolet;
   display: inline;
 }
 
-#generador-pestañas{
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+#generador-tarjetas{
   justify-content: start;
   width:85vw;
   margin-left: 3vw;
 }
 
-.pestaña{
+.tarjeta{
+  display:inline-block;
   background-color:rgba(48, 48, 162, 0.168);
   margin: 15px;
+  margin-left: 50px;
   height: 70px;
   width: 350px;
-  display: inline-flex;
-  flex-direction: row;
   border-radius: 4px;
-  padding: auto;
   padding-right: 5px;
-  align-items: center;
 }
 
 .descripcion{
-  display:inline-flex;
-  flex-direction: column;
-  width: 250px;
+  width: 200px;
+  display: inline-block;
 }
 
 
 .descripcion-puesto{
+  display:block;
   color: rgba(255, 255, 255, 0.826);
 }
 
 .descripcion-empresa{
   color: rgba(255, 255, 255, 0.418);
   font-size: 12px;
+  display:block;
 }
 
 .tiempo{
+  height: 70px;
+  width: 110px;
+  display:inline-block;
   color: rgba(255, 255, 255, 0.744);
-  width: fit-content;
+  text-align: end;
+  transform:translateY(-13px)
 }
 
 #titulo{
@@ -69,18 +71,19 @@ p{
 
 .punto-blanco{
   height: 10px;
-  margin: 5px;
+  margin: 15px;
+  margin-top:30px;
   display: inline-block;
 }
 
 .contenedor-punto{
+  display:inline;
   width:60px;
 }
 
 .botones{
   margin: 10px;
-  display: flex;
-  flex-direction: column;
+  display:inline-block;
 
 }
 
@@ -93,6 +96,8 @@ p{
   cursor:pointer;
   height: 20px;
   width: 20px;
+  display:block;
+  text-align: center;
 }
 
 .boton:hover{
@@ -138,15 +143,19 @@ p{
 }
 
 @media (max-width:600px){
-  #generador-pestañas{
+  #generador-tarjetas{
     width:90vw;
     margin-left: 0px;
     justify-content:center;
 
   }
 
-  .pestaña{
+  .tarjeta{
     height: 70px;
-    width: 300px;
+    width: 310px;
+  }
+
+  .tiempo{
+    width:63px;
   }
 }

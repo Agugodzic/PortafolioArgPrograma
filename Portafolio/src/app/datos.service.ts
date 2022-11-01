@@ -8,7 +8,7 @@ export class DatosService {
 
   constructor() { }
 
-  apiUrl = "http://localhost:8080"
+  apiUrl = "http://portafolio-back-ap.herokuapp.com"
 
   Banner = [
     {indice:0,link:"https://i.postimg.cc/vB4rzrQX/banner2.png"},

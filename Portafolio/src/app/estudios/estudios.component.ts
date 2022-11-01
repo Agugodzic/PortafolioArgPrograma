@@ -32,11 +32,12 @@ export class EstudiosComponent implements OnInit {
   private _accion:string;
 
   public editarCurso : CursoModel | undefined;
-  public listaDeCursos: CursoModel[] | undefined;
-  public listaTerciario: TerciarioModel[] | undefined;
-  public listaUniversitario: UniversitarioModel[] | undefined;
-  public listaUniversitarioEnCurso: UniversitarioEnCursoModel[] | undefined;
-  public tituloSecundario: SecundarioModel | undefined;
+  public listaDeCursos:any = [];
+  public listaTerciario:any = [];
+  public listaUniversitario:any = [];
+  public listaUniversitarioEnCurso:any = [];
+  public tituloSecundario:any = "";
+  public mostrarRecurso:boolean = false;
 
   @Input() logeado:boolean;
 
@@ -66,14 +67,9 @@ export class EstudiosComponent implements OnInit {
   //--------------Cursos----------------//
 
   public listarCursos(){
-    this.cursos.listar().subscribe({
-      next: (response: CursoModel[])  =>{
-        this.listaDeCursos = response;
-      },
-        error:(error:HttpErrorResponse) => {
-          console.log(error.message)
-        }
-    })
+    this.cursos.listar().subscribe(
+      (response: CursoModel[])  => this.listaDeCursos = response
+      )
   }
 
   public eliminarCurso(id:number){

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogInComponent } from './formularios/log-in/log-in.component';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
@@ -24,6 +23,7 @@ import { EditarProyectosComponent } from './formularios/editar-proyectos/editar-
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './servicios/interceptor.service';
 import { AuthService } from './servicios/auth.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -41,11 +41,10 @@ import { AuthService } from './servicios/auth.service';
     EditarFotoComponent,
     EditarEstudiosComponent,
     EditarProyectosComponent,
-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     NgCircleProgressModule.forRoot({

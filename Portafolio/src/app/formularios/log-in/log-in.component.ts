@@ -26,7 +26,7 @@ export class LogInComponent implements OnInit {
 
   ingresar(){
     this.authService.IniciarSesion(this.logIn.value).subscribe()
-    setTimeout(() => this.comprobar(),1000)
+    setTimeout(() => this.comprobar(),3000)
   }
 
   ngOnInit(): void {

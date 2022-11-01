@@ -95,7 +95,8 @@ export class EditarPortadaComponent implements OnInit {
 
   bannerClick(portada:string):void{
     this.cambiarPortada(portada)
-    location.reload()
+    setTimeout(() => location.reload(),2000)
+
   }
 
   ngOnInit(): void {

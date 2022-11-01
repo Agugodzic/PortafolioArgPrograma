@@ -1,4 +1,3 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { DatosService } from '../datos.service';
 import { HabilidadesModel} from '../models/habilidades.model';
@@ -14,9 +13,10 @@ export class HabilidadesComponent implements OnInit {
   public id:number=0;
   public accion:string="";
   public habilidad:HabilidadesModel;
-  public listaDeHabilidades:HabilidadesModel[] | undefined;
+  public listaDeHabilidades?:any;
   public Imagen = this.datos.Imagen;
   public mostrarEditarHabilidad = false;
+  public mostrarRecurso:boolean = false;
 
   constructor(private datos:DatosService, private habilidadesService:HabilidadesService) { }
 
@@ -24,19 +24,18 @@ export class HabilidadesComponent implements OnInit {
   //-----------------------------------//
 
   public listarHabilidades(){
-    this.habilidadesService.listar().subscribe({
-      next: (response: HabilidadesModel[])  =>{
+    this.habilidadesService.listar().subscribe(
+      (response: HabilidadesModel[])  =>{
         this.listaDeHabilidades = response;
-      },
-        error:(error:HttpErrorResponse) =>{
-          console.log(error.message)
-        }
-    })
-  }
+    })}
 
   public eliminarHabilidad(id:number):void{
     this.habilidadesService.eliminar(id).subscribe();
     location.reload();
+  }
+
+  public mostrar(){
+    this.mostrarRecurso = true;
   }
 
   //-----------------------------------//
@@ -54,8 +53,6 @@ export class HabilidadesComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarHabilidades()
-    setTimeout(() => "",1000)
-
   }
 
 }

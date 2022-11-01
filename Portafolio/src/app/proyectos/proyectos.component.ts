@@ -11,7 +11,7 @@ import { ProyectosService } from '../servicios/proyectos.service';
 })
 export class ProyectosComponent implements OnInit {
 
-  public Proyectos:ProyectosModel[];
+  public Proyectos:any = [];
   public Imagen = this.datos.Imagen;
   public proyecto:ProyectosModel;
   public accion:string="";
