@@ -1,20 +1,20 @@
   <!---------- Formularios ----------->
 
-  <div id="contenedor-formulario" *ngIf="mostrarEditarPortada">
+  <div class="contenedor-formulario" *ngIf="mostrarEditarPortada">
     <div class="centrar">
       <app-editar-portada></app-editar-portada>
       <button class="cerrar" (click)="switchPortada()"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
     </div>
   </div>
 
-  <div id="contenedor-formulario" *ngIf="mostrarEditarInfo">
+  <div class="contenedor-formulario" *ngIf="mostrarEditarInfo">
     <div class="centrar">
       <app-editar-info [datos]="datosDeUsuario" ></app-editar-info>
       <button class="cerrar" (click)="switchInfo()"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>
     </div>
   </div>
 
-  <div id="contenedor-formulario" *ngIf="mostrarEditarFoto">
+  <div class="contenedor-formulario" *ngIf="mostrarEditarFoto">
     <div class="centrar">
       <app-editar-foto></app-editar-foto>
       <button class="cerrar" (click)="switchFoto()"><img class="imagen-cerrar" [src]="Imagen.deleteNegro"></button>

@@ -93,7 +93,7 @@
   opacity: 90%;
   margin-left:30vw;
   margin-right: 20vw;
-  margin-top: 50px;
+  margin-top: 40px;
   width: 60vw;
   overflow: visible;
   padding-right: 15px;
@@ -160,7 +160,7 @@
   color: rgba(252, 252, 252, 0.85);
 }
 
-#contenedor-formulario{
+.contenedor-formulario{
   position:fixed;
   top:0px;
   left:0px;
@@ -233,6 +233,10 @@
 
   #sobre-mi-texto{
     font-size:12px;
+  }
+
+  .contenedor-formulario{
+    height:100vh;
   }
 }
 

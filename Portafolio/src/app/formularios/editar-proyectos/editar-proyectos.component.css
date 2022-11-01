@@ -101,3 +101,8 @@ form{
   background-color: #000030ad;
 }
 
+@media (max-width:500px){
+  form{
+    width: 350px;
+  }
+}

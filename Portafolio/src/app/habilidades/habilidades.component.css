@@ -98,6 +98,7 @@
 }
 
 #mas-boton{
+  text-align: center;
   display:block;
   background-color: rgba(47, 48, 78, 0.347);
   border:none;
@@ -106,7 +107,8 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 25px;
+  transform: translateX(38px)
 }
 
 #mas-boton:hover{
