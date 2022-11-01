@@ -7,8 +7,8 @@
   height: max-content;
   display: inline-block;
   margin:35px;
-  margin-right:50px;
-  margin-left: 20px;
+  margin-right:20px;
+  margin-left: 60px;
 
 }
 
@@ -71,7 +71,7 @@
 
 .circulo-progreso{
   z-index:2000;
-  margin-left: 10px;
+  margin-left: 18px;
 }
 
 #contenedor-habilidades{

@@ -94,14 +94,14 @@ export class EditarEstudiosComponent implements OnInit {
         id:[],
         titulo:['',[Validators.required]],
         institucion:['',[Validators.required]],
-        info:['',[Validators.required]]
+        descripcion:['',[Validators.required]]
       }
     )
     this.agregarEstudio = this.formBuilder.group(
       {
         titulo:['',[Validators.required]],
         institucion:['',[Validators.required]],
-        info:['',[Validators.required]]
+        descripcion:['',[Validators.required]]
       }
     )
 
@@ -109,7 +109,7 @@ export class EditarEstudiosComponent implements OnInit {
       id:this.elemento.id,
       titulo:this.elemento.titulo,
       institucion:this.elemento.institucion,
-      info:this.elemento.descripcion
+      descripcion:this.elemento.descripcion
     })
   }
 }
