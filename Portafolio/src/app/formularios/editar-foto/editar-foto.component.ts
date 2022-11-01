@@ -75,7 +75,7 @@ export class EditarFotoComponent implements OnInit {
   submitAgregar():any{
     this.fotoService.agregar(this.agregarFoto.value).subscribe();
     this.cambiarFoto(this.agregarFoto.value)
-    location.reload()
+    setTimeout(() => location.reload(),3000)
   }
 
   eliminar(id:number){

@@ -43,11 +43,11 @@ export class EditarHabilidadComponent implements OnInit {
 
   submitEditar():any{
     this.habilidadesService.editar(this.editarHabilidad.value).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),1000)
   }
   submitAgregar():any{
     this.habilidadesService.agregar(this.agregarHabilidad.value).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),1000)
   }
 
 

@@ -54,10 +54,11 @@
       <button *ngIf="logeado" class="mas-boton" (click)="switchEstudios('UniversitarioEnCurso',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
       </div>
 
-        <!--------  TITULO UNIVERSITARIO --------->
+     <!--------  TITULO UNIVERSITARIO --------->
 
-      <div id="terciario">
-        <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+      <div *ngIf="logeado || listaUniversitario.length > 0" id="terciario">
+      <div *ngIf="logeado || listaUniversitarioEnCurso.length > 0" class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+
         <p class="titulo2">TITULO UNIVERSITARIO</p>
         <div *ngFor="let universitario of listaUniversitario">
 
@@ -85,7 +86,7 @@
       <!--------  TITULO TERCIARIO --------->
 
   <div class="contenedor-estudios">
-    <div id="terciario">
+    <div *ngIf="logeado || listaTerciario.length > 0" id="terciario">
       <p class="titulo2">TITULO TERCIARIO</p>
       <div *ngFor="let terciario of listaTerciario">
 
@@ -106,12 +107,14 @@
         </div>
     </div>
     <button *ngIf="logeado" class="mas-boton"  (click)="switchEstudios('Terciario',0,'agregar',null)"><img class="mas-icono" [src]="Imagen.mas" ></button>
-  </div>
+</div>
+
 
       <!-----------  CURSOS ------------->
 
-    <div id="cursos">
-  <div class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
+    <div *ngIf="logeado || listaDeCursos.length > 0" id="cursos">
+
+    <div *ngIf="logeado || listaTerciario.length > 0" class="contenedor-separador"><img class="imagen-separador" [src]="Imagen.separadorBlanco"></div>
 
       <p class="titulo2">CURSOS</p>
       <div *ngFor="let curso of listaDeCursos">
