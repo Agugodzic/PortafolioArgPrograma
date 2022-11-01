@@ -13,7 +13,7 @@ p{
 
 form{
   background-color: rgb(235, 235, 235);
-  width: 350px;
+  min-width: 500px;
   border-radius: 4px;
   display:flex;
   position: relative;

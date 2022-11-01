@@ -24,8 +24,13 @@ export class EstudiosComponent implements OnInit {
   public UniversitarioIncompleto:any;
   public TituloUniversitario:any;
   public Terciario:any;
-  public mostrarEditarEstudios:boolean = false;
+
+  public textoInfo:string;
+  public tituloInfo:string;
+  public mostrarInfo:boolean = false;
+
   public elemento:any;
+  public mostrarEditarEstudios:boolean = false;
 
   private _objeto:string;
   private _id:number;
@@ -37,7 +42,6 @@ export class EstudiosComponent implements OnInit {
   public listaUniversitario:any = [];
   public listaUniversitarioEnCurso:any = [];
   public tituloSecundario:any = "";
-  public mostrarRecurso:boolean = false;
 
   @Input() logeado:boolean;
 
@@ -157,6 +161,17 @@ export class EstudiosComponent implements OnInit {
       this.mostrarEditarEstudios = false;
     }else{
       this.mostrarEditarEstudios = true;
+    }
+  }
+
+  switchInfo(titulo:string,texto:string):void{
+    this.tituloInfo = titulo;
+    this.textoInfo = texto;
+
+    if(this.mostrarInfo == true){
+      this.mostrarInfo = false;
+    }else{
+      this.mostrarInfo = true;
     }
   }
 

@@ -31,7 +31,7 @@ export class HabilidadesComponent implements OnInit {
 
   public eliminarHabilidad(id:number):void{
     this.habilidadesService.eliminar(id).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),1000)
   }
 
   public mostrar(){

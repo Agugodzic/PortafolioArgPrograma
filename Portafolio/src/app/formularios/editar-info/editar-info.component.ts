@@ -40,7 +40,7 @@ export class EditarInfoComponent implements OnInit {
 
   submit():any{
     this.infoService.editar(this.editarInfo.value).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),2000)
   }
 
   ngOnInit(): void {

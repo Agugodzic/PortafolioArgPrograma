@@ -24,6 +24,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './servicios/interceptor.service';
 import { AuthService } from './servicios/auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VentanaDeTextoComponent } from './ventana-de-texto/ventana-de-texto.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EditarFotoComponent,
     EditarEstudiosComponent,
     EditarProyectosComponent,
+    VentanaDeTextoComponent,
   ],
   imports: [
     BrowserModule,

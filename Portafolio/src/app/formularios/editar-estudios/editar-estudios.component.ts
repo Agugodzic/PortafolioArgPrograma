@@ -40,11 +40,11 @@ export class EditarEstudiosComponent implements OnInit {
 
   submitEditar():any{
     this.servicio.editar(this.editarEstudio.value).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),2000)
   }
   submitAgregar():any{
     this.servicio.agregar(this.agregarEstudio.value).subscribe();
-    location.reload();
+    setTimeout(() => location.reload(),2000)
   }
 
 
@@ -94,14 +94,14 @@ export class EditarEstudiosComponent implements OnInit {
         id:[],
         titulo:['',[Validators.required]],
         institucion:['',[Validators.required]],
-        info:['',[Validators.required]]
+        descripcion:['',[Validators.required]]
       }
     )
     this.agregarEstudio = this.formBuilder.group(
       {
         titulo:['',[Validators.required]],
         institucion:['',[Validators.required]],
-        info:['',[Validators.required]]
+        descripcion:['',[Validators.required]]
       }
     )
 
@@ -109,7 +109,7 @@ export class EditarEstudiosComponent implements OnInit {
       id:this.elemento.id,
       titulo:this.elemento.titulo,
       institucion:this.elemento.institucion,
-      info:this.elemento.descripcion
+      descripcion:this.elemento.descripcion
     })
   }
 }

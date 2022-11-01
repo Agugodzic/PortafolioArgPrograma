@@ -1,8 +1,15 @@
+.section{
+  text-align: center;
+}
+
 .habilidad{
   width: max-content;
   height: max-content;
   display: inline-block;
   margin:35px;
+  margin-right:20px;
+  margin-left: 60px;
+
 }
 
 .titulo{
@@ -55,6 +62,7 @@
   transform: translateY(-10px);
   opacity: 0;
   transition:0.1s;
+  text-align: center;
 }
 
 .botones:hover{
@@ -63,11 +71,11 @@
 
 .circulo-progreso{
   z-index:2000;
-  margin-left: 10px;
+  margin-left: 18px;
 }
 
 #contenedor-habilidades{
-  margin-left: 70px;
+  transform: translateX(-35px);
 }
 
 #contenedor-formulario{
