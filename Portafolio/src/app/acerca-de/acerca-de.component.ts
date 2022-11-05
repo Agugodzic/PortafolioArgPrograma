@@ -19,6 +19,7 @@ export class AcercaDeComponent implements OnInit {
   public mostrarEditarInfo = false;
   public mostrarEditarFoto = false;
   public mostrarRecurso = false;
+  public test:string = "test";
 
   @Input() logeado:boolean;
 

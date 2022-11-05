@@ -3,12 +3,16 @@
   width:92vw ;
 }
 
+body{width:98vw}
+
+
 .titulo{
   transform: translateX(50px);
 }
 
 
 .contenedor-estudios{
+  padding-left: 5vw;
   display:inline-flex;
   flex-direction: column;
   width: 40vw;

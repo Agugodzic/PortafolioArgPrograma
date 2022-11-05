@@ -2,6 +2,8 @@
   width:92vw;
 }
 
+body{width:98vw}
+
 #contenedor-banner{
   text-align: center;
   margin-top: 15px;
@@ -128,6 +130,7 @@
 
 .informacion-personal{
   margin-left:30vw;
+  width: 800px;
 }
 
 .texto-informacion-personal{

@@ -8,6 +8,8 @@ html{
   margin-top: 35px;
   display:block;
   opacity:90%;
+  width: 98vw;
+  text-align: center;
 }
 
 p{
