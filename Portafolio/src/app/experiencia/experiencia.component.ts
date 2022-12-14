@@ -25,7 +25,6 @@ export class ExperienciaComponent implements OnInit{
     this.editarExperiencia = false;
     this.accion="";
     this.id=0;
-    this.Experiencia  = this.datos.Experiencia;
     this.Info = this.datos.Info;
     this.Imagen = this.datos.Imagen;
   }

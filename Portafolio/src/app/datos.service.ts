@@ -8,7 +8,7 @@ export class DatosService {
 
   constructor() { }
 
-  apiUrl = "http://portafolio-back-ap.herokuapp.com"
+  apiUrl = "http://portafoliobackend-production-0719.up.railway.app"
 
   Banner = [
     {indice:0,link:"https://i.postimg.cc/vB4rzrQX/banner2.png"},
@@ -74,150 +74,7 @@ export class DatosService {
     sobreMi:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   };
 
-  Experiencia = [
-    {
-      id:0,
-      puesto:"Desarollador Full Stack Jr",
-      empresa:"Tech y Dev S.A",
-      tiempo:5,
-      unidad:"años"
-    },
-    {
-      id:1,
-      puesto:"Desarollador Java",
-      empresa:"Tecno Solutions S.A",
-      tiempo:5,
-      unidad:"años"
-    },
-    {
-      id:2,
-      puesto:"php Back End Developer",
-      empresa:"Infiny Des",
-      tiempo:4,
-      unidad:"años"
-    },
-    {
-      id:3,
-      puesto:"Desarollador Front End Sr",
-      empresa:"Tech y Dev S.A",
-      tiempo:8,
-      unidad:"meses"
-    },
-  ];
-
-  Habilidades = [
-    {
-      id:0,
-      habilidad:"Photoshop",
-      nivel:75
-    },
-    {
-      id:1,
-      habilidad:"Word",
-      nivel:90
-    },
-    {
-      id:2,
-      habilidad:"Excel",
-      nivel:70
-    },
-    {
-      id:3,
-      habilidad:"Python",
-      nivel:65
-    },
-    {
-      id:4,
-      habilidad:"Angular",
-      nivel:75
-    },
-    {
-      id:5,
-      habilidad:"Html",
-      nivel:80
-    },
-    {
-      id:6,
-      habilidad:"CSS",
-      nivel:70
-    },
-    {
-      id:7,
-      habilidad:"GitHub",
-      nivel:80
-    },
-    {
-      id:8,
-      habilidad:"Typescript",
-      nivel:70
-    }
-
-  ];
-
-  Proyectos = [
-    {
-      id:0,
-      titulo:"Portafolio Argentina",
-      descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
-      linkPreview:"",
-      linkGitHub:"",
-      linkImagen:"https://i.postimg.cc/bw36jQRs/preview-portafolio.png",
-      estado:"En desarrollo"
-    },
-    {
-      id:1,
-      titulo:"Tienda Online de Hardware",
-      descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
-      linkPreview:"",
-      linkGitHub:"",
-      linkImagen:"https://i.postimg.cc/NjgNVNm3/preview-Tienda.png",
-      estado:"En desarrollo"
-    },
-    {
-      id:2,
-      titulo:"Backing Tracks Online",
-      descripcion:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ",
-      linkPreview:"",
-      linkGitHub:"",
-      linkImagen:"",
-      estado:"En desarrollo"
-    }
-  ];
-
-  Cursos = [
-    {
-      id:0,
-      titulo:"Programador Web Full-Stack Junior",
-      institucion:"Argentina Programa",
-      descripcion:""
-    },
-    {
-      id:1,
-      titulo:"Fundamentos del Marketing Digital",
-      institucion:"Google Activate",
-      descripcion:""
-    }
-  ];
-
   TituloSecundario = {
     institucion:"Colegio Nuestra Señora de Guadalupe",
   };
-
-  TituloUniversitario = [];
-
-  Terciario = [];
-
-  UniversitarioIncompleto = [
-    {
-      id:0,
-      carrera:"Licenciatura en Economia",
-      institucion:"Facultad de ciencias economicas - UNL"
-
-    },
-    {
-      id:0,
-      carrera:"Analista Industrial",
-      institucion:"Facultad ingenieria quimica - UNL"
-    }
-  ];
 }
