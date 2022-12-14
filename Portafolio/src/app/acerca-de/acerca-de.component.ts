@@ -12,7 +12,6 @@ import { InfoService } from '../servicios/info.service';
 export class AcercaDeComponent implements OnInit {
   public datosDeUsuario:any = {};
   public Imagen:any = this.datos.Imagen;
-  public Info:any = this.datos.Info;
   public verMasTexto:String = "Ver mas";
   public verMas:boolean = false;
   public mostrarEditarPortada = false;
